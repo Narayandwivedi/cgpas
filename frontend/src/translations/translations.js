@@ -87,7 +87,7 @@ export const translations = {
             description: 'आर्थिक रूप से कमजोर वर्गों और अनाथ लड़कियों के लिए पूरी तरह से मुफ्त विवाह समारोह। 2025 में होटल एंट्री पॉइंट में 51 जोड़ों की शादी हुई, और सरायपाली क्षेत्र में 21 जोड़ों की शादी हुई, जिसमें सभी व्यवस्थाएं मुफ्त में प्रदान की गईं।'
           },
           sanjhaChulha: {
-            title: 'अग्र सांझा चूल्हा',
+            title: 'श्री अग्रसेन सांझा चूल्हा',
             description: '"सेवा दान नहीं" - जरूरतमंद परिवारों को निर्दिष्ट स्टोर से किराने का सामान और दैनिक आवश्यक वस्तुओं पर 50% सब्सिडी के साथ सहायता करना। वर्तमान में 10+ परिवारों को गरिमा और सम्मान के साथ सेवा प्रदान कर रहे हैं, गोपनीय रिकॉर्ड बनाए रख रहे हैं।'
           },
           covidRelief: {
@@ -177,10 +177,10 @@ export const translations = {
             description: 'संगठनात्मक गतिविधियों का समन्वय करने वाले महासचिव'
           },
           {
-            name: 'श्री अशोक मोदी',
-            position: 'प्रांतीय कार्यकारी अध्यक्ष',
-            location: 'कोरबा',
-            description: 'प्रांतीय संचालन और पहलों का समर्थन'
+            name: 'श्री ललित अग्रवाल',
+            position: 'अध्यक्ष ABCD',
+            organization: 'अग्रवाल बिजनेस एंड कम्युनिटी डेवलपमेंट',
+            description: 'व्यापार विकास और समुदाय सशक्तिकरण का नेतृत्व'
           },
           {
             name: 'श्री राजेंद्र अग्रवाल',
@@ -348,7 +348,7 @@ export const translations = {
             description: 'Completely free wedding ceremonies for economically weaker sections and orphan girls. 51 couples married in 2025 at Hotel Entry Point, and 21 couples in Saraipali area with all arrangements provided free of cost.'
           },
           sanjhaChulha: {
-            title: 'Agra Sanjha Chulha',
+            title: 'Shri Agrasen Sanjha Chulha',
             description: '"Service not Charity" - Supporting needy families with 50% subsidy on groceries and daily essentials from designated stores. Currently serving 10+ families with dignity and respect, maintaining confidential records.'
           },
           covidRelief: {
@@ -438,10 +438,10 @@ export const translations = {
             description: 'General Secretary coordinating organizational activities'
           },
           {
-            name: 'Shri Ashok Modi',
-            position: 'Provincial Working President',
-            location: 'Korba',
-            description: 'Supporting provincial operations and initiatives'
+            name: 'Shri Lalit Agarwal',
+            position: 'Chairman ABCD',
+            organization: 'Agrawal Business & Community Development',
+            description: 'Leading business development and community empowerment'
           },
           {
             name: 'Shri Rajendra Agarwal',
