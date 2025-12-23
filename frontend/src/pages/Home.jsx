@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
+import HeroSection from '../component/HeroSection';
 
 const Home = () => {
   const { language } = useLanguage();
@@ -9,21 +10,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-50 to-orange-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              {t.home.hero.welcome}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-4">
-              {t.home.hero.subtitle}
-            </p>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              {t.home.hero.description}
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* About CGPAS Section */}
       <section className="py-16 bg-white border-t-4 border-gray-200">
