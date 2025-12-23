@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Contact = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,14 +34,14 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r- from-orange-600 to-orange-500 py-16">
+      <section className="bg-gradient-to-r from-orange-600 to-orange-500 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold">
-              Contact Us
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              {t.contact.hero.title}
             </h1>
-            <p className="text-xl text-white">
-              Get in touch with us. We would love to hear from you
+            <p className="text-xl text-white mt-4">
+              {t.contact.hero.subtitle}
             </p>
           </div>
         </div>
@@ -49,11 +54,10 @@ const Contact = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Get In Touch
+                {t.contact.info.title}
               </h2>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                Have questions or want to learn more about CGPAS? We are here to
-                help. Reach out to us through any of the following channels.
+                {t.contact.info.description}
               </p>
 
               <div className="space-y-6">
@@ -76,7 +80,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                      Email
+                      {t.contact.info.email}
                     </h3>
                     <a
                       href="mailto:cgpas@gmail.com"
@@ -106,7 +110,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                      Phone
+                      {t.contact.info.phone}
                     </h3>
                     <a
                       href="tel:9993961778"
@@ -136,10 +140,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                      Office Hours
+                      {t.contact.info.officeHours}
                     </h3>
-                    <p className="text-gray-700">Monday - Saturday</p>
-                    <p className="text-gray-700">10:00 AM - 6:00 PM</p>
+                    <p className="text-gray-700">{t.contact.info.days}</p>
+                    <p className="text-gray-700">{t.contact.info.hours}</p>
                   </div>
                 </div>
               </div>
@@ -147,10 +151,10 @@ const Contact = () => {
               {/* Social Media or Additional Info */}
               <div className="mt-8 p-6 bg-orange-50 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  Join Our Community
+                  {t.contact.info.joinCommunity.title}
                 </h3>
                 <p className="text-gray-700 mb-4">
-                  Become a member of CGPAS and be part of our growing community.
+                  {t.contact.info.joinCommunity.description}
                 </p>
                 <a
                   href="https://abcdvyapar.com/signup"
@@ -158,7 +162,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-200"
                 >
-                  Join Now
+                  {t.contact.info.joinCommunity.cta}
                 </a>
               </div>
             </div>
@@ -167,7 +171,7 @@ const Contact = () => {
             <div>
               <div className="bg-white rounded-lg shadow-md p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Send Us a Message
+                  {t.contact.form.title}
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -175,7 +179,7 @@ const Contact = () => {
                       htmlFor="name"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Full Name
+                      {t.contact.form.fullName}
                     </label>
                     <input
                       type="text"
@@ -185,7 +189,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
-                      placeholder="Your Name"
+                      placeholder={t.contact.form.placeholders.name}
                     />
                   </div>
 
@@ -194,7 +198,7 @@ const Contact = () => {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Email Address
+                      {t.contact.form.emailAddress}
                     </label>
                     <input
                       type="email"
@@ -204,7 +208,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
-                      placeholder="your.email@example.com"
+                      placeholder={t.contact.form.placeholders.email}
                     />
                   </div>
 
@@ -213,7 +217,7 @@ const Contact = () => {
                       htmlFor="phone"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Phone Number
+                      {t.contact.form.phoneNumber}
                     </label>
                     <input
                       type="tel"
@@ -222,7 +226,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
-                      placeholder="+91 9999999999"
+                      placeholder={t.contact.form.placeholders.phone}
                     />
                   </div>
 
@@ -231,7 +235,7 @@ const Contact = () => {
                       htmlFor="subject"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Subject
+                      {t.contact.form.subject}
                     </label>
                     <input
                       type="text"
@@ -241,7 +245,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
-                      placeholder="How can we help?"
+                      placeholder={t.contact.form.placeholders.subject}
                     />
                   </div>
 
@@ -250,7 +254,7 @@ const Contact = () => {
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Message
+                      {t.contact.form.message}
                     </label>
                     <textarea
                       id="message"
@@ -260,7 +264,7 @@ const Contact = () => {
                       required
                       rows="5"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all resize-none"
-                      placeholder="Tell us more about your inquiry..."
+                      placeholder={t.contact.form.placeholders.message}
                     ></textarea>
                   </div>
 
@@ -268,7 +272,7 @@ const Contact = () => {
                     type="submit"
                     className="w-full bg-orange-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-200 shadow-md hover:shadow-lg"
                   >
-                    Send Message
+                    {t.contact.form.submit}
                   </button>
                 </form>
               </div>

@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
+import LanguageToggle from './LanguageToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { language } = useLanguage();
+  const t = translations[language];
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -17,17 +22,17 @@ const Navbar = () => {
               />
               <div className="flex flex-col">
                 <span className="text-orange-600 text-2xl md:text-3xl font-bold tracking-tight leading-tight">
-                  CGPAS
+                  {t.cgpas}
                 </span>
                 <span className="text-gray-600 text-[10px] md:text-xs font-medium tracking-wide">
-                  Chhattisgarh Prantiya Agrawal Sangathan
+                  {t.cgpasFullEnglish}
                 </span>
               </div>
             </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             <Link
               to="/"
               className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
@@ -46,6 +51,7 @@ const Navbar = () => {
             >
               Contact
             </Link>
+            <LanguageToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,6 +105,9 @@ const Navbar = () => {
             >
               Contact
             </Link>
+            <div className="px-3 py-2">
+              <LanguageToggle />
+            </div>
           </div>
         </div>
       )}

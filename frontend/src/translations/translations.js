@@ -1,0 +1,523 @@
+export const translations = {
+  hi: {
+    // Common
+    cgpas: 'CGPAS',
+    cgpasFull: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन',
+    cgpasFullEnglish: 'Chhattisgarh Prantiya Agrawal Sangathan',
+
+    // Navigation
+    nav: {
+      home: 'होम',
+      about: 'हमारे बारे में',
+      contact: 'संपर्क करें'
+    },
+
+    // Language Toggle
+    languageToggle: {
+      switchToEnglish: 'English में देखने के लिए यहां क्लिक करें',
+      switchToHindi: 'हिंदी में देखने के लिए यहां क्लिक करें',
+      changeLanguage: 'भाषा बदलें'
+    },
+
+    // Home Page
+    home: {
+      hero: {
+        welcome: 'CGPAS में आपका स्वागत है',
+        subtitle: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन',
+        description: 'एकता, विकास और प्रगति के माध्यम से अग्रवाल समुदाय को सशक्त बनाना। एक मजबूत और समृद्ध समुदाय बनाने के हमारे मिशन में शामिल हों।'
+      },
+      aboutSection: {
+        title: 'CGPAS के बारे में',
+        paragraph1: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन (CGPAS) छत्तीसगढ़ में अग्रवाल समुदाय की वृद्धि और समृद्धि के लिए समर्पित मूल संगठन है। हम एकता को बढ़ावा देने, व्यापार विकास को प्रोत्साहित करने और सभी अग्रवालों के लिए अवसर पैदा करने के लिए प्रतिबद्ध हैं।',
+        paragraph2: 'छत्र संगठन के रूप में, CGPAS विभिन्न छोटे संगठनों और पहलों की देखरेख और समर्थन करता है, हमारे समुदाय के बंधनों को मजबूत करने और सामूहिक प्रगति को आगे बढ़ाने के लिए मिलकर काम करता है।'
+      },
+      abcdSection: {
+        title: 'ABCD - अग्रवाल बिजनेस एंड कम्युनिटी डेवलपमेंट',
+        description: 'ABCD (अग्रवाल बिजनेस एंड कम्युनिटी डेवलपमेंट) CGPAS की एक प्रमुख पहल है। यह नेटवर्किंग, संसाधनों और सहयोगात्मक अवसरों के माध्यम से अग्रवाल उद्यमियों और व्यवसायों को सशक्त बनाने पर केंद्रित है।',
+        forBusinesses: {
+          title: 'व्यवसायों के लिए',
+          description: 'विक्रेताओं से जुड़ें, अपने नेटवर्क का विस्तार करें, और हमारे व्यापक समुदाय मंच के माध्यम से अपने व्यवसाय को बढ़ाएं।',
+          benefits: [
+            'सत्यापित विक्रेताओं तक पहुंच',
+            'व्यापार नेटवर्किंग के अवसर',
+            'समुदाय समर्थन और संसाधन'
+          ],
+          cta: 'विक्रेता के रूप में जुड़ें'
+        },
+        forMembers: {
+          title: 'सदस्यों के लिए',
+          description: 'अग्रवाल समुदाय के भीतर विशेष लाभों, कार्यक्रमों और अवसरों तक पहुंच प्राप्त करने के लिए सदस्य के रूप में शामिल हों।',
+          benefits: [
+            'विशेष सदस्य लाभ',
+            'सामुदायिक कार्यक्रम और प्रोग्राम',
+            'पेशेवर नेटवर्किंग'
+          ],
+          cta: 'सदस्य के रूप में जुड़ें'
+        }
+      },
+      initiatives: {
+        title: 'हमारी प्रमुख पहल और कार्यक्रम',
+        list: {
+          agraAlankaran: {
+            title: 'वार्षिक अग्र अलंकरण',
+            description: 'शिक्षा, व्यापार, सामाजिक सेवा, कला, खेल और अन्य सहित 18 श्रेणियों में प्रतिष्ठित सदस्यों को सम्मानित करने वाला वार्षिक पुरस्कार समारोह। पूरे समुदाय में उत्कृष्टता को मान्यता देना।'
+          },
+          agraPanchayat: {
+            title: 'अग्र पंचायत समिति',
+            description: 'विवाह, तलाक, संपत्ति और पारिवारिक मामलों को संभालने वाली विवाद समाधान प्रणाली। सेवानिवृत्त उच्च न्यायालय के न्यायाधीशों और वरिष्ठ समुदाय के सदस्यों के मार्गदर्शन में हजारों मामले शांतिपूर्वक हल किए गए।'
+          },
+          mangalParinay: {
+            title: 'मंगल परिणय योजना',
+            description: '15+ व्हाट्सएप समूहों के साथ वैवाहिक गठबंधन कार्यक्रम। 780 से अधिक सफल मैच सुविधाजनक। 800+ प्रतिभागियों के साथ वार्षिक ऑनलाइन मिलन जिसमें विदेश से 75 शामिल हैं।'
+          },
+          educationLoan: {
+            title: 'ब्याज मुक्त शिक्षा ऋण',
+            description: 'श्री अग्रसेन चैरिटेबल ट्रस्ट के माध्यम से, सभी जातियों और धर्मों के योग्य छात्रों को उच्च शिक्षा के लिए ₹2 लाख तक का ब्याज मुक्त ऋण प्रदान करना। रोजगार सुरक्षित करने के बाद आसान मासिक किस्तों में चुकाया जा सकता है।'
+          },
+          ambulance: {
+            title: 'एम्बुलेंस सहायता योजना',
+            description: 'श्री अग्रसेन चैरिटेबल ट्रस्ट के माध्यम से सार्वजनिक उपयोग के लिए एम्बुलेंस खरीद पर 50% सब्सिडी। स्थानीय अग्रवाल सभाएं ट्रस्ट के साथ संयुक्त रूप से एम्बुलेंस का रखरखाव और संचालन करती हैं।'
+          },
+          kanyaVivah: {
+            title: 'श्री अग्रसेन कन्या विवाह',
+            description: 'समुदाय के सदस्यों के लिए सामूहिक विवाह समारोह। होटल एंट्री पॉइंट में ₹2 लाख प्रति विवाह की किफायती दरों पर भव्य व्यवस्था, जिसमें सभी सुविधाएं और बेटियों के विवाह के लिए एक शानदार उत्सव शामिल है।'
+          },
+          freeWeddings: {
+            title: 'निःशुल्क सामूहिक विवाह कार्यक्रम',
+            description: 'आर्थिक रूप से कमजोर वर्गों और अनाथ लड़कियों के लिए पूरी तरह से मुफ्त विवाह समारोह। 2025 में होटल एंट्री पॉइंट में 51 जोड़ों की शादी हुई, और सरायपाली क्षेत्र में 21 जोड़ों की शादी हुई, जिसमें सभी व्यवस्थाएं मुफ्त में प्रदान की गईं।'
+          },
+          sanjhaChulha: {
+            title: 'अग्र सांझा चूल्हा',
+            description: '"सेवा दान नहीं" - जरूरतमंद परिवारों को निर्दिष्ट स्टोर से किराने का सामान और दैनिक आवश्यक वस्तुओं पर 50% सब्सिडी के साथ सहायता करना। वर्तमान में 10+ परिवारों को गरिमा और सम्मान के साथ सेवा प्रदान कर रहे हैं, गोपनीय रिकॉर्ड बनाए रख रहे हैं।'
+          },
+          covidRelief: {
+            title: 'कोविड राहत सहायता',
+            description: 'छत्तीसगढ़ में ₹10 लाख का फंड बनाया गया ताकि कोविड प्रभावित परिवारों को उनकी जरूरत के समय में वित्तीय सहायता प्रदान की जा सके। इस मानवीय पहल से कई परिवारों को लाभ हुआ है।'
+          }
+        }
+      },
+      organizations: {
+        title: 'हमारे संगठन',
+        trust: {
+          name: 'श्री अग्रसेन चैरिटेबल ट्रस्ट',
+          chairman: 'अध्यक्ष: श्री सुनील रामदास अग्रवाल',
+          activities: [
+            'ब्याज मुक्त शिक्षा ऋण',
+            'एम्बुलेंस सब्सिडी कार्यक्रम',
+            'स्वास्थ्य सेवा सहायता पहल'
+          ]
+        },
+        mahila: {
+          name: 'रायपुर जिला महिला अग्रवाल संगठन',
+          president: 'अध्यक्ष: श्रीमती प्रियंका अग्रवाल',
+          activities: [
+            'महिला सशक्तिकरण कार्यक्रम',
+            'सांस्कृतिक और धार्मिक कार्यक्रम',
+            'सामाजिक कल्याण गतिविधियां'
+          ]
+        }
+      },
+      cta: {
+        title: 'आज ही हमारे समुदाय में शामिल हों',
+        description: 'विकास, एकता और समृद्धि के लिए समर्पित एक संपन्न समुदाय का हिस्सा बनें। साथ मिलकर, हम अधिक हासिल कर सकते हैं।',
+        contact: 'संपर्क करें',
+        becomeMember: 'सदस्य बनें'
+      }
+    },
+
+    // About Page
+    about: {
+      title: 'CGPAS के बारे में',
+      subtitle: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन',
+      mission: {
+        title: 'हमारा मिशन',
+        description: 'सामाजिक सेवा, शिक्षा, स्वास्थ्य सेवा और सांस्कृतिक संरक्षण के माध्यम से छत्तीसगढ़ भर में अग्रवाल समुदाय को एकजुट और मजबूत करना। हम "सेवा संकल्प नहीं, प्रतिबद्धता है" की भावना के साथ समाज की सेवा करने के लिए प्रतिबद्ध हैं - महाराजा अग्रसेन के 18 सिद्धांतों के पदचिन्हों का पालन करते हुए।'
+      },
+      vision: {
+        title: 'हमारी दृष्टि',
+        description: 'एक आत्मनिर्भर, संगठित और प्रगतिशील अग्रवाल समुदाय बनाना जो सांस्कृतिक विरासत को संरक्षित करते हुए सामाजिक कल्याण में योगदान देता है। हम एक ऐसे समाज की कल्पना करते हैं जहां किसी की थाली खाली न रहे - "सेवा ही संगठन है" के सिद्धांत को मूर्त रूप देते हुए।'
+      },
+      aboutOrg: {
+        title: 'हमारे संगठन के बारे में',
+        para1: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन (CGPAS) छत्तीसगढ़ भर में अग्रवाल समुदाय को एकजुट और सशक्त बनाने के लिए समर्पित एक प्रमुख सामाजिक संगठन है। आधुनिक विकास को बढ़ावा देते हुए हमारी समृद्ध सांस्कृतिक विरासत को संरक्षित करने की दृष्टि से स्थापित, हम परंपरा और प्रगति के बीच एक सेतु के रूप में कार्य करते हैं।',
+        para2: 'डॉ. अशोक अग्रवाल (अध्यक्ष 2024-2027) के सक्षम नेतृत्व में और महाराजा अग्रसेन के सिद्धांतों द्वारा निर्देशित, हमारा संगठन 35 से अधिक वर्षों से समाज की सेवा कर रहा है। हम रायपुर, बिलासपुर, दुर्ग, कोरबा, राजनांदगांव और कई अन्य सहित छत्तीसगढ़ के सभी प्रमुख शहरों में जिला स्तरीय समितियों के नेटवर्क के माध्यम से काम करते हैं।',
+        para3: 'हमारा आदर्श वाक्य "सेवा ही संगठन है" सामाजिक कल्याण के प्रति हमारी प्रतिबद्धता को दर्शाता है। हम "किसी की थाली खाली न रहे" के दर्शन में विश्वास करते हैं और यह सुनिश्चित करने के लिए अथक प्रयास करते हैं कि हमारे समुदाय के प्रत्येक सदस्य को शिक्षा, स्वास्थ्य सेवा और विकास के अवसरों तक पहुंच हो।'
+      },
+      leadership: {
+        title: 'हमारा नेतृत्व',
+        leaders: [
+          {
+            name: 'डॉ. अशोक अग्रवाल',
+            position: 'अध्यक्ष (2024-2027)',
+            location: 'रायपुर',
+            description: '35+ वर्षों के सामाजिक सेवा अनुभव के साथ संगठन का नेतृत्व'
+          },
+          {
+            name: 'श्री प्रदीप मित्तल',
+            position: 'राष्ट्रीय अध्यक्ष',
+            organization: 'अखिल भारतीय अग्रवाल संगठन',
+            description: 'प्रांतीय संगठनों को मार्गदर्शन और समर्थन प्रदान करना'
+          },
+          {
+            name: 'श्री सियाराम अग्रवाल',
+            position: 'राष्ट्रीय कार्यकारी अध्यक्ष',
+            organization: 'अखिल भारतीय अग्रवाल संगठन',
+            description: 'राष्ट्रीय स्तर की पहलों में सक्रिय नेतृत्व'
+          },
+          {
+            name: 'श्रीमती गंगा अग्रवाल',
+            position: 'प्रांतीय महिला अध्यक्ष',
+            organization: 'CG प्रांतीय महिला अग्रवाल संगठन',
+            description: 'महिला सशक्तिकरण और सामाजिक कल्याण कार्यक्रमों का नेतृत्व'
+          },
+          {
+            name: 'श्री संजय अग्रवाल',
+            position: 'प्रांतीय महामंत्री',
+            location: 'रायपुर',
+            description: 'संगठनात्मक गतिविधियों का समन्वय करने वाले महासचिव'
+          },
+          {
+            name: 'श्री अशोक मोदी',
+            position: 'प्रांतीय कार्यकारी अध्यक्ष',
+            location: 'कोरबा',
+            description: 'प्रांतीय संचालन और पहलों का समर्थन'
+          },
+          {
+            name: 'श्री राजेंद्र अग्रवाल',
+            position: 'प्रांतीय कार्यकारी अध्यक्ष',
+            location: 'बिलासपुर',
+            description: 'क्षेत्रीय गतिविधियों और सदस्य जुड़ाव की देखरेख'
+          },
+          {
+            name: 'श्रीमती निधि अग्रवाल',
+            position: 'प्रांतीय महिला महामंत्री',
+            organization: 'महिला विंग',
+            description: 'महिला-केंद्रित कार्यक्रमों और पहलों का समन्वय'
+          }
+        ]
+      },
+      keyInitiatives: {
+        title: 'हमारी प्रमुख पहल'
+      },
+      contact: {
+        title: 'संपर्क करें',
+        office: {
+          title: 'प्रांतीय कार्यालय',
+          address: 'श्री हनुमान मार्केट, रामसागर पारा\nरायपुर, छत्तीसगढ़\nफोन: 0771 4032100'
+        },
+        email: {
+          title: 'ईमेल'
+        },
+        event: {
+          title: 'कार्यक्रम की तारीख',
+          details: '9वां अग्र अलंकरण समारोह\n28 अगस्त, 2025 (गुरुवार)\nएस.एन. पैलेस, रायपुर'
+        }
+      },
+      stats: {
+        marriages: 'विवाह व्यवस्थित',
+        members: 'ABCD सदस्य',
+        awards: 'पुरस्कार श्रेणियां',
+        service: 'सेवा के वर्ष'
+      }
+    },
+
+    // Contact Page
+    contact: {
+      hero: {
+        title: 'संपर्क करें',
+        subtitle: 'हमसे संपर्क करें। हम आपसे सुनना पसंद करेंगे'
+      },
+      info: {
+        title: 'संपर्क में रहें',
+        description: 'CGPAS के बारे में प्रश्न हैं या अधिक जानना चाहते हैं? हम यहां मदद के लिए हैं। निम्नलिखित किसी भी चैनल के माध्यम से हमसे संपर्क करें।',
+        email: 'ईमेल',
+        phone: 'फोन',
+        officeHours: 'कार्यालय समय',
+        days: 'सोमवार - शनिवार',
+        hours: '10:00 AM - 6:00 PM',
+        joinCommunity: {
+          title: 'हमारे समुदाय में शामिल हों',
+          description: 'CGPAS के सदस्य बनें और हमारे बढ़ते समुदाय का हिस्सा बनें।',
+          cta: 'अभी शामिल हों'
+        }
+      },
+      form: {
+        title: 'हमें संदेश भेजें',
+        fullName: 'पूरा नाम',
+        emailAddress: 'ईमेल पता',
+        phoneNumber: 'फोन नंबर',
+        subject: 'विषय',
+        message: 'संदेश',
+        submit: 'संदेश भेजें',
+        placeholders: {
+          name: 'आपका नाम',
+          email: 'your.email@example.com',
+          phone: '+91 9999999999',
+          subject: 'हम कैसे मदद कर सकते हैं?',
+          message: 'अपनी पूछताछ के बारे में अधिक बताएं...'
+        }
+      }
+    }
+  },
+
+  en: {
+    // Common
+    cgpas: 'CGPAS',
+    cgpasFull: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन',
+    cgpasFullEnglish: 'Chhattisgarh Prantiya Agrawal Sangathan',
+
+    // Navigation
+    nav: {
+      home: 'Home',
+      about: 'About',
+      contact: 'Contact'
+    },
+
+    // Language Toggle
+    languageToggle: {
+      switchToEnglish: 'Click here to view in English',
+      switchToHindi: 'हिंदी में देखने के लिए यहां क्लिक करें',
+      changeLanguage: 'Change Language'
+    },
+
+    // Home Page
+    home: {
+      hero: {
+        welcome: 'Welcome to CGPAS',
+        subtitle: 'Chhattisgarh Prantiya Agrawal Sangathan',
+        description: 'Empowering the Agrawal community through unity, growth, and development. Join us in our mission to create a stronger and more prosperous community.'
+      },
+      aboutSection: {
+        title: 'About CGPAS',
+        paragraph1: 'Chhattisgarh Prantiya Agrawal Sangathan (CGPAS) is the parent wing dedicated to the growth and prosperity of the Agrawal community in Chhattisgarh. We are committed to fostering unity, promoting business development, and creating opportunities for all Agrawals.',
+        paragraph2: 'As the umbrella organization, CGPAS oversees and supports various smaller sangathans and initiatives, working together to strengthen our community bonds and drive collective progress.'
+      },
+      abcdSection: {
+        title: 'ABCD - Agrawal Business and Community Development',
+        description: 'ABCD (Agrawal Business and Community Development) is one of the key initiatives under CGPAS. It focuses on empowering Agrawal entrepreneurs and businesses through networking, resources, and collaborative opportunities.',
+        forBusinesses: {
+          title: 'For Businesses',
+          description: 'Connect with vendors, expand your network, and grow your business through our extensive community platform.',
+          benefits: [
+            'Access to verified vendors',
+            'Business networking opportunities',
+            'Community support and resources'
+          ],
+          cta: 'Join as Vendor'
+        },
+        forMembers: {
+          title: 'For Members',
+          description: 'Join as a member to access exclusive benefits, events, and opportunities within the Agrawal community.',
+          benefits: [
+            'Exclusive member benefits',
+            'Community events and programs',
+            'Professional networking'
+          ],
+          cta: 'Join as Member'
+        }
+      },
+      initiatives: {
+        title: 'Our Key Initiatives & Programs',
+        list: {
+          agraAlankaran: {
+            title: 'Annual Agra Alankaran',
+            description: 'Annual awards ceremony honoring distinguished members in 18 categories including education, business, social service, arts, sports, and more. Recognizing excellence across the community.'
+          },
+          agraPanchayat: {
+            title: 'Agra Panchayat Committee',
+            description: 'Dispute resolution system handling marriage, divorce, property, and family matters. Thousands of cases resolved peacefully with guidance from retired High Court judges and senior community members.'
+          },
+          mangalParinay: {
+            title: 'Mangal Parinay Yojana',
+            description: 'Matrimonial alliance program with 15+ WhatsApp groups. Over 780 successful matches facilitated. Annual online meet with 800+ participants including 75 from abroad.'
+          },
+          educationLoan: {
+            title: 'Interest-Free Education Loan',
+            description: 'Through Shri Agrasen Charitable Trust, providing interest-free loans up to ₹2 lakhs for higher education to deserving students of all castes and religions. Repayable in easy monthly installments after securing employment.'
+          },
+          ambulance: {
+            title: 'Ambulance Support Scheme',
+            description: '50% subsidy on ambulance purchase for public use through Shri Agrasen Charitable Trust. Local Agrawal sabhas maintain and operate the ambulances jointly with the trust.'
+          },
+          kanyaVivah: {
+            title: 'Shri Agrasen Kanya Vivah',
+            description: 'Mass wedding ceremonies for community members. Grand arrangements at affordable rates of ₹2 lakh per wedding at Hotel Entry Point, including all facilities and a magnificent celebration for daughters\' marriages.'
+          },
+          freeWeddings: {
+            title: 'Free Mass Wedding Program',
+            description: 'Completely free wedding ceremonies for economically weaker sections and orphan girls. 51 couples married in 2025 at Hotel Entry Point, and 21 couples in Saraipali area with all arrangements provided free of cost.'
+          },
+          sanjhaChulha: {
+            title: 'Agra Sanjha Chulha',
+            description: '"Service not Charity" - Supporting needy families with 50% subsidy on groceries and daily essentials from designated stores. Currently serving 10+ families with dignity and respect, maintaining confidential records.'
+          },
+          covidRelief: {
+            title: 'COVID Relief Support',
+            description: '₹10 lakh fund created in Chhattisgarh to support COVID-affected families with financial assistance during their time of need. Many families have benefited from this humanitarian initiative.'
+          }
+        }
+      },
+      organizations: {
+        title: 'Our Organizations',
+        trust: {
+          name: 'Shri Agrasen Charitable Trust',
+          chairman: 'Chairman: Shri Sunil Ramdas Agrawal',
+          activities: [
+            'Interest-free education loans',
+            'Ambulance subsidy program',
+            'Healthcare support initiatives'
+          ]
+        },
+        mahila: {
+          name: 'Raipur District Mahila Agrawal Sangathan',
+          president: 'President: Smt. Priyanka Agrawal',
+          activities: [
+            'Women empowerment programs',
+            'Cultural and religious events',
+            'Social welfare activities'
+          ]
+        }
+      },
+      cta: {
+        title: 'Join Our Community Today',
+        description: 'Be part of a thriving community dedicated to growth, unity, and prosperity. Together, we can achieve more.',
+        contact: 'Contact Us',
+        becomeMember: 'Become a Member'
+      }
+    },
+
+    // About Page
+    about: {
+      title: 'About CGPAS',
+      subtitle: 'Chhattisgarh Prantiya Agrawal Sangathan',
+      mission: {
+        title: 'Our Mission',
+        description: 'To unite and strengthen the Agrawal community across Chhattisgarh through social service, education, healthcare, and cultural preservation. We are committed to serving society with the spirit of "Service is not a resolution, but a commitment" - following the footsteps of Maharaja Agrasen\'s 18 principles.'
+      },
+      vision: {
+        title: 'Our Vision',
+        description: 'To create a self-reliant, organized, and progressive Agrawal community that contributes to social welfare while preserving cultural heritage. We envision a society where no one\'s plate remains empty - embodying the principle of "सेवा ही संगठन है" (Service is Organization).'
+      },
+      aboutOrg: {
+        title: 'About Our Organization',
+        para1: 'The Chhattisgarh Prantiya Agrawal Sangathan (CGPAS) is a premier social organization dedicated to uniting and empowering the Agrawal community across Chhattisgarh. Established with the vision of preserving our rich cultural heritage while promoting modern development, we serve as a bridge between tradition and progress.',
+        para2: 'Under the able leadership of Dr. Ashok Agarwal (President 2024-2027) and guided by the principles of Maharaja Agrasen, our organization has been serving society for over 35 years. We operate through a network of district-level committees across all major cities of Chhattisgarh including Raipur, Bilaspur, Durg, Korba, Rajnandgaon, and many others.',
+        para3: 'Our motto "सेवा ही संगठन है" (Service is Organization) reflects our commitment to social welfare. We believe in the philosophy of "किसी की थाली खाली न रहे" (No one\'s plate should remain empty) and work tirelessly to ensure that every member of our community has access to education, healthcare, and opportunities for growth.'
+      },
+      leadership: {
+        title: 'Our Leadership',
+        leaders: [
+          {
+            name: 'Dr. Ashok Agarwal',
+            position: 'President (2024-2027)',
+            location: 'Raipur',
+            description: 'Leading the organization with 35+ years of social service experience'
+          },
+          {
+            name: 'Shri Pradeep Mittal',
+            position: 'National Chairman',
+            organization: 'Akhil Bhartiya Agarwal Sangathan',
+            description: 'Providing guidance and support to provincial organizations'
+          },
+          {
+            name: 'Shri Siyaram Agarwal',
+            position: 'National Working President',
+            organization: 'Akhil Bhartiya Agarwal Sangathan',
+            description: 'Active leadership in national-level initiatives'
+          },
+          {
+            name: 'Smt. Ganga Agarwal',
+            position: 'Provincial Women\'s President',
+            organization: 'CG Provincial Mahila Agarwal Sangathan',
+            description: 'Leading women empowerment and social welfare programs'
+          },
+          {
+            name: 'Shri Sanjay Agarwal',
+            position: 'Provincial Mahamantri',
+            location: 'Raipur',
+            description: 'General Secretary coordinating organizational activities'
+          },
+          {
+            name: 'Shri Ashok Modi',
+            position: 'Provincial Working President',
+            location: 'Korba',
+            description: 'Supporting provincial operations and initiatives'
+          },
+          {
+            name: 'Shri Rajendra Agarwal',
+            position: 'Provincial Working President',
+            location: 'Bilaspur',
+            description: 'Overseeing regional activities and member engagement'
+          },
+          {
+            name: 'Smt. Nidhi Agarwal',
+            position: 'Provincial Mahila Mahamantri',
+            organization: 'Women\'s Wing',
+            description: 'Coordinating women-focused programs and initiatives'
+          }
+        ]
+      },
+      keyInitiatives: {
+        title: 'Our Key Initiatives'
+      },
+      contact: {
+        title: 'Contact Us',
+        office: {
+          title: 'Provincial Office',
+          address: 'Shri Hanuman Market, Ramsagar Para\nRaipur, Chhattisgarh\nPhone: 0771 4032100'
+        },
+        email: {
+          title: 'Email'
+        },
+        event: {
+          title: 'Event Date',
+          details: '9th Agra Alankaran Ceremony\nAugust 28, 2025 (Thursday)\nS.N. Palace, Raipur'
+        }
+      },
+      stats: {
+        marriages: 'Marriages Arranged',
+        members: 'ABCD Members',
+        awards: 'Award Categories',
+        service: 'Years of Service'
+      }
+    },
+
+    // Contact Page
+    contact: {
+      hero: {
+        title: 'Contact Us',
+        subtitle: 'Get in touch with us. We would love to hear from you'
+      },
+      info: {
+        title: 'Get In Touch',
+        description: 'Have questions or want to learn more about CGPAS? We are here to help. Reach out to us through any of the following channels.',
+        email: 'Email',
+        phone: 'Phone',
+        officeHours: 'Office Hours',
+        days: 'Monday - Saturday',
+        hours: '10:00 AM - 6:00 PM',
+        joinCommunity: {
+          title: 'Join Our Community',
+          description: 'Become a member of CGPAS and be part of our growing community.',
+          cta: 'Join Now'
+        }
+      },
+      form: {
+        title: 'Send Us a Message',
+        fullName: 'Full Name',
+        emailAddress: 'Email Address',
+        phoneNumber: 'Phone Number',
+        subject: 'Subject',
+        message: 'Message',
+        submit: 'Send Message',
+        placeholders: {
+          name: 'Your Name',
+          email: 'your.email@example.com',
+          phone: '+91 9999999999',
+          subject: 'How can we help?',
+          message: 'Tell us more about your inquiry...'
+        }
+      }
+    }
+  }
+};

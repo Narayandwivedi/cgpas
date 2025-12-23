@@ -1,6 +1,11 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Home = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -8,14 +13,13 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Welcome to CGPAS
+              {t.home.hero.welcome}
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-4">
-              Chhattisgarh Prantiya Agrawal Sangathan
+              {t.home.hero.subtitle}
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Empowering the Agrawal community through unity, growth, and development.
-              Join us in our mission to create a stronger and more prosperous community.
+              {t.home.hero.description}
             </p>
           </div>
         </div>
@@ -27,21 +31,16 @@ const Home = () => {
           <div className="border-4 border-gray-900 rounded-xl p-8 md:p-12 bg-gradient-to-br from-orange-50 to-white shadow-xl">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                About CGPAS
+                {t.home.aboutSection.title}
               </h2>
               <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
             </div>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Chhattisgarh Prantiya Agrawal Sangathan (CGPAS) is the parent wing
-                dedicated to the growth and prosperity of the Agrawal community in
-                Chhattisgarh. We are committed to fostering unity, promoting business
-                development, and creating opportunities for all Agrawals.
+                {t.home.aboutSection.paragraph1}
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                As the umbrella organization, CGPAS oversees and supports various
-                smaller sangathans and initiatives, working together to strengthen
-                our community bonds and drive collective progress.
+                {t.home.aboutSection.paragraph2}
               </p>
             </div>
           </div>
@@ -54,14 +53,11 @@ const Home = () => {
           <div className="border-4 border-gray-900 rounded-xl p-8 md:p-12 bg-white shadow-xl">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                ABCD - Agrawal Business and Community Development
+                {t.home.abcdSection.title}
               </h2>
               <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
               <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                ABCD (Agrawal Business and Community Development) is one of the key
-                initiatives under CGPAS. It focuses on empowering Agrawal
-                entrepreneurs and businesses through networking, resources, and
-                collaborative opportunities.
+                {t.home.abcdSection.description}
               </p>
             </div>
 
@@ -84,26 +80,19 @@ const Home = () => {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">
-                    For Businesses
+                    {t.home.abcdSection.forBusinesses.title}
                   </h3>
                 </div>
                 <p className="text-gray-700 mb-4 text-base">
-                  Connect with vendors, expand your network, and grow your
-                  business through our extensive community platform.
+                  {t.home.abcdSection.forBusinesses.description}
                 </p>
                 <ul className="text-gray-700 space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-3 text-xl font-bold">✓</span>
-                    <span>Access to verified vendors</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-3 text-xl font-bold">✓</span>
-                    <span>Business networking opportunities</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-3 text-xl font-bold">✓</span>
-                    <span>Community support and resources</span>
-                  </li>
+                  {t.home.abcdSection.forBusinesses.benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-orange-600 mr-3 text-xl font-bold">✓</span>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
                 </ul>
                 <a
                   href="https://vendor.abcdvyapar.com"
@@ -111,7 +100,7 @@ const Home = () => {
                   rel="noopener noreferrer"
                   className="block w-full bg-gray-900 text-white text-center px-6 py-3 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-lg"
                 >
-                  Join as Vendor
+                  {t.home.abcdSection.forBusinesses.cta}
                 </a>
               </div>
 
@@ -133,26 +122,19 @@ const Home = () => {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">
-                    For Members
+                    {t.home.abcdSection.forMembers.title}
                   </h3>
                 </div>
                 <p className="text-gray-700 mb-4 text-base">
-                  Join as a member to access exclusive benefits, events, and
-                  opportunities within the Agrawal community.
+                  {t.home.abcdSection.forMembers.description}
                 </p>
                 <ul className="text-gray-700 space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-3 text-xl font-bold">✓</span>
-                    <span>Exclusive member benefits</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-3 text-xl font-bold">✓</span>
-                    <span>Community events and programs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-3 text-xl font-bold">✓</span>
-                    <span>Professional networking</span>
-                  </li>
+                  {t.home.abcdSection.forMembers.benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-orange-600 mr-3 text-xl font-bold">✓</span>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
                 </ul>
                 <a
                   href="https://abcdvyapar.com/signup"
@@ -160,7 +142,7 @@ const Home = () => {
                   rel="noopener noreferrer"
                   className="block w-full bg-orange-600 text-white text-center px-6 py-3 rounded-lg font-semibold text-lg hover:bg-orange-700 transition-all duration-200 shadow-md hover:shadow-lg"
                 >
-                  Join as Member
+                  {t.home.abcdSection.forMembers.cta}
                 </a>
               </div>
             </div>
@@ -173,11 +155,11 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Key Initiatives & Programs
+              {t.home.initiatives.title}
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Annual Agra Alankaran */}
             <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300">
@@ -187,10 +169,10 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Annual Agra Alankaran
+                {t.home.initiatives.list.agraAlankaran.title}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Annual awards ceremony honoring distinguished members in 18 categories including education, business, social service, arts, sports, and more. Recognizing excellence across the community.
+                {t.home.initiatives.list.agraAlankaran.description}
               </p>
             </div>
 
@@ -202,10 +184,10 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Agra Panchayat Committee
+                {t.home.initiatives.list.agraPanchayat.title}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Dispute resolution system handling marriage, divorce, property, and family matters. Thousands of cases resolved peacefully with guidance from retired High Court judges and senior community members.
+                {t.home.initiatives.list.agraPanchayat.description}
               </p>
             </div>
 
@@ -217,10 +199,10 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Mangal Parinay Yojana
+                {t.home.initiatives.list.mangalParinay.title}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Matrimonial alliance program with 15+ WhatsApp groups. Over 780 successful matches facilitated. Annual online meet with 800+ participants including 75 from abroad.
+                {t.home.initiatives.list.mangalParinay.description}
               </p>
             </div>
 
@@ -232,10 +214,10 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Interest-Free Education Loan
+                {t.home.initiatives.list.educationLoan.title}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Through Shri Agrasen Charitable Trust, providing interest-free loans up to ₹2 lakhs for higher education to deserving students of all castes and religions. Repayable in easy monthly installments after securing employment.
+                {t.home.initiatives.list.educationLoan.description}
               </p>
             </div>
 
@@ -247,10 +229,10 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Ambulance Support Scheme
+                {t.home.initiatives.list.ambulance.title}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                50% subsidy on ambulance purchase for public use through Shri Agrasen Charitable Trust. Local Agrawal sabhas maintain and operate the ambulances jointly with the trust.
+                {t.home.initiatives.list.ambulance.description}
               </p>
             </div>
 
@@ -262,10 +244,10 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Shri Agrasen Kanya Vivah
+                {t.home.initiatives.list.kanyaVivah.title}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Mass wedding ceremonies for community members. Grand arrangements at affordable rates of ₹2 lakh per wedding at Hotel Entry Point, including all facilities and a magnificent celebration for daughters' marriages.
+                {t.home.initiatives.list.kanyaVivah.description}
               </p>
             </div>
 
@@ -277,10 +259,10 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Free Mass Wedding Program
+                {t.home.initiatives.list.freeWeddings.title}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Completely free wedding ceremonies for economically weaker sections and orphan girls. 51 couples married in 2025 at Hotel Entry Point, and 21 couples in Saraipali area with all arrangements provided free of cost.
+                {t.home.initiatives.list.freeWeddings.description}
               </p>
             </div>
 
@@ -292,10 +274,10 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Agra Sanjha Chulha
+                {t.home.initiatives.list.sanjhaChulha.title}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                "Service not Charity" - Supporting needy families with 50% subsidy on groceries and daily essentials from designated stores. Currently serving 10+ families with dignity and respect, maintaining confidential records.
+                {t.home.initiatives.list.sanjhaChulha.description}
               </p>
             </div>
 
@@ -307,10 +289,10 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                COVID Relief Support
+                {t.home.initiatives.list.covidRelief.title}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                ₹10 lakh fund created in Chhattisgarh to support COVID-affected families with financial assistance during their time of need. Many families have benefited from this humanitarian initiative.
+                {t.home.initiatives.list.covidRelief.description}
               </p>
             </div>
           </div>
@@ -322,7 +304,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Organizations
+              {t.home.organizations.title}
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
           </div>
@@ -331,48 +313,36 @@ const Home = () => {
             {/* Shri Agrasen Charitable Trust */}
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Shri Agrasen Charitable Trust
+                {t.home.organizations.trust.name}
               </h3>
               <p className="text-gray-700 mb-4">
-                Chairman: Shri Sunil Ramdas Agrawal
+                {t.home.organizations.trust.chairman}
               </p>
               <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-orange-600 mr-2">•</span>
-                  <span>Interest-free education loans</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-600 mr-2">•</span>
-                  <span>Ambulance subsidy program</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-600 mr-2">•</span>
-                  <span>Healthcare support initiatives</span>
-                </li>
+                {t.home.organizations.trust.activities.map((activity, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    <span>{activity}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Raipur District Mahila Agrawal Sangathan */}
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Raipur District Mahila Agrawal Sangathan
+                {t.home.organizations.mahila.name}
               </h3>
               <p className="text-gray-700 mb-4">
-                President: Smt. Priyanka Agrawal
+                {t.home.organizations.mahila.president}
               </p>
               <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-orange-600 mr-2">•</span>
-                  <span>Women empowerment programs</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-600 mr-2">•</span>
-                  <span>Cultural and religious events</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-600 mr-2">•</span>
-                  <span>Social welfare activities</span>
-                </li>
+                {t.home.organizations.mahila.activities.map((activity, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    <span>{activity}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -383,18 +353,17 @@ const Home = () => {
       <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Join Our Community Today
+            {t.home.cta.title}
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Be part of a thriving community dedicated to growth, unity, and prosperity.
-            Together, we can achieve more.
+            {t.home.cta.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg"
             >
-              Contact Us
+              {t.home.cta.contact}
             </a>
             <a
               href="https://abcdvyapar.com/signup"
@@ -402,7 +371,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-all duration-200 shadow-lg"
             >
-              Become a Member
+              {t.home.cta.becomeMember}
             </a>
           </div>
         </div>
