@@ -23,7 +23,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:cgpas@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:cgpscg@gmail.com?subject=${encodeURIComponent(
       formData.subject
     )}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
@@ -61,6 +61,40 @@ const Contact = () => {
               </p>
 
               <div className="space-y-6">
+                {/* Address */}
+                <div className="flex items-start">
+                  <div className="bg-orange-100 rounded-lg p-3 mr-4">
+                    <svg
+                      className="w-6 h-6 text-orange-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      Address
+                    </h3>
+                    <p className="text-gray-700">
+                      Hanuman Market, Ramsagar Para,<br />
+                      RAIPUR CG 492001
+                    </p>
+                  </div>
+                </div>
+
                 {/* Email */}
                 <div className="flex items-start">
                   <div className="bg-orange-100 rounded-lg p-3 mr-4">
@@ -83,10 +117,10 @@ const Contact = () => {
                       {t.contact.info.email}
                     </h3>
                     <a
-                      href="mailto:cgpas@gmail.com"
+                      href="mailto:cgpscg@gmail.com"
                       className="text-orange-600 hover:text-orange-700 transition-colors duration-200"
                     >
-                      cgpas@gmail.com
+                      cgpscg@gmail.com
                     </a>
                   </div>
                 </div>
@@ -113,10 +147,10 @@ const Contact = () => {
                       {t.contact.info.phone}
                     </h3>
                     <a
-                      href="tel:9993961778"
+                      href="tel:07713562323"
                       className="text-orange-600 hover:text-orange-700 transition-colors duration-200"
                     >
-                      +91 9993961778
+                      0771- 3562323
                     </a>
                   </div>
                 </div>
