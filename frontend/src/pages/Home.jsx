@@ -23,11 +23,8 @@ const Home = () => {
               <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
             </div>
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                {t.home.aboutSection.paragraph1}
-              </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                {t.home.aboutSection.paragraph2}
+                {t.home.aboutSection.paragraph1}
               </p>
             </div>
           </div>

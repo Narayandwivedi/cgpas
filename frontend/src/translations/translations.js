@@ -29,30 +29,30 @@ export const translations = {
       aboutSection: {
         title: 'CGPAS के बारे में',
         paragraph1: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन (CGPAS) छत्तीसगढ़ में अग्रवाल समुदाय की वृद्धि और समृद्धि के लिए समर्पित मूल संगठन है। हम एकता को बढ़ावा देने, व्यापार विकास को प्रोत्साहित करने और सभी अग्रवालों के लिए अवसर पैदा करने के लिए प्रतिबद्ध हैं।',
-        paragraph2: 'छत्र संगठन के रूप में, CGPAS विभिन्न छोटे संगठनों और पहलों की देखरेख और समर्थन करता है, हमारे समुदाय के बंधनों को मजबूत करने और सामूहिक प्रगति को आगे बढ़ाने के लिए मिलकर काम करता है।'
+        paragraph2: ''
       },
       abcdSection: {
         title: 'ABCD - अग्रवाल बिजनेस एंड कम्युनिटी डेवलपमेंट',
         description: 'ABCD (अग्रवाल बिजनेस एंड कम्युनिटी डेवलपमेंट) CGPAS की एक प्रमुख पहल है। यह नेटवर्किंग, संसाधनों और सहयोगात्मक अवसरों के माध्यम से अग्रवाल उद्यमियों और व्यवसायों को सशक्त बनाने पर केंद्रित है।',
         forBusinesses: {
-          title: 'व्यवसायों के लिए',
-          description: 'विक्रेताओं से जुड़ें, अपने नेटवर्क का विस्तार करें, और हमारे व्यापक समुदाय मंच के माध्यम से अपने व्यवसाय को बढ़ाएं।',
+          title: 'विक्रेताओं के लिए',
+          description: 'सत्यापित खरीदारों से जुड़ें, अपने नेटवर्क का विस्तार करें, और हमारे व्यापक समुदाय मंच के माध्यम से अपने व्यवसाय को बढ़ाएं।',
           benefits: [
-            'सत्यापित विक्रेताओं तक पहुंच',
+            'सत्यापित खरीदारों तक पहुंच',
             'व्यापार नेटवर्किंग के अवसर',
             'समुदाय समर्थन और संसाधन'
           ],
           cta: 'विक्रेता के रूप में जुड़ें'
         },
         forMembers: {
-          title: 'सदस्यों के लिए',
-          description: 'अग्रवाल समुदाय के भीतर विशेष लाभों, कार्यक्रमों और अवसरों तक पहुंच प्राप्त करने के लिए सदस्य के रूप में शामिल हों।',
+          title: 'खरीदारों के लिए',
+          description: 'सत्यापित विक्रेताओं से जुड़ें और विशेष छूट और खरीदार विशेषाधिकारों का आनंद लें।',
           benefits: [
-            'विशेष सदस्य लाभ',
-            'सामुदायिक कार्यक्रम और प्रोग्राम',
-            'पेशेवर नेटवर्किंग'
+            'सत्यापित विक्रेताओं तक पहुंच',
+            'विशेष छूट और ऑफ़र',
+            'खरीदार के रूप में विशेषाधिकार'
           ],
-          cta: 'सदस्य के रूप में जुड़ें'
+          cta: 'खरीदार के रूप में जुड़ें'
         }
       },
       initiatives: {
@@ -290,30 +290,30 @@ export const translations = {
       aboutSection: {
         title: 'About CGPAS',
         paragraph1: 'Chhattisgarh Prantiya Agrawal Sangathan (CGPAS) is the parent wing dedicated to the growth and prosperity of the Agrawal community in Chhattisgarh. We are committed to fostering unity, promoting business development, and creating opportunities for all Agrawals.',
-        paragraph2: 'As the umbrella organization, CGPAS oversees and supports various smaller sangathans and initiatives, working together to strengthen our community bonds and drive collective progress.'
+        paragraph2: ''
       },
       abcdSection: {
         title: 'ABCD - Agrawal Business and Community Development',
         description: 'ABCD (Agrawal Business and Community Development) is one of the key initiatives under CGPAS. It focuses on empowering Agrawal entrepreneurs and businesses through networking, resources, and collaborative opportunities.',
         forBusinesses: {
-          title: 'For Businesses',
-          description: 'Connect with vendors, expand your network, and grow your business through our extensive community platform.',
+          title: 'For Vendors',
+          description: 'Connect with verified buyers, expand your network, and grow your business through our extensive community platform.',
           benefits: [
-            'Access to verified vendors',
+            'Access to verified buyers',
             'Business networking opportunities',
             'Community support and resources'
           ],
           cta: 'Join as Vendor'
         },
         forMembers: {
-          title: 'For Members',
-          description: 'Join as a member to access exclusive benefits, events, and opportunities within the Agrawal community.',
+          title: 'For Buyers',
+          description: 'Connect with verified vendors and enjoy exclusive discounts and buyer privileges.',
           benefits: [
-            'Exclusive member benefits',
-            'Community events and programs',
-            'Professional networking'
+            'Access to verified vendors',
+            'Exclusive discounts and offers',
+            'Privileges as a buyer'
           ],
-          cta: 'Join as Member'
+          cta: 'Join as Buyer'
         }
       },
       initiatives: {
