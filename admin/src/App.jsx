@@ -1,34 +1,52 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Sidebar from './component/Sidebar'
+import Dashboard from './pages/Dashboard'
+import Gallery from './pages/Gallery'
+import BlogManage from './pages/BlogManage'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="flex min-h-screen bg-gray-50">
+        {/* Sidebar */}
+        <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
+
+        {/* Main Content */}
+        <div className="flex-1 lg:ml-64">
+          {/* Header */}
+          <header className="bg-white shadow-sm sticky top-0 z-30">
+            <div className="flex items-center justify-between px-6 py-4">
+              <button
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="lg:hidden text-gray-600 hover:text-gray-900 p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+              <div className="flex-1 lg:flex-none">
+                <h2 className="text-xl font-bold text-gray-800 ml-4 lg:ml-0">
+                  ASTRO SATYA Admin Panel
+                </h2>
+              </div>
+            </div>
+          </header>
+
+          {/* Page Content */}
+          <main>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/blogs" element={<BlogManage />} />
+            </Routes>
+          </main>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Router>
   )
 }
 

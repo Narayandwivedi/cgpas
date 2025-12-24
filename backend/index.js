@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 const connectDB = require('./config/Mongodb');
 const blogRoutes = require('./routes/blogRoutes');
+const adminBlogRoutes = require('./routes/adminBlogRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -17,6 +18,7 @@ connectDB();
 
 // Routes
 app.use('/api/blogs', blogRoutes);
+app.use('/api/admin/blogs', adminBlogRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {
