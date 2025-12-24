@@ -6,6 +6,8 @@ const connectDB = require('./config/Mongodb');
 const blogRoutes = require('./routes/blogRoutes');
 const adminBlogRoutes = require('./routes/adminBlogRoutes');
 const uploadRoutes = require('./routes/uploadRoutes');
+const galleryRoutes = require('./routes/galleryRoutes');
+const adminGalleryRoutes = require('./routes/adminGalleryRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -25,6 +27,8 @@ connectDB();
 app.use('/api/blogs', blogRoutes);
 app.use('/api/admin/blogs', adminBlogRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/gallery', galleryRoutes);
+app.use('/api/admin/gallery', adminGalleryRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {

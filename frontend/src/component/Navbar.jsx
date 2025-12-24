@@ -52,6 +52,12 @@ const Navbar = () => {
               Blog
             </Link>
             <Link
+              to="/gallery"
+              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
+            >
+              Gallery
+            </Link>
+            <Link
               to="/contact"
               className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
             >
@@ -110,6 +116,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Blog
+            </Link>
+            <Link
+              to="/gallery"
+              className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Gallery
             </Link>
             <Link
               to="/contact"
