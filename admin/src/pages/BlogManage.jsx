@@ -7,6 +7,8 @@ const BlogManage = () => {
   const [loading, setLoading] = useState(true)
   const [showForm, setShowForm] = useState(false)
   const [editingBlog, setEditingBlog] = useState(null)
+  const [uploadingImage, setUploadingImage] = useState(false)
+  const [excerptManuallyEdited, setExcerptManuallyEdited] = useState(false)
   const [formData, setFormData] = useState({
     title: '',
     excerpt: '',
@@ -22,6 +24,7 @@ const BlogManage = () => {
   })
 
   const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+  const BASE_URL = import.meta.env.VITE_BASE_URL || 'http://localhost:5000'
 
   useEffect(() => {
     fetchBlogs()
@@ -71,6 +74,8 @@ const BlogManage = () => {
           metaDescription: blog.metaDescription || ''
         })
         setEditingBlog(blog)
+        // Mark as manually edited when editing existing blog
+        setExcerptManuallyEdited(true)
         setShowForm(true)
       }
     } catch (error) {
@@ -94,11 +99,111 @@ const BlogManage = () => {
       metaDescription: ''
     })
     setEditingBlog(null)
+    setExcerptManuallyEdited(false)
+  }
+
+  // Generate excerpt from content (30-40 words)
+  const generateExcerpt = (text) => {
+    if (!text || text.trim() === '') return ''
+
+    // Remove extra whitespace and newlines
+    const cleanText = text.replace(/\s+/g, ' ').trim()
+
+    // Split into words
+    const words = cleanText.split(' ')
+
+    // Take first 35 words (middle of 30-40 range)
+    const excerptWords = words.slice(0, 35)
+
+    // Join and add ellipsis if there are more words
+    let excerpt = excerptWords.join(' ')
+    if (words.length > 35) {
+      excerpt += '...'
+    }
+
+    // Limit to 200 characters (model constraint)
+    if (excerpt.length > 200) {
+      excerpt = excerpt.substring(0, 197) + '...'
+    }
+
+    return excerpt
   }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
+
+    // If user is editing excerpt manually, mark it as manually edited
+    if (name === 'excerpt') {
+      setExcerptManuallyEdited(true)
+      setFormData(prev => ({ ...prev, [name]: value }))
+    }
+    // If user is editing content and excerpt hasn't been manually edited, auto-generate
+    else if (name === 'content') {
+      setFormData(prev => {
+        const newData = { ...prev, content: value }
+        // Auto-generate excerpt only if not manually edited
+        if (!excerptManuallyEdited) {
+          newData.excerpt = generateExcerpt(value)
+        }
+        return newData
+      })
+    }
+    else {
+      setFormData(prev => ({ ...prev, [name]: value }))
+    }
+  }
+
+  const handleGenerateExcerpt = () => {
+    const generatedExcerpt = generateExcerpt(formData.content)
+    setFormData(prev => ({ ...prev, excerpt: generatedExcerpt }))
+    setExcerptManuallyEdited(false)
+  }
+
+  const handleImageUpload = async (e) => {
+    const file = e.target.files[0]
+    if (!file) return
+
+    // Check file type
+    const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp']
+    if (!allowedTypes.includes(file.type)) {
+      alert('Please upload a valid image file (jpeg, jpg, png, gif, webp)')
+      return
+    }
+
+    // Check file size (max 10MB)
+    if (file.size > 10 * 1024 * 1024) {
+      alert('Image size should be less than 10MB')
+      return
+    }
+
+    setUploadingImage(true)
+
+    try {
+      const formData = new FormData()
+      formData.append('image', file)
+
+      const response = await fetch(`${API_URL}/upload/blog-featured`, {
+        method: 'POST',
+        body: formData
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setFormData(prev => ({
+          ...prev,
+          featuredImage: BASE_URL + data.data.url
+        }))
+        alert(`Image uploaded successfully! Size: ${data.data.size}`)
+      } else {
+        alert(data.message || 'Failed to upload image')
+      }
+    } catch (error) {
+      console.error('Error uploading image:', error)
+      alert('Failed to upload image')
+    } finally {
+      setUploadingImage(false)
+    }
   }
 
   const handleSubmit = async (e) => {
@@ -302,23 +407,6 @@ const BlogManage = () => {
 
               <div className="md:col-span-2">
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Excerpt *
-                </label>
-                <textarea
-                  name="excerpt"
-                  value={formData.excerpt}
-                  onChange={handleInputChange}
-                  required
-                  maxLength={200}
-                  rows={2}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  placeholder="Brief description (max 200 characters)"
-                />
-                <p className="text-xs text-gray-500 mt-1">{formData.excerpt.length}/200</p>
-              </div>
-
-              <div className="md:col-span-2">
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Content *
                 </label>
                 <textarea
@@ -330,6 +418,39 @@ const BlogManage = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   placeholder="Write your blog content here..."
                 />
+              </div>
+
+              <div className="md:col-span-2">
+                <div className="flex items-center justify-between mb-2">
+                  <label className="block text-sm font-semibold text-gray-700">
+                    Excerpt * {!excerptManuallyEdited && formData.content && <span className="text-xs text-green-600 font-normal">(Auto-generated)</span>}
+                  </label>
+                  {formData.content && (
+                    <button
+                      type="button"
+                      onClick={handleGenerateExcerpt}
+                      className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-lg hover:bg-blue-200 transition-colors"
+                    >
+                      🔄 Regenerate from Content
+                    </button>
+                  )}
+                </div>
+                <textarea
+                  name="excerpt"
+                  value={formData.excerpt}
+                  onChange={handleInputChange}
+                  required
+                  maxLength={200}
+                  rows={3}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  placeholder="Auto-generated from content (30-40 words), or edit manually..."
+                />
+                <div className="flex items-center justify-between mt-1">
+                  <p className="text-xs text-gray-500">
+                    {excerptManuallyEdited ? '✏️ Manually edited' : '🤖 Auto-generated from first 30-40 words'}
+                  </p>
+                  <p className="text-xs text-gray-500">{formData.excerpt.length}/200</p>
+                </div>
               </div>
 
               <div>
@@ -394,18 +515,51 @@ const BlogManage = () => {
                 </select>
               </div>
 
-              <div>
+              <div className="md:col-span-2">
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Featured Image URL
+                  Featured Image
                 </label>
-                <input
-                  type="url"
-                  name="featuredImage"
-                  value={formData.featuredImage}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  placeholder="https://example.com/image.jpg"
-                />
+
+                {/* Image Preview */}
+                {formData.featuredImage && (
+                  <div className="mb-4 relative">
+                    <img
+                      src={formData.featuredImage}
+                      alt="Featured image preview"
+                      className="w-full max-w-2xl h-64 object-cover rounded-lg border-2 border-gray-200"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setFormData(prev => ({ ...prev, featuredImage: '' }))}
+                      className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full hover:bg-red-600 transition-colors"
+                      title="Remove image"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                )}
+
+                {/* Upload Button */}
+                <div>
+                  <label className="cursor-pointer">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                      className="hidden"
+                      disabled={uploadingImage}
+                    />
+                    <div className={`inline-flex bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all items-center space-x-2 ${uploadingImage ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                      <span>{uploadingImage ? '⏳' : '📤'}</span>
+                      <span className="font-semibold">
+                        {uploadingImage ? 'Uploading...' : 'Upload Image'}
+                      </span>
+                    </div>
+                  </label>
+                  <p className="text-xs text-gray-500 mt-2">
+                    Upload an image (will be optimized to WebP, 1200x630px for SEO)
+                  </p>
+                </div>
               </div>
 
               <div>
