@@ -6,6 +6,9 @@ import LanguageToggle from './LanguageToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [newsDropdown, setNewsDropdown] = useState(false);
+  const [membersDropdown, setMembersDropdown] = useState(false);
+  const [membersTypeDropdown, setMembersTypeDropdown] = useState(false);
   const { language } = useLanguage();
   const t = translations[language];
 
@@ -51,6 +54,108 @@ const Navbar = () => {
             >
               Blog
             </Link>
+
+            {/* News Dropdown */}
+            <div className="relative">
+              <button
+                onMouseEnter={() => setNewsDropdown(true)}
+                onMouseLeave={() => setNewsDropdown(false)}
+                className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium flex items-center"
+              >
+                News
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {newsDropdown && (
+                <div
+                  onMouseEnter={() => setNewsDropdown(true)}
+                  onMouseLeave={() => setNewsDropdown(false)}
+                  className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+                >
+                  <Link
+                    to="/news/international"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                  >
+                    International
+                  </Link>
+                  <Link
+                    to="/news/national"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                  >
+                    National
+                  </Link>
+                  <Link
+                    to="/news/cg"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                  >
+                    CG News
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Members Zone Dropdown */}
+            <div className="relative">
+              <button
+                onMouseEnter={() => setMembersDropdown(true)}
+                onMouseLeave={() => setMembersDropdown(false)}
+                className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium flex items-center"
+              >
+                Members Zone
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {membersDropdown && (
+                <div
+                  onMouseEnter={() => setMembersDropdown(true)}
+                  onMouseLeave={() => setMembersDropdown(false)}
+                  className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50"
+                >
+                  {/* Members Type Sub-dropdown */}
+                  <div className="relative">
+                    <button
+                      onMouseEnter={() => setMembersTypeDropdown(true)}
+                      onMouseLeave={() => setMembersTypeDropdown(false)}
+                      className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between"
+                    >
+                      Members Type
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                    {membersTypeDropdown && (
+                      <div
+                        onMouseEnter={() => setMembersTypeDropdown(true)}
+                        onMouseLeave={() => setMembersTypeDropdown(false)}
+                        className="absolute left-full top-0 ml-1 w-56 bg-white rounded-md shadow-lg py-1 z-50"
+                      >
+                        <Link
+                          to="/members/join-cgpas"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                        >
+                          Join as CGPAS Member
+                        </Link>
+                        <Link
+                          to="/members/join-abcd"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                        >
+                          Join as ABCD Member
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                  <Link
+                    to="/members/how-to-join"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                  >
+                    How to Join
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link
               to="/gallery"
               className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
@@ -123,6 +228,99 @@ const Navbar = () => {
             >
               Blog
             </Link>
+
+            {/* News Dropdown Mobile */}
+            <div>
+              <button
+                onClick={() => setNewsDropdown(!newsDropdown)}
+                className="w-full text-left px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium flex items-center justify-between"
+              >
+                News
+                <svg className={`w-4 h-4 transition-transform ${newsDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {newsDropdown && (
+                <div className="pl-6 space-y-1">
+                  <Link
+                    to="/news/international"
+                    className="block px-3 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    International
+                  </Link>
+                  <Link
+                    to="/news/national"
+                    className="block px-3 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    National
+                  </Link>
+                  <Link
+                    to="/news/cg"
+                    className="block px-3 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    CG News
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Members Zone Dropdown Mobile */}
+            <div>
+              <button
+                onClick={() => setMembersDropdown(!membersDropdown)}
+                className="w-full text-left px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium flex items-center justify-between"
+              >
+                Members Zone
+                <svg className={`w-4 h-4 transition-transform ${membersDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {membersDropdown && (
+                <div className="pl-6 space-y-1">
+                  {/* Members Type Sub-dropdown Mobile */}
+                  <div>
+                    <button
+                      onClick={() => setMembersTypeDropdown(!membersTypeDropdown)}
+                      className="w-full text-left px-3 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md flex items-center justify-between"
+                    >
+                      Members Type
+                      <svg className={`w-4 h-4 transition-transform ${membersTypeDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {membersTypeDropdown && (
+                      <div className="pl-6 space-y-1">
+                        <Link
+                          to="/members/join-cgpas"
+                          className="block px-3 py-2 text-xs text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          Join as CGPAS Member
+                        </Link>
+                        <Link
+                          to="/members/join-abcd"
+                          className="block px-3 py-2 text-xs text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          Join as ABCD Member
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                  <Link
+                    to="/members/how-to-join"
+                    className="block px-3 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    How to Join
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link
               to="/gallery"
               className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"

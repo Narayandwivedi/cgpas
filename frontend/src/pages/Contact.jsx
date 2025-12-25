@@ -10,6 +10,7 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
+    contactType: 'general',
     subject: '',
     message: '',
   });
@@ -23,10 +24,12 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const contactTypeLabel = formData.contactType === 'suggestion' ? 'Suggestion' :
+                            formData.contactType === 'complaint' ? 'Complaint' : 'General Inquiry';
     const mailtoLink = `mailto:cgpscg@gmail.com?subject=${encodeURIComponent(
-      formData.subject
+      `[${contactTypeLabel}] ${formData.subject}`
     )}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+      `Contact Type: ${contactTypeLabel}\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
     )}`;
     window.location.href = mailtoLink;
   };
@@ -262,6 +265,27 @@ const Contact = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
                       placeholder={t.contact.form.placeholders.phone}
                     />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="contactType"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Contact Type
+                    </label>
+                    <select
+                      id="contactType"
+                      name="contactType"
+                      value={formData.contactType}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all bg-white"
+                    >
+                      <option value="general">General Inquiry</option>
+                      <option value="suggestion">Suggestion</option>
+                      <option value="complaint">Complaint</option>
+                    </select>
                   </div>
 
                   <div>

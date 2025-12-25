@@ -45,6 +45,22 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link
+                  to="/suggestions"
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200"
+                >
+                  Suggestions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/complaint"
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200"
+                >
+                  Complaint
+                </Link>
+              </li>
+              <li>
                 <a
                   href="https://abcdvyapar.com"
                   target="_blank"
