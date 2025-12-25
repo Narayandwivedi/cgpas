@@ -10,7 +10,6 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    contactType: 'general',
     subject: '',
     message: '',
   });
@@ -24,12 +23,10 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const contactTypeLabel = formData.contactType === 'suggestion' ? 'Suggestion' :
-                            formData.contactType === 'complaint' ? 'Complaint' : 'General Inquiry';
     const mailtoLink = `mailto:cgpscg@gmail.com?subject=${encodeURIComponent(
-      `[${contactTypeLabel}] ${formData.subject}`
+      formData.subject
     )}&body=${encodeURIComponent(
-      `Contact Type: ${contactTypeLabel}\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
     )}`;
     window.location.href = mailtoLink;
   };
@@ -46,6 +43,32 @@ const Contact = () => {
             <p className="text-xl text-white mt-4">
               {t.contact.hero.subtitle}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links Section */}
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="/suggestions"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-600 transition-all duration-200 shadow-md hover:shadow-lg"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+              Do you have any suggestion? Suggest here
+            </a>
+            <a
+              href="/complaint"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-red-600 to-red-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-red-600 transition-all duration-200 shadow-md hover:shadow-lg"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              Do you have any complaint? Complaint here
+            </a>
           </div>
         </div>
       </section>
@@ -265,27 +288,6 @@ const Contact = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
                       placeholder={t.contact.form.placeholders.phone}
                     />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="contactType"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Contact Type
-                    </label>
-                    <select
-                      id="contactType"
-                      name="contactType"
-                      value={formData.contactType}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all bg-white"
-                    >
-                      <option value="general">General Inquiry</option>
-                      <option value="suggestion">Suggestion</option>
-                      <option value="complaint">Complaint</option>
-                    </select>
                   </div>
 
                   <div>
