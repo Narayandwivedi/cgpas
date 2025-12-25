@@ -117,10 +117,10 @@ const Footer = () => {
                   />
                 </svg>
                 <a
-                  href="mailto:cgpscg@gmail.com"
+                  href="mailto:cgpascg@gmail.com"
                   className="text-gray-300 hover:text-orange-400 transition-colors duration-200"
                 >
-                  cgpscg@gmail.com
+                  cgpascg@gmail.com
                 </a>
               </div>
               <div className="flex items-start">

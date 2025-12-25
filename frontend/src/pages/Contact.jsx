@@ -23,7 +23,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:cgpscg@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:cgpascg@gmail.com?subject=${encodeURIComponent(
       formData.subject
     )}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
@@ -143,10 +143,10 @@ const Contact = () => {
                       {t.contact.info.email}
                     </h3>
                     <a
-                      href="mailto:cgpscg@gmail.com"
+                      href="mailto:cgpascg@gmail.com"
                       className="text-orange-600 hover:text-orange-700 transition-colors duration-200"
                     >
-                      cgpscg@gmail.com
+                      cgpascg@gmail.com
                     </a>
                   </div>
                 </div>

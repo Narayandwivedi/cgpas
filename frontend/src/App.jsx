@@ -8,6 +8,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import AllNews from './pages/news/AllNews';
+import CGNews from './pages/news/CGNews';
+import NationalNews from './pages/news/NationalNews';
+import InternationalNews from './pages/news/InternationalNews';
 import Gallery from './pages/Gallery';
 import ExecutiveBody from './pages/ExecutiveBody';
 
@@ -24,6 +28,10 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/news" element={<AllNews />} />
+              <Route path="/news/cg" element={<CGNews />} />
+              <Route path="/news/national" element={<NationalNews />} />
+              <Route path="/news/international" element={<InternationalNews />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/executive-body" element={<ExecutiveBody />} />
             </Routes>

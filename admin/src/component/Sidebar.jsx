@@ -28,6 +28,12 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       icon: '📝',
       path: '/blogs',
       description: 'Manage Blog Posts'
+    },
+    {
+      name: 'News',
+      icon: '📰',
+      path: '/news',
+      description: 'Manage News Articles'
     }
   ]
 
