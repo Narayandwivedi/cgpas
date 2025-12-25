@@ -14,10 +14,6 @@ const gallerySchema = new mongoose.Schema({
   imageUrl: {
     type: String,
   },
-  // For images: path to thumbnail
-  thumbnailUrl: {
-    type: String,
-  },
   // For videos: YouTube video URL
   videoUrl: {
     type: String,
@@ -29,16 +25,8 @@ const gallerySchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["draft", "published", "archived"],
+    enum: ["draft", "published"],
     default: "published",
-  },
-  views: {
-    type: Number,
-    default: 0,
-  },
-  likes: {
-    type: Number,
-    default: 0,
   },
   uploadedBy: {
     type: String,

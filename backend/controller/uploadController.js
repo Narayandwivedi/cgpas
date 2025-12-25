@@ -113,32 +113,12 @@ const uploadGalleryImage = async (req, res) => {
       })
       .toFile(filepath);
 
-    // Create thumbnail
-    const thumbnailFilename = `gallery-${timestamp}-${randomString}-thumb.webp`;
-    const thumbnailPath = path.join(galleryDir, thumbnailFilename);
-
-    await sharp(req.file.buffer)
-      .resize({
-        width: 400,
-        height: 400,
-        fit: 'cover',
-        position: 'center'
-      })
-      .webp({
-        quality: 80,
-        effort: 6
-      })
-      .toFile(thumbnailPath);
-
-    // Get file sizes
+    // Get file size
     const stats = fs.statSync(filepath);
-    const thumbStats = fs.statSync(thumbnailPath);
     const fileSizeInKB = (stats.size / 1024).toFixed(2);
-    const thumbSizeInKB = (thumbStats.size / 1024).toFixed(2);
 
-    // Generate URLs
+    // Generate URL
     const imageUrl = `/uploads/gallery/${filename}`;
-    const thumbnailUrl = `/uploads/gallery/${thumbnailFilename}`;
 
     res.status(200).json({
       success: true,
@@ -146,9 +126,7 @@ const uploadGalleryImage = async (req, res) => {
       data: {
         filename,
         url: imageUrl,
-        thumbnailUrl,
         size: `${fileSizeInKB} KB`,
-        thumbnailSize: `${thumbSizeInKB} KB`,
         format: 'webp'
       }
     });
@@ -202,8 +180,73 @@ const deleteImage = async (req, res) => {
   }
 };
 
+// Upload executive body photo
+const uploadExecutiveBodyPhoto = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({
+        success: false,
+        message: 'No file uploaded'
+      });
+    }
+
+    // Ensure executive body directory exists
+    const executiveDir = path.join(uploadsDir, 'executive');
+    if (!fs.existsSync(executiveDir)) {
+      fs.mkdirSync(executiveDir, { recursive: true });
+    }
+
+    // Generate unique filename
+    const timestamp = Date.now();
+    const randomString = Math.random().toString(36).substring(2, 8);
+    const filename = `executive-${timestamp}-${randomString}.webp`;
+    const filepath = path.join(executiveDir, filename);
+
+    // Process image with sharp
+    // Optimize for executive body photos (square/portrait)
+    await sharp(req.file.buffer)
+      .resize({
+        width: 800,  // Standard size for profile photos
+        height: 800, // Square aspect ratio
+        fit: 'cover',
+        position: 'center'
+      })
+      .webp({
+        quality: 90,
+        effort: 6
+      })
+      .toFile(filepath);
+
+    // Get file size
+    const stats = fs.statSync(filepath);
+    const fileSizeInKB = (stats.size / 1024).toFixed(2);
+
+    // Generate URL
+    const imageUrl = `/uploads/executive/${filename}`;
+
+    res.status(200).json({
+      success: true,
+      message: 'Executive body photo uploaded successfully',
+      data: {
+        filename,
+        url: imageUrl,
+        size: `${fileSizeInKB} KB`,
+        format: 'webp'
+      }
+    });
+  } catch (error) {
+    console.error('Error uploading executive body photo:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Error uploading executive body photo',
+      error: error.message
+    });
+  }
+};
+
 module.exports = {
   uploadBlogFeaturedImage,
   uploadGalleryImage,
+  uploadExecutiveBodyPhoto,
   deleteImage
 };

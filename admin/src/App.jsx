@@ -4,6 +4,7 @@ import Sidebar from './component/Sidebar'
 import Dashboard from './pages/Dashboard'
 import Gallery from './pages/Gallery'
 import BlogManage from './pages/BlogManage'
+import ExecutiveBody from './pages/ExecutiveBody'
 import './App.css'
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/blogs" element={<BlogManage />} />
+              <Route path="/executive-body" element={<ExecutiveBody />} />
             </Routes>
           </main>
         </div>

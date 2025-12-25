@@ -79,7 +79,7 @@ const Gallery = () => {
                       <div className="relative aspect-video bg-gray-200 overflow-hidden">
                         <img
                           src={getImageUrl(item.imageUrl)}
-                          alt={item.altText || item.title}
+                          alt={item.altText || item.title || 'Gallery image'}
                           className="w-full h-full object-contain"
                         />
                       </div>

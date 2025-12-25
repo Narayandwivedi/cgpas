@@ -58,6 +58,12 @@ const Navbar = () => {
               Gallery
             </Link>
             <Link
+              to="/executive-body"
+              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
+            >
+              Executive Body
+            </Link>
+            <Link
               to="/contact"
               className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
             >
@@ -123,6 +129,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Gallery
+            </Link>
+            <Link
+              to="/executive-body"
+              className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Executive Body
             </Link>
             <Link
               to="/contact"

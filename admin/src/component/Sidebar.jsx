@@ -18,6 +18,12 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       description: 'Manage Gallery'
     },
     {
+      name: 'Executive Body',
+      icon: '👥',
+      path: '/executive-body',
+      description: 'Manage Members'
+    },
+    {
       name: 'Blogs',
       icon: '📝',
       path: '/blogs',

@@ -12,7 +12,6 @@ const Gallery = () => {
     title: '',
     mediaType: 'image',
     imageUrl: '',
-    thumbnailUrl: '',
     videoUrl: '',
     altText: '',
     status: 'published',
@@ -83,8 +82,7 @@ const Gallery = () => {
       if (data.success) {
         setFormData(prev => ({
           ...prev,
-          imageUrl: BASE_URL + data.data.url,
-          thumbnailUrl: BASE_URL + data.data.thumbnailUrl
+          imageUrl: BASE_URL + data.data.url
         }))
         alert(`Image uploaded successfully! Size: ${data.data.size}`)
       } else {
@@ -153,7 +151,6 @@ const Gallery = () => {
       title: item.title || '',
       mediaType: item.mediaType,
       imageUrl: item.imageUrl || '',
-      thumbnailUrl: item.thumbnailUrl || '',
       videoUrl: item.videoUrl || '',
       altText: item.altText || '',
       status: item.status,
@@ -189,7 +186,6 @@ const Gallery = () => {
       title: '',
       mediaType: 'image',
       imageUrl: '',
-      thumbnailUrl: '',
       videoUrl: '',
       altText: '',
       status: 'published',
@@ -256,7 +252,7 @@ const Gallery = () => {
               <div className="relative aspect-video bg-gray-200">
                 {item.mediaType === 'image' ? (
                   <img
-                    src={item.thumbnailUrl || item.imageUrl}
+                    src={item.imageUrl}
                     alt={item.altText || item.title}
                     className="w-full h-full object-cover"
                   />
@@ -388,13 +384,13 @@ const Gallery = () => {
                     {formData.imageUrl ? (
                       <div className="space-y-3">
                         <img
-                          src={formData.thumbnailUrl || formData.imageUrl}
+                          src={formData.imageUrl}
                           alt="Preview"
                           className="max-h-48 mx-auto rounded-lg"
                         />
                         <button
                           type="button"
-                          onClick={() => setFormData(prev => ({ ...prev, imageUrl: '', thumbnailUrl: '' }))}
+                          onClick={() => setFormData(prev => ({ ...prev, imageUrl: '' }))}
                           className="text-red-600 hover:text-red-700 text-sm font-semibold"
                         >
                           Remove Image
@@ -499,7 +495,6 @@ const Gallery = () => {
                   >
                     <option value="published">Published</option>
                     <option value="draft">Draft</option>
-                    <option value="archived">Archived</option>
                   </select>
                 </div>
                 <div>
