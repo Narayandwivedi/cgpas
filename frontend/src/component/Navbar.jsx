@@ -56,7 +56,7 @@ const Navbar = () => {
             </Link>
 
             {/* News Dropdown */}
-            <div className="relative">
+            <div className="relative group">
               <button
                 onMouseEnter={() => setNewsDropdown(true)}
                 onMouseLeave={() => setNewsDropdown(false)}
@@ -71,32 +71,34 @@ const Navbar = () => {
                 <div
                   onMouseEnter={() => setNewsDropdown(true)}
                   onMouseLeave={() => setNewsDropdown(false)}
-                  className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+                  className="absolute left-0 mt-0 pt-2 w-48 z-50"
                 >
-                  <Link
-                    to="/news/international"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
-                  >
-                    International
-                  </Link>
-                  <Link
-                    to="/news/national"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
-                  >
-                    National
-                  </Link>
-                  <Link
-                    to="/news/cg"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
-                  >
-                    CG News
-                  </Link>
+                  <div className="bg-white rounded-md shadow-lg py-1">
+                    <Link
+                      to="/news/international"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                    >
+                      International
+                    </Link>
+                    <Link
+                      to="/news/national"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                    >
+                      National
+                    </Link>
+                    <Link
+                      to="/news/cg"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                    >
+                      CG News
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
 
             {/* Members Zone Dropdown */}
-            <div className="relative">
+            <div className="relative group">
               <button
                 onMouseEnter={() => setMembersDropdown(true)}
                 onMouseLeave={() => setMembersDropdown(false)}
@@ -111,47 +113,53 @@ const Navbar = () => {
                 <div
                   onMouseEnter={() => setMembersDropdown(true)}
                   onMouseLeave={() => setMembersDropdown(false)}
-                  className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50"
+                  className="absolute left-0 mt-0 pt-2 w-56 z-50"
                 >
-                  {/* Members Type Sub-dropdown */}
-                  <div className="relative">
-                    <button
-                      onMouseEnter={() => setMembersTypeDropdown(true)}
-                      onMouseLeave={() => setMembersTypeDropdown(false)}
-                      className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between"
-                    >
-                      Members Type
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                    {membersTypeDropdown && (
-                      <div
+                  <div className="bg-white rounded-md shadow-lg py-1">
+                    {/* Members Type Sub-dropdown */}
+                    <div className="relative group/submenu">
+                      <button
                         onMouseEnter={() => setMembersTypeDropdown(true)}
                         onMouseLeave={() => setMembersTypeDropdown(false)}
-                        className="absolute left-full top-0 ml-1 w-56 bg-white rounded-md shadow-lg py-1 z-50"
+                        className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between"
                       >
-                        <Link
-                          to="/members/join-cgpas"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                        Members Type
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                      {membersTypeDropdown && (
+                        <div
+                          onMouseEnter={() => setMembersTypeDropdown(true)}
+                          onMouseLeave={() => setMembersTypeDropdown(false)}
+                          className="absolute left-full top-0 -ml-px w-56 bg-white rounded-md shadow-lg py-1 z-50"
                         >
-                          Join as CGPAS Member
-                        </Link>
-                        <Link
-                          to="/members/join-abcd"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
-                        >
-                          Join as ABCD Member
-                        </Link>
-                      </div>
-                    )}
+                          <a
+                            href="https://abcdvyapar.com/signup"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                          >
+                            Join as CGPAS Member
+                          </a>
+                          <a
+                            href="https://abcdvyapar.com/signup"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                          >
+                            Join as ABCD Member
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                    <Link
+                      to="/members/how-to-join"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                    >
+                      How to Join
+                    </Link>
                   </div>
-                  <Link
-                    to="/members/how-to-join"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
-                  >
-                    How to Join
-                  </Link>
                 </div>
               )}
             </div>
@@ -293,20 +301,24 @@ const Navbar = () => {
                     </button>
                     {membersTypeDropdown && (
                       <div className="pl-6 space-y-1">
-                        <Link
-                          to="/members/join-cgpas"
+                        <a
+                          href="https://abcdvyapar.com/signup"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="block px-3 py-2 text-xs text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
                           Join as CGPAS Member
-                        </Link>
-                        <Link
-                          to="/members/join-abcd"
+                        </a>
+                        <a
+                          href="https://abcdvyapar.com/signup"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="block px-3 py-2 text-xs text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
                           Join as ABCD Member
-                        </Link>
+                        </a>
                       </div>
                     )}
                   </div>
