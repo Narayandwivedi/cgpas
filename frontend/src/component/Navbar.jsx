@@ -14,20 +14,20 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-4 py-2 group">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-24 gap-4 md:gap-8 lg:gap-12">
+          <div className="flex items-center flex-shrink-0">
+            <Link to="/" className="flex items-center gap-3 md:gap-4 py-2 group">
               <img
                 src="/cgpas logo final.webp"
                 alt="CGPAS Logo"
-                className="h-16 md:h-20 w-auto"
+                className="h-14 md:h-16 lg:h-18 w-auto"
               />
               <div className="flex flex-col">
-                <span className="text-orange-600 text-2xl md:text-3xl font-bold tracking-tight leading-tight">
+                <span className="text-orange-600 text-xl md:text-2xl lg:text-3xl font-bold tracking-tight leading-tight">
                   {t.cgpas}
                 </span>
-                <span className="text-gray-600 text-[10px] md:text-xs font-medium tracking-wide">
+                <span className="text-gray-600 text-[9px] md:text-[10px] lg:text-xs font-medium tracking-wide">
                   {t.cgpasFullEnglish}
                 </span>
               </div>
@@ -35,22 +35,22 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-0.5 lg:space-x-1 xl:space-x-2 flex-shrink-0">
             <Link
               to="/"
-              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 whitespace-nowrap"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 whitespace-nowrap"
             >
               About
             </Link>
             <Link
               to="/blog"
-              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 whitespace-nowrap"
             >
               Blog
             </Link>
@@ -60,10 +60,10 @@ const Navbar = () => {
               <button
                 onMouseEnter={() => setNewsDropdown(true)}
                 onMouseLeave={() => setNewsDropdown(false)}
-                className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium flex items-center"
+                className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 flex items-center gap-1 whitespace-nowrap"
               >
                 News
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
@@ -71,24 +71,24 @@ const Navbar = () => {
                 <div
                   onMouseEnter={() => setNewsDropdown(true)}
                   onMouseLeave={() => setNewsDropdown(false)}
-                  className="absolute left-0 mt-0 pt-2 w-48 z-50"
+                  className="absolute left-0 mt-0 pt-2 w-52 z-50"
                 >
-                  <div className="bg-white rounded-md shadow-lg py-1">
+                  <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
                     <Link
                       to="/news/international"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                      className="block px-4 py-2.5 text-[14px] font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
                     >
                       International
                     </Link>
                     <Link
                       to="/news/national"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                      className="block px-4 py-2.5 text-[14px] font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
                     >
                       National
                     </Link>
                     <Link
                       to="/news/cg"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                      className="block px-4 py-2.5 text-[14px] font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
                     >
                       CG News
                     </Link>
@@ -102,10 +102,10 @@ const Navbar = () => {
               <button
                 onMouseEnter={() => setMembersDropdown(true)}
                 onMouseLeave={() => setMembersDropdown(false)}
-                className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium flex items-center"
+                className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 flex items-center gap-1 whitespace-nowrap"
               >
                 Members Zone
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
@@ -113,15 +113,15 @@ const Navbar = () => {
                 <div
                   onMouseEnter={() => setMembersDropdown(true)}
                   onMouseLeave={() => setMembersDropdown(false)}
-                  className="absolute left-0 mt-0 pt-2 w-56 z-50"
+                  className="absolute left-0 mt-0 pt-2 w-60 z-50"
                 >
-                  <div className="bg-white rounded-md shadow-lg py-1">
+                  <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
                     {/* Members Type Sub-dropdown */}
                     <div className="relative group/submenu">
                       <button
                         onMouseEnter={() => setMembersTypeDropdown(true)}
                         onMouseLeave={() => setMembersTypeDropdown(false)}
-                        className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between"
+                        className="w-full text-left px-4 py-2.5 text-[14px] font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between transition-colors"
                       >
                         Members Type
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,13 +132,13 @@ const Navbar = () => {
                         <div
                           onMouseEnter={() => setMembersTypeDropdown(true)}
                           onMouseLeave={() => setMembersTypeDropdown(false)}
-                          className="absolute left-full top-0 -ml-px w-56 bg-white rounded-md shadow-lg py-1 z-50"
+                          className="absolute left-full top-0 -ml-px w-60 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50"
                         >
                           <a
                             href="https://abcdvyapar.com/signup"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                            className="block px-4 py-2.5 text-[14px] font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
                           >
                             Join as CGPAS Member
                           </a>
@@ -146,7 +146,7 @@ const Navbar = () => {
                             href="https://abcdvyapar.com/signup"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                            className="block px-4 py-2.5 text-[14px] font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
                           >
                             Join as ABCD Member
                           </a>
@@ -155,7 +155,7 @@ const Navbar = () => {
                     </div>
                     <Link
                       to="/members/how-to-join"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                      className="block px-4 py-2.5 text-[14px] font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
                     >
                       How to Join
                     </Link>
@@ -166,23 +166,25 @@ const Navbar = () => {
 
             <Link
               to="/gallery"
-              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 whitespace-nowrap"
             >
               Gallery
             </Link>
             <Link
               to="/executive-body"
-              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 whitespace-nowrap"
             >
               Executive Body
             </Link>
             <Link
               to="/contact"
-              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 whitespace-nowrap"
             >
               Contact
             </Link>
-            <LanguageToggle />
+            <div className="ml-1 lg:ml-2">
+              <LanguageToggle />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
