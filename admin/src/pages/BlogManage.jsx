@@ -23,8 +23,9 @@ const BlogManage = () => {
     metaDescription: ''
   })
 
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
-  const BASE_URL = import.meta.env.VITE_BASE_URL || 'http://localhost:5000'
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000'
+  const API_URL = `${BACKEND_URL}/api`
+  const BASE_URL = BACKEND_URL
 
   useEffect(() => {
     fetchBlogs()
