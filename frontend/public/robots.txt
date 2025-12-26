@@ -1,14 +1,26 @@
 # robots.txt for CGPAS Website
+# Chhattisgarh Prantiya Agrawal Sangathan
 
 # Allow all search engines to crawl the entire site
 User-agent: *
 Allow: /
 
-# Disallow crawling of PDF files (optional - remove if you want PDFs indexed)
-# Disallow: /*.pdf$
+# Disallow admin routes
+Disallow: /admin/
+Disallow: /api/
+
+# Allow specific paths (optional, but helps clarify)
+Allow: /about
+Allow: /contact
+Allow: /blog
+Allow: /news
+Allow: /gallery
+Allow: /executive-body
+Allow: /branches
 
 # Sitemap location
 Sitemap: https://www.cgpas.org/sitemap.xml
 
 # Crawl-delay (optional, helps prevent server overload)
+# Uncomment if needed
 # Crawl-delay: 10

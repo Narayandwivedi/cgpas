@@ -297,24 +297,24 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-50">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-2 pt-1 pb-2 space-y-0.5">
             <Link
               to="/"
-              className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"
+              className="block px-3 py-1.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium text-sm"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"
+              className="block px-3 py-1.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium text-sm"
               onClick={() => setIsOpen(false)}
             >
               About
             </Link>
             <Link
               to="/blog"
-              className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"
+              className="block px-3 py-1.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium text-sm"
               onClick={() => setIsOpen(false)}
             >
               Blog
@@ -324,7 +324,7 @@ const Navbar = () => {
             <div>
               <button
                 onClick={() => setNewsDropdown(!newsDropdown)}
-                className="w-full text-left px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium flex items-center justify-between"
+                className="w-full text-left px-3 py-1.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium text-sm flex items-center justify-between"
               >
                 News
                 <svg className={`w-4 h-4 transition-transform ${newsDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -332,31 +332,31 @@ const Navbar = () => {
                 </svg>
               </button>
               {newsDropdown && (
-                <div className="pl-6 space-y-1">
+                <div className="pl-4 space-y-0.5">
                   <Link
                     to="/news"
-                    className="block px-3 py-2 text-sm font-semibold text-orange-600 hover:bg-orange-50 rounded-md"
+                    className="block px-3 py-1 text-xs font-semibold text-orange-600 hover:bg-orange-50 rounded-md"
                     onClick={() => setIsOpen(false)}
                   >
                     All News
                   </Link>
                   <Link
                     to="/news/cg"
-                    className="block px-3 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                    className="block px-3 py-1 text-xs text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
                     onClick={() => setIsOpen(false)}
                   >
                     CG News
                   </Link>
                   <Link
                     to="/news/national"
-                    className="block px-3 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                    className="block px-3 py-1 text-xs text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
                     onClick={() => setIsOpen(false)}
                   >
                     National
                   </Link>
                   <Link
                     to="/news/international"
-                    className="block px-3 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                    className="block px-3 py-1 text-xs text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
                     onClick={() => setIsOpen(false)}
                   >
                     International
@@ -369,7 +369,7 @@ const Navbar = () => {
             <div>
               <button
                 onClick={() => setMembersDropdown(!membersDropdown)}
-                className="w-full text-left px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium flex items-center justify-between"
+                className="w-full text-left px-3 py-1.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium text-sm flex items-center justify-between"
               >
                 Members Zone
                 <svg className={`w-4 h-4 transition-transform ${membersDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -377,12 +377,12 @@ const Navbar = () => {
                 </svg>
               </button>
               {membersDropdown && (
-                <div className="pl-6 space-y-1">
+                <div className="pl-4 space-y-0.5">
                   {/* Members Type Sub-dropdown Mobile */}
                   <div>
                     <button
                       onClick={() => setMembersTypeDropdown(!membersTypeDropdown)}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md flex items-center justify-between"
+                      className="w-full text-left px-3 py-1 text-xs text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md flex items-center justify-between"
                     >
                       Members Type
                       <svg className={`w-4 h-4 transition-transform ${membersTypeDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -390,12 +390,12 @@ const Navbar = () => {
                       </svg>
                     </button>
                     {membersTypeDropdown && (
-                      <div className="pl-6 space-y-1">
+                      <div className="pl-4 space-y-0.5">
                         <a
                           href="https://abcdvyapar.com/signup"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-3 py-2 text-xs text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                          className="block px-3 py-1 text-[10px] text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
                           Join as CGPAS Member
@@ -404,7 +404,7 @@ const Navbar = () => {
                           href="https://abcdvyapar.com/signup"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-3 py-2 text-xs text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                          className="block px-3 py-1 text-[10px] text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
                           Join as ABCD Member
@@ -414,7 +414,7 @@ const Navbar = () => {
                   </div>
                   <Link
                     to="/members/how-to-join"
-                    className="block px-3 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                    className="block px-3 py-1 text-xs text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-md"
                     onClick={() => setIsOpen(false)}
                   >
                     How to Join
@@ -425,33 +425,33 @@ const Navbar = () => {
 
             <Link
               to="/gallery"
-              className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"
+              className="block px-3 py-1.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium text-sm"
               onClick={() => setIsOpen(false)}
             >
               Gallery
             </Link>
             <Link
               to="/executive-body"
-              className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"
+              className="block px-3 py-1.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium text-sm"
               onClick={() => setIsOpen(false)}
             >
               Executive Body
             </Link>
             <Link
               to="/branches"
-              className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"
+              className="block px-3 py-1.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium text-sm"
               onClick={() => setIsOpen(false)}
             >
               Branches
             </Link>
             <Link
               to="/contact"
-              className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"
+              className="block px-3 py-1.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium text-sm"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
-            <div className="px-3 py-2">
+            <div className="px-3 py-1.5">
               <LanguageToggle />
             </div>
           </div>

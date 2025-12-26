@@ -7,7 +7,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://www.cgpas.org/</loc>
-    <lastmod>2025-12-24</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- About Page -->
   <url>
     <loc>https://www.cgpas.org/about</loc>
-    <lastmod>2025-12-24</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,7 +23,68 @@
   <!-- Contact Page -->
   <url>
     <loc>https://www.cgpas.org/contact</loc>
-    <lastmod>2025-12-24</lastmod>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Page -->
+  <url>
+    <loc>https://www.cgpas.org/blog</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- News Pages -->
+  <url>
+    <loc>https://www.cgpas.org/news</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cgpas.org/news/cg</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cgpas.org/news/national</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cgpas.org/news/international</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://www.cgpas.org/gallery</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Executive Body Page -->
+  <url>
+    <loc>https://www.cgpas.org/executive-body</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Branches Page -->
+  <url>
+    <loc>https://www.cgpas.org/branches</loc>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
