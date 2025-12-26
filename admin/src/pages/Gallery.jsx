@@ -244,9 +244,9 @@ const Gallery = () => {
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-6">
           {galleryItems.map((item) => (
-            <div key={item._id} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+            <div key={item._id} className="bg-white rounded-lg md:rounded-xl shadow-md md:shadow-lg overflow-hidden group hover:shadow-xl transition-all">
               <div className="relative aspect-video bg-gray-200">
                 {item.mediaType === 'image' ? (
                   <img
@@ -262,52 +262,54 @@ const Gallery = () => {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
-                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center">
-                        <Video className="text-white" size={32} />
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-red-600 rounded-full flex items-center justify-center">
+                        <Video className="text-white" size={20} />
                       </div>
                     </div>
                   </div>
                 )}
-                <div className="absolute top-2 right-2">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                <div className="absolute top-1 right-1 md:top-2 md:right-2">
+                  <span className={`px-1.5 py-0.5 md:px-3 md:py-1 rounded-full text-xs font-semibold ${
                     item.mediaType === 'image'
                       ? 'bg-blue-500 text-white'
                       : 'bg-red-500 text-white'
                   }`}>
-                    {item.mediaType === 'image' ? '📷 Image' : '🎥 Video'}
+                    <span className="hidden md:inline">{item.mediaType === 'image' ? '📷 Image' : '🎥 Video'}</span>
+                    <span className="md:hidden">{item.mediaType === 'image' ? '📷' : '🎥'}</span>
                   </span>
                 </div>
               </div>
 
-              <div className="p-4">
-                <h3 className="font-semibold text-gray-800 mb-1 line-clamp-1">{item.title || 'Untitled'}</h3>
-                <div className="flex items-center justify-between mt-3">
-                  <div className="flex gap-2">
-                    <span className={`text-xs px-2 py-1 rounded ${
+              <div className="p-2 md:p-4">
+                <h3 className="text-xs md:text-base font-semibold text-gray-800 mb-1 line-clamp-1">{item.title || 'Untitled'}</h3>
+                <div className="flex items-center justify-between mt-2 md:mt-3">
+                  <div className="flex gap-1 md:gap-2">
+                    <span className={`text-xs px-1.5 py-0.5 md:px-2 md:py-1 rounded ${
                       item.status === 'published'
                         ? 'bg-green-100 text-green-700'
                         : 'bg-yellow-100 text-yellow-700'
                     }`}>
-                      {item.status}
+                      <span className="hidden md:inline">{item.status}</span>
+                      <span className="md:hidden">{item.status === 'published' ? '✓' : '•'}</span>
                     </span>
-                    <span className="text-xs px-2 py-1 rounded bg-purple-100 text-purple-700" title="Priority Order">
+                    <span className="text-xs px-1.5 py-0.5 md:px-2 md:py-1 rounded bg-purple-100 text-purple-700" title="Priority Order">
                       #{item.priority || 0}
                     </span>
                   </div>
-                  <div className="flex space-x-2">
+                  <div className="flex space-x-1 md:space-x-2">
                     <button
                       onClick={() => handleEdit(item)}
-                      className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                      className="p-1.5 md:p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
                       title="Edit"
                     >
-                      <Edit size={18} />
+                      <Edit size={16} className="md:w-[18px] md:h-[18px]" />
                     </button>
                     <button
                       onClick={() => handleDelete(item._id)}
-                      className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                      className="p-1.5 md:p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
                       title="Delete"
                     >
-                      <Trash2 size={18} />
+                      <Trash2 size={16} className="md:w-[18px] md:h-[18px]" />
                     </button>
                   </div>
                 </div>

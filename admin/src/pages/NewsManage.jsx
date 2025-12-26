@@ -324,12 +324,12 @@ const NewsManage = () => {
           ) : (
             <div className="grid grid-cols-1 gap-4">
               {news.map((news) => (
-                <div key={news._id} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <h3 className="text-xl font-bold text-gray-800">{news.title}</h3>
-                        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                <div key={news._id} className="bg-white rounded-lg md:rounded-xl shadow-md hover:shadow-lg transition-shadow p-3 md:p-6">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start gap-2 mb-2">
+                        <h3 className="text-sm md:text-xl font-bold text-gray-800 line-clamp-2 flex-1">{news.title}</h3>
+                        <span className={`px-2 md:px-3 py-0.5 md:py-1 rounded-full text-xs font-semibold whitespace-nowrap flex-shrink-0 ${
                           news.status === 'published'
                             ? 'bg-green-100 text-green-700'
                             : news.status === 'draft'
@@ -339,34 +339,41 @@ const NewsManage = () => {
                           {news.status}
                         </span>
                       </div>
-                      <p className="text-gray-600 mb-3">{news.excerpt}</p>
-                      <div className="flex items-center space-x-4 text-sm text-gray-500">
-                        <span>📁 {news.newsType}</span>
-                        <span>👁️ {news.views} views</span>
-                        <span>📅 {new Date(news.createdAt).toLocaleDateString()}</span>
+                      <p className="text-xs md:text-base text-gray-600 mb-2 md:mb-3 line-clamp-2">{news.excerpt}</p>
+                      <div className="flex flex-wrap items-center gap-2 md:gap-4 text-xs md:text-sm text-gray-500">
+                        <span className="truncate">📁 {news.newsType}</span>
+                        <span className="whitespace-nowrap">👁️ {news.views}</span>
+                        <span className="hidden md:inline">📅 {new Date(news.createdAt).toLocaleDateString()}</span>
                       </div>
                       {news.tags && news.tags.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mt-3">
-                          {news.tags.map((tag, index) => (
-                            <span key={index} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
+                        <div className="flex flex-wrap gap-1.5 md:gap-2 mt-2 md:mt-3">
+                          {news.tags.slice(0, 3).map((tag, index) => (
+                            <span key={index} className="bg-gray-100 text-gray-700 px-2 md:px-3 py-0.5 md:py-1 rounded-full text-xs">
                               {tag}
                             </span>
                           ))}
+                          {news.tags.length > 3 && (
+                            <span className="text-xs text-gray-500">+{news.tags.length - 3} more</span>
+                          )}
                         </div>
                       )}
                     </div>
-                    <div className="flex items-center space-x-2 ml-4">
+                    <div className="flex flex-col md:flex-row items-center gap-1.5 md:gap-2 flex-shrink-0">
                       <button
                         onClick={() => handleEditNews(news)}
-                        className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+                        className="bg-blue-500 text-white p-2 md:px-4 md:py-2 rounded-lg hover:bg-blue-600 transition-colors"
+                        title="Edit"
                       >
-                        ✏️ Edit
+                        <span className="md:hidden">✏️</span>
+                        <span className="hidden md:inline">✏️ Edit</span>
                       </button>
                       <button
                         onClick={() => handleDelete(news._id)}
-                        className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors"
+                        className="bg-red-500 text-white p-2 md:px-4 md:py-2 rounded-lg hover:bg-red-600 transition-colors"
+                        title="Delete"
                       >
-                        🗑️ Delete
+                        <span className="md:hidden">🗑️</span>
+                        <span className="hidden md:inline">🗑️ Delete</span>
                       </button>
                     </div>
                   </div>

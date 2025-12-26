@@ -213,9 +213,9 @@ const ExecutiveBody = () => {
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-6">
           {members.map((member) => (
-            <div key={member._id} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+            <div key={member._id} className="bg-white rounded-lg md:rounded-xl shadow-md md:shadow-lg overflow-hidden group hover:shadow-xl transition-all">
               <div className="relative aspect-square bg-gray-200">
                 <img
                   src={member.imageUrl}
@@ -224,37 +224,38 @@ const ExecutiveBody = () => {
                 />
               </div>
 
-              <div className="p-4">
-                <h3 className="font-semibold text-gray-800 mb-1 line-clamp-1">{member.name}</h3>
-                <p className="text-sm text-purple-600 font-medium mb-1">{member.position}</p>
-                <p className="text-sm text-gray-600 mb-2">{member.organization}</p>
-                <div className="flex items-center justify-between mt-3">
-                  <div className="flex gap-2">
-                    <span className={`text-xs px-2 py-1 rounded ${
+              <div className="p-2 md:p-4">
+                <h3 className="text-xs md:text-base font-semibold text-gray-800 mb-0.5 md:mb-1 line-clamp-1">{member.name}</h3>
+                <p className="text-xs md:text-sm text-purple-600 font-medium mb-0.5 md:mb-1 line-clamp-1">{member.position}</p>
+                <p className="text-xs md:text-sm text-gray-600 mb-1 md:mb-2 line-clamp-1">{member.organization}</p>
+                <div className="flex items-center justify-between mt-2 md:mt-3">
+                  <div className="flex gap-1 md:gap-2">
+                    <span className={`text-xs px-1.5 py-0.5 md:px-2 md:py-1 rounded ${
                       member.status === 'published'
                         ? 'bg-green-100 text-green-700'
                         : 'bg-yellow-100 text-yellow-700'
                     }`}>
-                      {member.status}
+                      <span className="hidden md:inline">{member.status}</span>
+                      <span className="md:hidden">{member.status === 'published' ? '✓' : '•'}</span>
                     </span>
-                    <span className="text-xs px-2 py-1 rounded bg-purple-100 text-purple-700" title="Priority Order">
+                    <span className="text-xs px-1.5 py-0.5 md:px-2 md:py-1 rounded bg-purple-100 text-purple-700" title="Priority Order">
                       #{member.priority || 0}
                     </span>
                   </div>
-                  <div className="flex space-x-2">
+                  <div className="flex space-x-1 md:space-x-2">
                     <button
                       onClick={() => handleEdit(member)}
-                      className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                      className="p-1.5 md:p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
                       title="Edit"
                     >
-                      <Edit size={18} />
+                      <Edit size={16} className="md:w-[18px] md:h-[18px]" />
                     </button>
                     <button
                       onClick={() => handleDelete(member._id)}
-                      className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                      className="p-1.5 md:p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
                       title="Delete"
                     >
-                      <Trash2 size={18} />
+                      <Trash2 size={16} className="md:w-[18px] md:h-[18px]" />
                     </button>
                   </div>
                 </div>
