@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           {/* About Section */}
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 md:col-span-1 text-center">
             <h3 className="text-base md:text-xl font-bold mb-3 md:mb-4 text-orange-400">CGPAS</h3>
             <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-1">
               Chhattisgarh Prantiya Agrawal Sammelan (Sangathan)
