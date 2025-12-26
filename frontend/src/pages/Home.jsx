@@ -13,17 +13,17 @@ const Home = () => {
       <HeroSection />
 
       {/* About CGPAS Section */}
-      <section className="py-16 bg-white border-t-4 border-gray-200">
+      <section className="py-8 md:py-16 bg-white border-t-4 border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-4 border-gray-900 rounded-xl p-8 md:p-12 bg-gradient-to-br from-orange-50 to-white shadow-xl">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="border-4 border-gray-900 rounded-xl p-4 md:p-8 lg:p-12 bg-gradient-to-br from-orange-50 to-white shadow-xl">
+            <div className="text-center mb-4 md:mb-8">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">
                 {t.home.aboutSection.title}
               </h2>
-              <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+              <div className="w-16 md:w-24 h-1 bg-orange-500 mx-auto mb-4 md:mb-8"></div>
             </div>
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-sm md:text-lg text-gray-700 leading-relaxed">
                 {t.home.aboutSection.paragraph1}
               </p>
             </div>
@@ -32,25 +32,25 @@ const Home = () => {
       </section>
 
       {/* ABCD Section */}
-      <section className="py-16 bg-gray-50 border-t-4 border-gray-200">
+      <section className="py-8 md:py-16 bg-gray-50 border-t-4 border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-4 border-gray-900 rounded-xl p-8 md:p-12 bg-white shadow-xl">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="border-4 border-gray-900 rounded-xl p-4 md:p-8 lg:p-12 bg-white shadow-xl">
+            <div className="text-center mb-6 md:mb-10">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">
                 {t.home.abcdSection.title}
               </h2>
-              <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
-              <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              <div className="w-16 md:w-24 h-1 bg-orange-500 mx-auto mb-4 md:mb-6"></div>
+              <p className="text-sm md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
                 {t.home.abcdSection.description}
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10">
-              <div className="border-2 border-gray-300 p-6 rounded-lg hover:border-orange-500 transition-all duration-300 bg-orange-50">
-                <div className="flex items-center mb-4">
-                  <div className="bg-orange-500 p-3 rounded-lg mr-4">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-10">
+              <div className="border-2 border-gray-300 p-4 md:p-6 rounded-lg hover:border-orange-500 transition-all duration-300 bg-orange-50">
+                <div className="flex items-center mb-3 md:mb-4">
+                  <div className="bg-orange-500 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
                     <svg
-                      className="w-8 h-8 text-white"
+                      className="w-6 h-6 md:w-8 md:h-8 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -63,17 +63,17 @@ const Home = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">
+                  <h3 className="text-lg md:text-2xl font-bold text-gray-900">
                     {t.home.abcdSection.forBusinesses.title}
                   </h3>
                 </div>
-                <p className="text-gray-700 mb-4 text-base">
+                <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
                   {t.home.abcdSection.forBusinesses.description}
                 </p>
-                <ul className="text-gray-700 space-y-3 mb-6">
+                <ul className="text-gray-700 space-y-2 md:space-y-3 mb-4 md:mb-6 text-sm md:text-base">
                   {t.home.abcdSection.forBusinesses.benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="text-orange-600 mr-3 text-xl font-bold">✓</span>
+                      <span className="text-orange-600 mr-2 md:mr-3 text-lg md:text-xl font-bold">✓</span>
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -82,17 +82,17 @@ const Home = () => {
                   href="https://vendor.abcdvyapar.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-gray-900 text-white text-center px-6 py-3 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-lg"
+                  className="block w-full bg-gray-900 text-white text-center px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-sm md:text-lg hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-lg"
                 >
                   {t.home.abcdSection.forBusinesses.cta}
                 </a>
               </div>
 
-              <div className="border-2 border-gray-300 p-6 rounded-lg hover:border-orange-500 transition-all duration-300 bg-orange-50">
-                <div className="flex items-center mb-4">
-                  <div className="bg-orange-500 p-3 rounded-lg mr-4">
+              <div className="border-2 border-gray-300 p-4 md:p-6 rounded-lg hover:border-orange-500 transition-all duration-300 bg-orange-50">
+                <div className="flex items-center mb-3 md:mb-4">
+                  <div className="bg-orange-500 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
                     <svg
-                      className="w-8 h-8 text-white"
+                      className="w-6 h-6 md:w-8 md:h-8 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -105,17 +105,17 @@ const Home = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">
+                  <h3 className="text-lg md:text-2xl font-bold text-gray-900">
                     {t.home.abcdSection.forMembers.title}
                   </h3>
                 </div>
-                <p className="text-gray-700 mb-4 text-base">
+                <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
                   {t.home.abcdSection.forMembers.description}
                 </p>
-                <ul className="text-gray-700 space-y-3 mb-6">
+                <ul className="text-gray-700 space-y-2 md:space-y-3 mb-4 md:mb-6 text-sm md:text-base">
                   {t.home.abcdSection.forMembers.benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="text-orange-600 mr-3 text-xl font-bold">✓</span>
+                      <span className="text-orange-600 mr-2 md:mr-3 text-lg md:text-xl font-bold">✓</span>
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -124,7 +124,7 @@ const Home = () => {
                   href="https://abcdvyapar.com/signup"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-orange-600 text-white text-center px-6 py-3 rounded-lg font-semibold text-lg hover:bg-orange-700 transition-all duration-200 shadow-md hover:shadow-lg"
+                  className="block w-full bg-orange-600 text-white text-center px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-sm md:text-lg hover:bg-orange-700 transition-all duration-200 shadow-md hover:shadow-lg"
                 >
                   {t.home.abcdSection.forMembers.cta}
                 </a>
@@ -135,147 +135,147 @@ const Home = () => {
       </section>
 
       {/* Our Key Initiatives Section */}
-      <section className="py-16 bg-white border-t-4 border-gray-200">
+      <section className="py-8 md:py-16 bg-white border-t-4 border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">
               {t.home.initiatives.title}
             </h2>
-            <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+            <div className="w-16 md:w-24 h-1 bg-orange-500 mx-auto mb-4 md:mb-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {/* Annual Agra Alankaran */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300">
-              <div className="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
+              <div className="bg-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {t.home.initiatives.list.agraAlankaran.title}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                 {t.home.initiatives.list.agraAlankaran.description}
               </p>
             </div>
 
             {/* Agra Panchayat */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300">
-              <div className="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
+              <div className="bg-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {t.home.initiatives.list.agraPanchayat.title}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                 {t.home.initiatives.list.agraPanchayat.description}
               </p>
             </div>
 
             {/* Mangal Parinay */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300">
-              <div className="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
+              <div className="bg-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {t.home.initiatives.list.mangalParinay.title}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                 {t.home.initiatives.list.mangalParinay.description}
               </p>
             </div>
 
             {/* Interest-Free Education Loan */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300">
-              <div className="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
+              <div className="bg-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {t.home.initiatives.list.educationLoan.title}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                 {t.home.initiatives.list.educationLoan.description}
               </p>
             </div>
 
             {/* Ambulance Support */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300">
-              <div className="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
+              <div className="bg-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {t.home.initiatives.list.ambulance.title}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                 {t.home.initiatives.list.ambulance.description}
               </p>
             </div>
 
             {/* Agra Kanya Vivah */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300">
-              <div className="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
+              <div className="bg-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {t.home.initiatives.list.kanyaVivah.title}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                 {t.home.initiatives.list.kanyaVivah.description}
               </p>
             </div>
 
             {/* Free Mass Weddings */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300">
-              <div className="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
+              <div className="bg-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {t.home.initiatives.list.freeWeddings.title}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                 {t.home.initiatives.list.freeWeddings.description}
               </p>
             </div>
 
             {/* Agra Sanjha Chulha */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300">
-              <div className="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
+              <div className="bg-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {t.home.initiatives.list.sanjhaChulha.title}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                 {t.home.initiatives.list.sanjhaChulha.description}
               </p>
             </div>
 
             {/* COVID Relief Fund */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300">
-              <div className="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
+              <div className="bg-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {t.home.initiatives.list.covidRelief.title}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                 {t.home.initiatives.list.covidRelief.description}
               </p>
             </div>
@@ -284,25 +284,25 @@ const Home = () => {
       </section>
 
       {/* Organizations Section */}
-      <section className="py-16 bg-gray-50 border-t-4 border-gray-200">
+      <section className="py-8 md:py-16 bg-gray-50 border-t-4 border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">
               {t.home.organizations.title}
             </h2>
-            <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+            <div className="w-16 md:w-24 h-1 bg-orange-500 mx-auto mb-4 md:mb-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
             {/* Shri Agrasen Charitable Trust */}
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-4 md:p-8 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">
                 {t.home.organizations.trust.name}
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
                 {t.home.organizations.trust.chairman}
               </p>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-gray-700 text-sm md:text-base">
                 {t.home.organizations.trust.activities.map((activity, index) => (
                   <li key={index} className="flex items-start">
                     <span className="text-orange-600 mr-2">•</span>
@@ -313,14 +313,14 @@ const Home = () => {
             </div>
 
             {/* Raipur District Mahila Agrawal Sangathan */}
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-4 md:p-8 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">
                 {t.home.organizations.mahila.name}
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
                 {t.home.organizations.mahila.president}
               </p>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-gray-700 text-sm md:text-base">
                 {t.home.organizations.mahila.activities.map((activity, index) => (
                   <li key={index} className="flex items-start">
                     <span className="text-orange-600 mr-2">•</span>
@@ -334,18 +334,18 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
+      <section className="py-8 md:py-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
             {t.home.cta.title}
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto">
             {t.home.cta.description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg"
+              className="bg-white text-orange-600 px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-sm md:text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg"
             >
               {t.home.cta.contact}
             </a>
@@ -353,7 +353,7 @@ const Home = () => {
               href="https://abcdvyapar.com/signup"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-all duration-200 shadow-lg"
+              className="bg-gray-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-sm md:text-lg hover:bg-gray-800 transition-all duration-200 shadow-lg"
             >
               {t.home.cta.becomeMember}
             </a>

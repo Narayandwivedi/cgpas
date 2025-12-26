@@ -75,7 +75,7 @@ const BlogsPage = () => {
       <div className="min-h-screen bg-gray-50">
       {/* Search Section */}
       <div className="bg-white shadow-sm border-b">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 py-4 md:py-6">
           <div className="flex justify-center">
             {/* Search Bar */}
             <form onSubmit={handleSearch} className="w-full max-w-2xl">
@@ -86,17 +86,17 @@ const BlogsPage = () => {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="Search blogs..."
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full pl-10 pr-4 py-2 md:py-3 text-sm md:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 md:h-5 md:w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                   </div>
                 </div>
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm md:text-base"
                 >
                   Search
                 </button>
@@ -107,7 +107,7 @@ const BlogsPage = () => {
       </div>
 
       {/* Blog Grid */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-6 md:py-12">
         {loading ? (
           <div className="flex justify-center items-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
@@ -128,7 +128,7 @@ const BlogsPage = () => {
               >
                 <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer">
                   {/* Blog Image or Alt Text */}
-                  <div className="h-56 lg:h-64 bg-gray-200" style={{ aspectRatio: '16/9' }}>
+                  <div className="h-40 md:h-56 lg:h-64 bg-gray-200" style={{ aspectRatio: '16/9' }}>
                     {blog.featuredImage ? (
                       <img
                         src={getImageUrl(blog.featuredImage)}
@@ -156,10 +156,10 @@ const BlogsPage = () => {
                   </div>
 
                   {/* Blog Content */}
-                  <div className="p-6">
+                  <div className="p-4 md:p-6">
                     {/* Category Badge */}
-                    <div className="mb-3">
-                      <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full capitalize ${
+                    <div className="mb-2 md:mb-3">
+                      <span className={`inline-block px-2 py-0.5 md:px-3 md:py-1 text-xs font-semibold rounded-full capitalize ${
                         blog.category === 'cricket' ? 'bg-blue-100 text-blue-800' :
                         blog.category === 'fantasy' ? 'bg-purple-100 text-purple-800' :
                         blog.category === 'tips' ? 'bg-orange-100 text-orange-800' :
@@ -171,17 +171,17 @@ const BlogsPage = () => {
                     </div>
 
                     {/* Blog Title */}
-                    <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-blue-600 transition-colors">
+                    <h2 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3 line-clamp-2 hover:text-blue-600 transition-colors">
                       {blog.title}
                     </h2>
 
                     {/* Blog Excerpt */}
-                    <p className="text-gray-600 mb-4 line-clamp-3">
+                    <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4 line-clamp-3">
                       {blog.excerpt}
                     </p>
 
                     {/* Blog Meta */}
-                    <div className="flex items-center justify-between text-sm text-gray-500">
+                    <div className="flex items-center justify-between text-xs md:text-sm text-gray-500">
                       <div className="flex items-center space-x-4">
                         <span className="flex items-center">
                           <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

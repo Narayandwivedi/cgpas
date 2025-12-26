@@ -124,18 +124,18 @@ const AllNews = () => {
       </section>
 
       {/* News List */}
-      <section className="py-16">
+      <section className="py-8 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {loading ? (
-            <div className="flex justify-center items-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600"></div>
+            <div className="flex justify-center items-center py-12 md:py-20">
+              <div className="animate-spin rounded-full h-10 w-10 md:h-12 md:w-12 border-b-2 border-orange-600"></div>
             </div>
           ) : filteredNews.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="text-xl text-gray-600">No news articles found.</p>
+            <div className="text-center py-12 md:py-20">
+              <p className="text-lg md:text-xl text-gray-600">No news articles found.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {filteredNews.map((item) => (
                 <div
                   key={item._id}
@@ -145,12 +145,12 @@ const AllNews = () => {
                     <img
                       src={item.featuredImage}
                       alt={item.featuredImageAlt || item.title}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-40 md:h-48 object-cover"
                     />
                   )}
-                  <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold mr-2 ${
+                  <div className="p-4 md:p-6">
+                    <div className="flex items-center text-xs md:text-sm text-gray-500 mb-2 md:mb-3">
+                      <span className={`px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs font-semibold mr-2 ${
                         item.newsType === 'cg'
                           ? 'bg-green-100 text-green-800'
                           : item.newsType === 'national'
@@ -159,19 +159,19 @@ const AllNews = () => {
                       }`}>
                         {getNewsTypeLabel(item.newsType)}
                       </span>
-                      <span>{formatDate(item.publishedAt || item.createdAt)}</span>
+                      <span className="text-xs md:text-sm">{formatDate(item.publishedAt || item.createdAt)}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+                    <h3 className="text-base md:text-xl font-bold text-gray-900 mb-2 line-clamp-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-3">
+                    <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4 line-clamp-3">
                       {item.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">By {item.author}</span>
+                      <span className="text-xs md:text-sm text-gray-500">By {item.author}</span>
                       <Link
                         to={`/news/article/${item.slug}`}
-                        className="text-orange-600 hover:text-orange-700 font-semibold text-sm"
+                        className="text-orange-600 hover:text-orange-700 font-semibold text-xs md:text-sm"
                       >
                         Read More →
                       </Link>

@@ -176,23 +176,23 @@ const Branch = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Our Branches</h1>
+      <div className="max-w-7xl mx-auto px-4 py-4 md:py-8">
+        <h1 className="text-2xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-gray-800">Our Branches</h1>
 
-        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <Search className="w-5 h-5" />
+        <div className="bg-white rounded-lg shadow-md p-4 md:p-6 mb-4 md:mb-8">
+          <h2 className="text-base md:text-xl font-semibold mb-3 md:mb-4 flex items-center gap-2">
+            <Search className="w-4 h-4 md:w-5 md:h-5" />
             Search Branches
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-3 md:mb-4">
             <div>
-              <label className="block text-sm font-medium mb-1">Country</label>
+              <label className="block text-xs md:text-sm font-medium mb-1">Country</label>
               <select
                 name="country"
                 value={filters.country}
                 onChange={handleFilterChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
               >
                 <option value="">All Countries</option>
                 {countries.map((country) => (
@@ -202,13 +202,13 @@ const Branch = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">State</label>
+              <label className="block text-xs md:text-sm font-medium mb-1">State</label>
               <select
                 name="state"
                 value={filters.state}
                 onChange={handleFilterChange}
                 disabled={!filters.country}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:bg-gray-100"
+                className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:bg-gray-100"
               >
                 <option value="">All States</option>
                 {states.map((state) => (
@@ -218,13 +218,13 @@ const Branch = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">District</label>
+              <label className="block text-xs md:text-sm font-medium mb-1">District</label>
               <select
                 name="district"
                 value={filters.district}
                 onChange={handleFilterChange}
                 disabled={!filters.state}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:bg-gray-100"
+                className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:bg-gray-100"
               >
                 <option value="">All Districts</option>
                 {districts.map((district) => (
@@ -234,45 +234,45 @@ const Branch = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">Search</label>
+              <label className="block text-xs md:text-sm font-medium mb-1">Search</label>
               <input
                 type="text"
                 name="search"
                 value={filters.search}
                 onChange={handleFilterChange}
-                placeholder="Search by keyword..."
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                placeholder="Search by country, state, district"
+                className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
             </div>
           </div>
 
           <button
             onClick={resetFilters}
-            className="text-amber-700 hover:text-amber-900 font-medium"
+            className="text-amber-700 hover:text-amber-900 font-medium text-xs md:text-sm"
           >
             Reset Filters
           </button>
         </div>
 
-        <div className="mb-4 text-gray-600">
+        <div className="mb-3 md:mb-4 text-gray-600 text-xs md:text-sm">
           Showing {filteredBranches.length} of {branches.length} branches
         </div>
 
         {filteredBranches.length === 0 ? (
-          <div className="text-center py-12 bg-white rounded-lg shadow">
-            <p className="text-xl text-gray-500">No branches found matching your criteria</p>
+          <div className="text-center py-8 md:py-12 bg-white rounded-lg shadow">
+            <p className="text-base md:text-xl text-gray-500">No branches found matching your criteria</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {filteredBranches.map((branch) => (
               <div
                 key={branch._id}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6"
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4 md:p-6"
               >
-                <div className="flex items-start gap-2 mb-3">
-                  <MapPin className="w-5 h-5 text-amber-700 mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-2 mb-2 md:mb-3">
+                  <MapPin className="w-4 h-4 md:w-5 md:h-5 text-amber-700 mt-0.5 md:mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-lg text-gray-800">
+                    <h3 className="font-bold text-sm md:text-lg text-gray-800">
                       {branch.district ? `${branch.district}, ` : ''}
                       {branch.state ? `${branch.state}, ` : ''}
                       {branch.country}
@@ -280,16 +280,16 @@ const Branch = () => {
                   </div>
                 </div>
 
-                <div className="space-y-2 mb-4">
-                  <p className="text-gray-600 text-sm">{branch.fullAddress}</p>
+                <div className="space-y-1 md:space-y-2 mb-3 md:mb-4">
+                  <p className="text-gray-600 text-xs md:text-sm">{branch.fullAddress}</p>
                 </div>
 
-                <div className="border-t pt-4 space-y-2">
+                <div className="border-t pt-3 md:pt-4 space-y-1.5 md:space-y-2">
                   <div className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-amber-700" />
+                    <Phone className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-700" />
                     <a
                       href={`tel:${branch.mobileNumber}`}
-                      className="text-gray-700 hover:text-amber-700"
+                      className="text-gray-700 hover:text-amber-700 text-xs md:text-sm"
                     >
                       {branch.mobileNumber}
                     </a>
@@ -297,10 +297,10 @@ const Branch = () => {
 
                   {branch.email && (
                     <div className="flex items-center gap-2">
-                      <Mail className="w-4 h-4 text-amber-700" />
+                      <Mail className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-700" />
                       <a
                         href={`mailto:${branch.email}`}
-                        className="text-gray-700 hover:text-amber-700 break-all"
+                        className="text-gray-700 hover:text-amber-700 break-all text-xs md:text-sm"
                       >
                         {branch.email}
                       </a>

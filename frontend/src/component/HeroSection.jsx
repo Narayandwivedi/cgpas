@@ -12,10 +12,10 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
           {/* Text Content */}
           <div className="text-center md:text-left">
-            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 whitespace-nowrap">
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 md:mb-6 whitespace-nowrap">
               {t.home.hero.welcome}
             </h1>
-            <p className="text-base md:text-2xl text-gray-700 mb-4">
+            <p className="text-base md:text-2xl text-gray-700 mb-2 md:mb-4">
               {t.home.hero.subtitle}
             </p>
             <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
@@ -30,13 +30,13 @@ const HeroSection = () => {
               <img
                 src="/maharaj.webp"
                 alt="Maharaja Agrasen"
-                className="relative w-full max-w-[290px] rounded-lg shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
+                className="relative w-full max-w-[174px] md:max-w-[290px] rounded-lg shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-6 py-3 rounded-full shadow-lg border-2 border-orange-500">
-                <p className="text-sm md:text-base font-bold text-gray-800 whitespace-nowrap">
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 md:px-6 md:py-3 rounded-full shadow-lg border-2 border-orange-500">
+                <p className="text-xs md:text-base font-bold text-gray-800 whitespace-nowrap">
                   महाराजा अग्रसेन
                 </p>
-                <p className="text-xs text-gray-600 text-center whitespace-nowrap">
+                <p className="text-[10px] md:text-xs text-gray-600 text-center whitespace-nowrap">
                   Maharaja Agrasen
                 </p>
               </div>
