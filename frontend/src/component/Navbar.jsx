@@ -196,6 +196,12 @@ const Navbar = () => {
               Executive Body
             </Link>
             <Link
+              to="/branches"
+              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 whitespace-nowrap"
+            >
+              Branches
+            </Link>
+            <Link
               to="/contact"
               className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 whitespace-nowrap"
             >
@@ -430,6 +436,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Executive Body
+            </Link>
+            <Link
+              to="/branches"
+              className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Branches
             </Link>
             <Link
               to="/contact"

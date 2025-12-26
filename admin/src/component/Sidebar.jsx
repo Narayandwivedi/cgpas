@@ -24,6 +24,12 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       description: 'Manage Members'
     },
     {
+      name: 'Branches',
+      icon: '🏢',
+      path: '/branches',
+      description: 'Manage Branches'
+    },
+    {
       name: 'Blogs',
       icon: '📝',
       path: '/blogs',
@@ -62,8 +68,8 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                 <span className="text-2xl">🕉️</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-orange-200">
-                  ASTRO SATYA
+                <h1 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-orange-200">
+                  CGPAS
                 </h1>
                 <p className="text-xs text-orange-200 font-medium">
                   Admin Panel

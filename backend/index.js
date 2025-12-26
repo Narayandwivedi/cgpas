@@ -12,6 +12,8 @@ const galleryRoutes = require('./routes/galleryRoutes');
 const adminGalleryRoutes = require('./routes/adminGalleryRoutes');
 const executiveBodyRoutes = require('./routes/executiveBodyRoutes');
 const adminExecutiveBodyRoutes = require('./routes/adminExecutiveBodyRoutes');
+const branchRoutes = require('./routes/branchRoutes');
+const adminBranchRoutes = require('./routes/adminBranchRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -37,6 +39,8 @@ app.use('/api/gallery', galleryRoutes);
 app.use('/api/admin/gallery', adminGalleryRoutes);
 app.use('/api/executive-body', executiveBodyRoutes);
 app.use('/api/admin/executive-body', adminExecutiveBodyRoutes);
+app.use('/api/branches', branchRoutes);
+app.use('/api/admin/branches', adminBranchRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {

@@ -177,20 +177,17 @@ const ExecutiveBody = () => {
   }
 
   return (
-    <div className="p-6">
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-800">Executive Body</h1>
-          <p className="text-gray-600 mt-2">Manage executive body members</p>
-        </div>
+    <div className="px-3 py-3 md:p-4 lg:p-6">
+      <div className="flex items-center justify-between gap-2 mb-4 md:mb-6 mt-2">
+        <h1 className="text-base md:text-xl lg:text-2xl font-bold text-gray-800">Executive Body</h1>
         <button
           onClick={() => {
             resetForm()
             setShowModal(true)
           }}
-          className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-xl hover:shadow-lg transition-all flex items-center space-x-2"
+          className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-3 md:px-6 py-1.5 md:py-3 text-xs md:text-base rounded-lg md:rounded-xl hover:shadow-lg transition-all flex items-center space-x-1.5 md:space-x-2 whitespace-nowrap flex-shrink-0"
         >
-          <Plus size={20} />
+          <Plus size={16} className="md:w-5 md:h-5" />
           <span className="font-semibold">Add Member</span>
         </button>
       </div>
@@ -210,7 +207,7 @@ const ExecutiveBody = () => {
               resetForm()
               setShowModal(true)
             }}
-            className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-8 py-3 rounded-xl hover:shadow-lg transition-all"
+            className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 md:px-8 py-2 md:py-3 text-sm md:text-base rounded-xl hover:shadow-lg transition-all"
           >
             Add Member
           </button>

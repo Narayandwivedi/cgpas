@@ -285,29 +285,26 @@ const BlogManage = () => {
 
   if (loading) {
     return (
-      <div className="p-6 flex items-center justify-center min-h-screen">
+      <div className="p-2 md:p-4 lg:p-6 flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <div className="animate-spin text-6xl mb-4">⏳</div>
-          <p className="text-gray-600">Loading blogs...</p>
+          <div className="animate-spin text-4xl md:text-6xl mb-4">⏳</div>
+          <p className="text-sm md:text-base text-gray-600">Loading blogs...</p>
         </div>
       </div>
     )
   }
 
   return (
-    <div className="p-6">
+    <div className="px-3 py-3 md:p-4 lg:p-6">
       {!showForm ? (
         <>
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-800">Blog Management</h1>
-              <p className="text-gray-600 mt-2">Manage your blog posts</p>
-            </div>
+          <div className="flex items-center justify-between gap-2 mb-4 md:mb-6 mt-2">
+            <h1 className="text-base md:text-xl lg:text-2xl font-bold text-gray-800">Blog Management</h1>
             <button
               onClick={handleNewBlog}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-xl hover:shadow-lg transition-all flex items-center space-x-2"
+              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 md:px-6 py-1.5 md:py-3 text-xs md:text-base rounded-lg md:rounded-xl hover:shadow-lg transition-all flex items-center space-x-1.5 md:space-x-2 whitespace-nowrap flex-shrink-0"
             >
-              <span className="text-xl">➕</span>
+              <span className="text-base md:text-xl">➕</span>
               <span className="font-semibold">New Blog</span>
             </button>
           </div>

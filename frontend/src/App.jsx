@@ -14,6 +14,7 @@ import NationalNews from './pages/news/NationalNews';
 import InternationalNews from './pages/news/InternationalNews';
 import Gallery from './pages/Gallery';
 import ExecutiveBody from './pages/ExecutiveBody';
+import Branch from './pages/Branch';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
               <Route path="/news/international" element={<InternationalNews />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/executive-body" element={<ExecutiveBody />} />
+              <Route path="/branches" element={<Branch />} />
             </Routes>
           </main>
           <Footer />
