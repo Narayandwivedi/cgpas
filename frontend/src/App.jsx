@@ -21,6 +21,25 @@ const App = () => {
     <LanguageProvider>
       <Router>
         <div className="flex flex-col min-h-screen">
+          {/* Testing Banner */}
+          <div className="fixed top-0 left-0 right-0 bg-yellow-400 text-black py-2 md:py-3 overflow-hidden z-50 flex items-center justify-center">
+            <div className="animate-marquee whitespace-nowrap">
+              <span className="text-xs md:text-sm font-semibold mx-4">
+                ⚠️ This website is under testing and will be live sooner ⚠️
+              </span>
+              <span className="text-xs md:text-sm font-semibold mx-4">
+                ⚠️ This website is under testing and will be live sooner ⚠️
+              </span>
+              <span className="text-xs md:text-sm font-semibold mx-4">
+                ⚠️ This website is under testing and will be live sooner ⚠️
+              </span>
+              <span className="text-xs md:text-sm font-semibold mx-4">
+                ⚠️ This website is under testing and will be live sooner ⚠️
+              </span>
+            </div>
+          </div>
+          {/* Spacer for fixed banner */}
+          <div className="h-10 md:h-12"></div>
           <Navbar />
           <LanguagePrompt />
           <main className="grow">
