@@ -330,16 +330,55 @@ const Home = () => {
               </ul>
             </div>
 
-            {/* Raipur District Mahila Agrawal Sangathan */}
+            {/* Shri Agrasen Madhavi Charitable Trust */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-3 md:p-8 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-base md:text-2xl font-bold text-gray-900 mb-1.5 md:mb-4">
+                {t.home.organizations.madhavi.name}
+              </h3>
+              <p className="text-gray-700 mb-2 md:mb-4 text-xs md:text-base leading-snug md:leading-normal">
+                {t.home.organizations.madhavi.chairman}
+              </p>
+              <ul className="space-y-1 md:space-y-2 text-gray-700 text-xs md:text-base">
+                {t.home.organizations.madhavi.activities.map((activity, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-orange-600 mr-1.5 md:mr-2">•</span>
+                    <span className="leading-snug md:leading-normal">{activity}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Chhattisgarh Provincial Mahila Agrawal Sangathan */}
             <div className="bg-white border-2 border-gray-200 rounded-lg p-3 md:p-8 hover:shadow-xl transition-all duration-300">
               <h3 className="text-base md:text-2xl font-bold text-gray-900 mb-1.5 md:mb-4">
                 {t.home.organizations.mahila.name}
               </h3>
-              <p className="text-gray-700 mb-2 md:mb-4 text-xs md:text-base leading-snug md:leading-normal">
+              <p className="text-gray-700 mb-1 md:mb-2 text-xs md:text-base leading-snug md:leading-normal">
                 {t.home.organizations.mahila.president}
+              </p>
+              <p className="text-gray-700 mb-2 md:mb-4 text-xs md:text-base leading-snug md:leading-normal">
+                {t.home.organizations.mahila.secretary}
               </p>
               <ul className="space-y-1 md:space-y-2 text-gray-700 text-xs md:text-base">
                 {t.home.organizations.mahila.activities.map((activity, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-orange-600 mr-1.5 md:mr-2">•</span>
+                    <span className="leading-snug md:leading-normal">{activity}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Chhattisgarh Provincial Youth Agrawal Organization */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-3 md:p-8 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-base md:text-2xl font-bold text-gray-900 mb-1.5 md:mb-4">
+                {t.home.organizations.youth.name}
+              </h3>
+              <p className="text-gray-700 mb-2 md:mb-4 text-xs md:text-base leading-snug md:leading-normal">
+                {t.home.organizations.youth.president}
+              </p>
+              <ul className="space-y-1 md:space-y-2 text-gray-700 text-xs md:text-base">
+                {t.home.organizations.youth.activities.map((activity, index) => (
                   <li key={index} className="flex items-start">
                     <span className="text-orange-600 mr-1.5 md:mr-2">•</span>
                     <span className="leading-snug md:leading-normal">{activity}</span>

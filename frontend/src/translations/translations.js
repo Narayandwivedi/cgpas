@@ -80,7 +80,7 @@ export const translations = {
           },
           kanyaVivah: {
             title: 'श्री अग्रसेन कन्या विवाह',
-            description: 'समुदाय के सदस्यों के लिए सामूहिक विवाह समारोह। होटल एंट्री पॉइंट में ₹2 लाख प्रति विवाह की किफायती दरों पर भव्य व्यवस्था, जिसमें सभी सुविधाएं और बेटियों के विवाह के लिए एक शानदार उत्सव शामिल है।'
+            description: 'समुदाय के सदस्यों के लिए सामूहिक विवाह समारोह। होटल एंट्री पॉइंट में ₹2.5 लाख प्रति विवाह की किफायती दरों पर भव्य व्यवस्था, जिसमें सभी सुविधाएं और बेटियों के विवाह के लिए एक शानदार उत्सव शामिल है।'
           },
           freeWeddings: {
             title: 'निःशुल्क सामूहिक विवाह कार्यक्रम',
@@ -102,18 +102,37 @@ export const translations = {
           name: 'श्री अग्रसेन चैरिटेबल ट्रस्ट',
           chairman: 'अध्यक्ष: श्री सुनील रामदास अग्रवाल',
           activities: [
-            'ब्याज मुक्त शिक्षा ऋण',
-            'एम्बुलेंस सब्सिडी कार्यक्रम',
-            'स्वास्थ्य सेवा सहायता पहल'
+            'श्री अग्रसेन ब्याज मुक्त उच्च शिक्षा ऋण योजना',
+            'एंबुलेंस योजना',
+            'कोरोना पीड़ित सहायता योजना सहित अन्य अनेक योजनाओं का संचालन'
+          ]
+        },
+        madhavi: {
+          name: 'श्री अग्रसेन माधवी चैरिटेबल ट्रस्ट',
+          chairman: 'अध्यक्ष: श्री नेतराम अग्रवाल',
+          activities: [
+            'रायपुर शहर में कुम्हारी के पास अविनाश ट्विन सिटी में दो एकड़ भूमि पर स्कूल निर्माण की ओर तेजी से अग्रसर',
+            'शिक्षा विकास पहल',
+            'सामुदायिक शिक्षा कार्यक्रम'
           ]
         },
         mahila: {
-          name: 'रायपुर जिला महिला अग्रवाल संगठन',
-          president: 'अध्यक्ष: श्रीमती प्रियंका अग्रवाल',
+          name: 'छत्तीसगढ़ प्रांतीय महिला अग्रवाल संगठन',
+          president: 'प्रांतीय अध्यक्ष: श्रीमती गंगा अग्रवाल',
+          secretary: 'महासचिव: श्रीमती निधि अग्रवाल',
           activities: [
-            'महिला सशक्तिकरण कार्यक्रम',
-            'सांस्कृतिक और धार्मिक कार्यक्रम',
-            'सामाजिक कल्याण गतिविधियां'
+            'प्रदेश की महिला इकाई में अग्रवाल महिलाओं की सक्रिय भागीदारी',
+            'पूरे प्रदेश में हर जिले में प्रांतीय महिला इकाइयां विस्तारित',
+            'महिला सशक्तिकरण और सामाजिक कल्याण कार्यक्रम'
+          ]
+        },
+        youth: {
+          name: 'छत्तीसगढ़ प्रांतीय युवा अग्रवाल संगठन',
+          president: 'प्रांतीय अध्यक्ष: श्री आशीष सेक्सरिया (दुर्ग)',
+          activities: [
+            'प्रदेश की युवा इकाई में अग्रवाल युवाओं की सक्रिय भागीदारी',
+            'पूरे प्रदेश में हर जिले में प्रांतीय युवा इकाइयां विस्तारित',
+            'युवा विकास और नेतृत्व कार्यक्रम'
           ]
         }
       },
@@ -341,7 +360,7 @@ export const translations = {
           },
           kanyaVivah: {
             title: 'Shri Agrasen Kanya Vivah',
-            description: 'Mass wedding ceremonies for community members. Grand arrangements at affordable rates of ₹2 lakh per wedding at Hotel Entry Point, including all facilities and a magnificent celebration for daughters\' marriages.'
+            description: 'Mass wedding ceremonies for community members. Grand arrangements at affordable rates of ₹2.5 lakh per wedding at Hotel Entry Point, including all facilities and a magnificent celebration for daughters\' marriages.'
           },
           freeWeddings: {
             title: 'Free Mass Wedding Program',
@@ -363,18 +382,37 @@ export const translations = {
           name: 'Shri Agrasen Charitable Trust',
           chairman: 'Chairman: Shri Sunil Ramdas Agrawal',
           activities: [
-            'Interest-free education loans',
-            'Ambulance subsidy program',
-            'Healthcare support initiatives'
+            'Shri Agrasen Interest-Free Higher Education Loan Scheme',
+            'Ambulance Scheme',
+            'COVID-affected Support Scheme and many other programs'
+          ]
+        },
+        madhavi: {
+          name: 'Shri Agrasen Madhavi Charitable Trust',
+          chairman: 'Chairman: Shri Netram Agrawal',
+          activities: [
+            'Rapidly progressing towards building a school on two acres of land in Avinash Twin City near Kumhari, Raipur',
+            'Education development initiatives',
+            'Community education programs'
           ]
         },
         mahila: {
-          name: 'Raipur District Mahila Agrawal Sangathan',
-          president: 'President: Smt. Priyanka Agrawal',
+          name: 'Chhattisgarh Provincial Mahila Agrawal Sangathan',
+          president: 'Provincial President: Smt. Ganga Agrawal',
+          secretary: 'General Secretary: Smt. Nidhi Agrawal',
           activities: [
-            'Women empowerment programs',
-            'Cultural and religious events',
-            'Social welfare activities'
+            'Active participation of Agrawal women in the state women\'s unit',
+            'Provincial women\'s units expanded in every district across the state',
+            'Women empowerment and social welfare programs'
+          ]
+        },
+        youth: {
+          name: 'Chhattisgarh Provincial Youth Agrawal Organization',
+          president: 'Provincial President: Shri Ashish Seksaria (Durg)',
+          activities: [
+            'Active participation of Agrawal youth in the state youth unit',
+            'Provincial youth units expanded in every district across the state',
+            'Youth development and leadership programs'
           ]
         }
       },
