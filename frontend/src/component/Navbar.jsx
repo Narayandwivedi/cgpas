@@ -24,7 +24,7 @@ const Navbar = () => {
                 className="h-14 md:h-16 lg:h-18 w-auto"
               />
               <div className="flex flex-col">
-                <span className="text-orange-600 text-xl md:text-2xl lg:text-3xl font-bold tracking-tight leading-tight">
+                <span className="text-orange-600 text-xl md:text-2xl lg:text-3xl font-bold tracking-wide leading-tight">
                   {t.cgpas}
                 </span>
                 <span className="text-gray-600 text-[9px] md:text-[10px] lg:text-xs font-medium tracking-wide leading-tight">
