@@ -27,8 +27,11 @@ const Navbar = () => {
                 <span className="text-orange-600 text-xl md:text-2xl lg:text-3xl font-bold tracking-tight leading-tight">
                   {t.cgpas}
                 </span>
-                <span className="text-gray-600 text-[9px] md:text-[10px] lg:text-xs font-medium tracking-wide">
-                  {t.cgpasFullEnglish}
+                <span className="text-gray-600 text-[9px] md:text-[10px] lg:text-xs font-medium tracking-wide leading-tight">
+                  {t.navbarLine1}
+                </span>
+                <span className="text-gray-600 text-[9px] md:text-[10px] lg:text-xs font-medium tracking-wide leading-tight">
+                  {t.navbarLine2}
                 </span>
               </div>
             </Link>

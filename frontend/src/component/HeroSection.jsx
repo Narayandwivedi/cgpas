@@ -15,8 +15,11 @@ const HeroSection = () => {
             <h1 className="text-xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 md:mb-6 whitespace-nowrap">
               {t.home.hero.welcome}
             </h1>
-            <p className="text-sm md:text-2xl text-gray-700 mb-1.5 md:mb-4 leading-snug md:leading-normal">
+            <p className="text-sm md:text-2xl text-gray-700 mb-1 md:mb-2 leading-snug md:leading-normal">
               {t.home.hero.subtitle}
+            </p>
+            <p className="text-xs md:text-base text-gray-600 mb-1.5 md:mb-4 italic leading-snug md:leading-normal">
+              {t.home.hero.stateUnit}
             </p>
             <p className="text-xs md:text-lg text-gray-600 leading-snug md:leading-relaxed">
               {t.home.hero.description}

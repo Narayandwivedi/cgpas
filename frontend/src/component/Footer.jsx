@@ -13,10 +13,14 @@ const Footer = () => {
           {/* About Section */}
           <div className="col-span-2 md:col-span-1">
             <h3 className="text-base md:text-xl font-bold mb-3 md:mb-4 text-orange-400">CGPAS</h3>
+            <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-2">
+              Chhattisgarh Prantiya Agrawal Sammelan (Sangathan)
+            </p>
+            <p className="text-gray-400 text-[10px] md:text-xs italic leading-relaxed mb-2">
+              State unit of Akhil Bhartiya Agrawal Sangathan
+            </p>
             <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
-              Chhattisgarh Prantiya Agrawal Sangathan is dedicated to the growth
-              and development of the Agrawal community through various initiatives
-              and programs.
+              Dedicated to the growth and development of the Agrawal community through various initiatives and programs.
             </p>
           </div>
 
@@ -210,7 +214,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-6 md:mt-8 pt-4 md:pt-8 text-center">
           <p className="text-gray-400 text-xs md:text-sm">
-            &copy; {new Date().getFullYear()} Chhattisgarh Prantiya Agrawal Sangathan. All rights reserved.
+            &copy; {new Date().getFullYear()} Chhattisgarh Prantiya Agrawal Sammelan (Sangathan). All rights reserved.
           </p>
         </div>
       </div>

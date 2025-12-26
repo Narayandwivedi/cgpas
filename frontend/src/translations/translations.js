@@ -2,8 +2,10 @@ export const translations = {
   hi: {
     // Common
     cgpas: 'CGPAS',
-    cgpasFull: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन',
-    cgpasFullEnglish: 'Chhattisgarh Prantiya Agrawal Sangathan',
+    cgpasFull: 'छत्तीसगढ़ प्रांतीय अग्रवाल सम्मेलन (संगठन)',
+    cgpasFullEnglish: 'Chhattisgarh Prantiya Agrawal Sammelan (Sangathan)',
+    navbarLine1: 'छत्तीसगढ़ प्रांतीय अग्रवाल',
+    navbarLine2: 'सम्मेलन (संगठन)',
 
     // Navigation
     nav: {
@@ -23,12 +25,13 @@ export const translations = {
     home: {
       hero: {
         welcome: 'CGPAS में आपका स्वागत है',
-        subtitle: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन',
+        subtitle: 'छत्तीसगढ़ प्रांतीय अग्रवाल सम्मेलन (संगठन)',
+        stateUnit: '(अखिल भारतीय अग्रवाल संगठन की प्रांतीय इकाई)',
         description: 'एकता, विकास और प्रगति के माध्यम से अग्रवाल समुदाय को सशक्त बनाना। एक मजबूत और समृद्ध समुदाय बनाने के हमारे मिशन में शामिल हों।'
       },
       aboutSection: {
         title: 'CGPAS के बारे में',
-        paragraph1: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन (CGPAS) छत्तीसगढ़ में अग्रवाल समुदाय की वृद्धि और समृद्धि के लिए समर्पित मूल संगठन है। हम एकता को बढ़ावा देने, व्यापार विकास को प्रोत्साहित करने और सभी अग्रवालों के लिए अवसर पैदा करने के लिए प्रतिबद्ध हैं।',
+        paragraph1: 'छत्तीसगढ़ प्रांतीय अग्रवाल सम्मेलन (संगठन) - CGPAS अखिल भारतीय अग्रवाल संगठन की प्रांतीय इकाई है, जो छत्तीसगढ़ में अग्रवाल समुदाय की वृद्धि और समृद्धि के लिए समर्पित है। हम एकता को बढ़ावा देने, व्यापार विकास को प्रोत्साहित करने और सभी अग्रवालों के लिए अवसर पैदा करने के लिए प्रतिबद्ध हैं। महाराजा अग्रसेन के सिद्धांतों का पालन करते हुए, हम समाज की सेवा और समुदाय के विकास के लिए निरंतर प्रयासरत हैं।',
         paragraph2: ''
       },
       abcdSection: {
@@ -147,7 +150,7 @@ export const translations = {
     // About Page
     about: {
       title: 'CGPAS के बारे में',
-      subtitle: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन',
+      subtitle: 'छत्तीसगढ़ प्रांतीय अग्रवाल सम्मेलन (संगठन) - अखिल भारतीय अग्रवाल संगठन की प्रांतीय इकाई',
       mission: {
         title: 'हमारा मिशन',
         description: 'सामाजिक सेवा, शिक्षा, स्वास्थ्य सेवा और सांस्कृतिक संरक्षण के माध्यम से छत्तीसगढ़ भर में अग्रवाल समुदाय को एकजुट और मजबूत करना। हम "सेवा संकल्प नहीं, प्रतिबद्धता है" की भावना के साथ समाज की सेवा करने के लिए प्रतिबद्ध हैं - महाराजा अग्रसेन के 18 सिद्धांतों के पदचिन्हों का पालन करते हुए।'
@@ -158,7 +161,7 @@ export const translations = {
       },
       aboutOrg: {
         title: 'हमारे संगठन के बारे में',
-        para1: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन (CGPAS) छत्तीसगढ़ भर में अग्रवाल समुदाय को एकजुट और सशक्त बनाने के लिए समर्पित एक प्रमुख सामाजिक संगठन है। आधुनिक विकास को बढ़ावा देते हुए हमारी समृद्ध सांस्कृतिक विरासत को संरक्षित करने की दृष्टि से स्थापित, हम परंपरा और प्रगति के बीच एक सेतु के रूप में कार्य करते हैं।',
+        para1: 'छत्तीसगढ़ प्रांतीय अग्रवाल सम्मेलन (संगठन) - CGPAS अखिल भारतीय अग्रवाल संगठन की प्रांतीय इकाई है, जो छत्तीसगढ़ भर में अग्रवाल समुदाय को एकजुट और सशक्त बनाने के लिए समर्पित एक प्रमुख सामाजिक संगठन है। आधुनिक विकास को बढ़ावा देते हुए हमारी समृद्ध सांस्कृतिक विरासत को संरक्षित करने की दृष्टि से स्थापित, हम परंपरा और प्रगति के बीच एक सेतु के रूप में कार्य करते हैं।',
         para2: 'डॉ. अशोक अग्रवाल (अध्यक्ष 2024-2027) के सक्षम नेतृत्व में और महाराजा अग्रसेन के सिद्धांतों द्वारा निर्देशित, हमारा संगठन 35 से अधिक वर्षों से समाज की सेवा कर रहा है। हम रायपुर, बिलासपुर, दुर्ग, कोरबा, राजनांदगांव और कई अन्य सहित छत्तीसगढ़ के सभी प्रमुख शहरों में जिला स्तरीय समितियों के नेटवर्क के माध्यम से काम करते हैं।',
         para3: 'हमारा आदर्श वाक्य "सेवा ही संगठन है" सामाजिक कल्याण के प्रति हमारी प्रतिबद्धता को दर्शाता है। हम "किसी की थाली खाली न रहे" के दर्शन में विश्वास करते हैं और यह सुनिश्चित करने के लिए अथक प्रयास करते हैं कि हमारे समुदाय के प्रत्येक सदस्य को शिक्षा, स्वास्थ्य सेवा और विकास के अवसरों तक पहुंच हो।'
       },
@@ -282,8 +285,10 @@ export const translations = {
   en: {
     // Common
     cgpas: 'CGPAS',
-    cgpasFull: 'छत्तीसगढ़ प्रांतीय अग्रवाल संगठन',
-    cgpasFullEnglish: 'Chhattisgarh Prantiya Agrawal Sangathan',
+    cgpasFull: 'छत्तीसगढ़ प्रांतीय अग्रवाल सम्मेलन (संगठन)',
+    cgpasFullEnglish: 'Chhattisgarh Prantiya Agrawal Sammelan (Sangathan)',
+    navbarLine1: 'Chhattisgarh Prantiya Agrawal',
+    navbarLine2: 'Sammelan (Sangathan)',
 
     // Navigation
     nav: {
@@ -303,12 +308,13 @@ export const translations = {
     home: {
       hero: {
         welcome: 'Welcome to CGPAS',
-        subtitle: 'Chhattisgarh Prantiya Agrawal Sangathan',
+        subtitle: 'Chhattisgarh Prantiya Agrawal Sammelan (Sangathan)',
+        stateUnit: 'State unit of Akhil Bhartiya Agrawal Sangathan',
         description: 'Empowering the Agrawal community through unity, growth, and development. Join us in our mission to create a stronger and more prosperous community.'
       },
       aboutSection: {
         title: 'About CGPAS',
-        paragraph1: 'Chhattisgarh Prantiya Agrawal Sangathan (CGPAS) is the parent wing dedicated to the growth and prosperity of the Agrawal community in Chhattisgarh. We are committed to fostering unity, promoting business development, and creating opportunities for all Agrawals.',
+        paragraph1: 'Chhattisgarh Prantiya Agrawal Sammelan (Sangathan) - CGPAS is the state unit of Akhil Bhartiya Agrawal Sangathan, dedicated to the growth and prosperity of the Agrawal community in Chhattisgarh. We are committed to fostering unity, promoting business development, and creating opportunities for all Agrawals. Following the principles of Maharaja Agrasen, we continuously strive for social service and community development.',
         paragraph2: ''
       },
       abcdSection: {
@@ -427,7 +433,7 @@ export const translations = {
     // About Page
     about: {
       title: 'About CGPAS',
-      subtitle: 'Chhattisgarh Prantiya Agrawal Sangathan',
+      subtitle: 'Chhattisgarh Prantiya Agrawal Sammelan (Sangathan) - State unit of Akhil Bhartiya Agrawal Sangathan',
       mission: {
         title: 'Our Mission',
         description: 'To unite and strengthen the Agrawal community across Chhattisgarh through social service, education, healthcare, and cultural preservation. We are committed to serving society with the spirit of "Service is not a resolution, but a commitment" - following the footsteps of Maharaja Agrasen\'s 18 principles.'
@@ -438,7 +444,7 @@ export const translations = {
       },
       aboutOrg: {
         title: 'About Our Organization',
-        para1: 'The Chhattisgarh Prantiya Agrawal Sangathan (CGPAS) is a premier social organization dedicated to uniting and empowering the Agrawal community across Chhattisgarh. Established with the vision of preserving our rich cultural heritage while promoting modern development, we serve as a bridge between tradition and progress.',
+        para1: 'Chhattisgarh Prantiya Agrawal Sammelan (Sangathan) - CGPAS is the state unit of Akhil Bhartiya Agrawal Sangathan, a premier social organization dedicated to uniting and empowering the Agrawal community across Chhattisgarh. Established with the vision of preserving our rich cultural heritage while promoting modern development, we serve as a bridge between tradition and progress.',
         para2: 'Under the able leadership of Dr. Ashok Agarwal (President 2024-2027) and guided by the principles of Maharaja Agrasen, our organization has been serving society for over 35 years. We operate through a network of district-level committees across all major cities of Chhattisgarh including Raipur, Bilaspur, Durg, Korba, Rajnandgaon, and many others.',
         para3: 'Our motto "सेवा ही संगठन है" (Service is Organization) reflects our commitment to social welfare. We believe in the philosophy of "किसी की थाली खाली न रहे" (No one\'s plate should remain empty) and work tirelessly to ensure that every member of our community has access to education, healthcare, and opportunities for growth.'
       },
