@@ -7,18 +7,18 @@ const HeroSection = () => {
   const t = translations[language];
 
   return (
-    <section className="bg-gradient-to-r from-orange-50 to-orange-100 py-8 md:py-20">
+    <section className="bg-gradient-to-r from-orange-50 to-orange-100 py-4 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-12 items-center">
           {/* Text Content */}
           <div className="text-center md:text-left">
-            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 md:mb-6 whitespace-nowrap">
+            <h1 className="text-xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 md:mb-6 whitespace-nowrap">
               {t.home.hero.welcome}
             </h1>
-            <p className="text-base md:text-2xl text-gray-700 mb-2 md:mb-4">
+            <p className="text-sm md:text-2xl text-gray-700 mb-1.5 md:mb-4 leading-snug md:leading-normal">
               {t.home.hero.subtitle}
             </p>
-            <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
+            <p className="text-xs md:text-lg text-gray-600 leading-snug md:leading-relaxed">
               {t.home.hero.description}
             </p>
           </div>
