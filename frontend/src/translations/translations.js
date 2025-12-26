@@ -63,39 +63,57 @@ export const translations = {
         list: {
           agraAlankaran: {
             title: 'वार्षिक अग्र अलंकरण',
-            description: 'शिक्षा, व्यापार, सामाजिक सेवा, कला, खेल और अन्य सहित 18 श्रेणियों में प्रतिष्ठित सदस्यों को सम्मानित करने वाला वार्षिक पुरस्कार समारोह। पूरे समुदाय में उत्कृष्टता को मान्यता देना।'
+            description: 'शिक्षा, व्यापार, सामाजिक सेवा, कला, खेल और अन्य सहित 18 श्रेणियों में प्रतिष्ठित सदस्यों को सम्मानित करने वाला वार्षिक पुरस्कार समारोह। पूरे समुदाय में उत्कृष्टता को मान्यता देना।',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           agraPanchayat: {
             title: 'अग्र पंचायत समिति',
-            description: 'विवाह, तलाक, संपत्ति और पारिवारिक मामलों को संभालने वाली विवाद समाधान प्रणाली। सेवानिवृत्त उच्च न्यायालय के न्यायाधीशों और वरिष्ठ समुदाय के सदस्यों के मार्गदर्शन में हजारों मामले शांतिपूर्वक हल किए गए।'
+            description: 'विवाह, तलाक, संपत्ति और पारिवारिक मामलों को संभालने वाली विवाद समाधान प्रणाली। सेवानिवृत्त उच्च न्यायालय के न्यायाधीशों और वरिष्ठ समुदाय के सदस्यों के मार्गदर्शन में हजारों मामले शांतिपूर्वक हल किए गए।',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           mangalParinay: {
             title: 'मंगल परिणय योजना',
-            description: '15+ व्हाट्सएप समूहों के साथ वैवाहिक गठबंधन कार्यक्रम। 780 से अधिक सफल मैच सुविधाजनक। 800+ प्रतिभागियों के साथ वार्षिक ऑनलाइन मिलन जिसमें विदेश से 75 शामिल हैं।'
+            description: '15+ व्हाट्सएप समूहों के साथ वैवाहिक गठबंधन कार्यक्रम। 780 से अधिक सफल मैच सुविधाजनक। 800+ प्रतिभागियों के साथ वार्षिक ऑनलाइन मिलन जिसमें विदेश से 75 शामिल हैं।',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           educationLoan: {
             title: 'ब्याज मुक्त शिक्षा ऋण',
-            description: 'श्री अग्रसेन चैरिटेबल ट्रस्ट के माध्यम से, सभी जातियों और धर्मों के योग्य छात्रों को उच्च शिक्षा के लिए ₹2 लाख तक का ब्याज मुक्त ऋण प्रदान करना। रोजगार सुरक्षित करने के बाद आसान मासिक किस्तों में चुकाया जा सकता है।'
+            description: 'श्री अग्रसेन चैरिटेबल ट्रस्ट के माध्यम से, सभी जातियों और धर्मों के योग्य छात्रों को उच्च शिक्षा के लिए ₹2 लाख तक का ब्याज मुक्त ऋण प्रदान करना। रोजगार सुरक्षित करने के बाद आसान मासिक किस्तों में चुकाया जा सकता है।',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           ambulance: {
             title: 'एम्बुलेंस सहायता योजना',
-            description: 'श्री अग्रसेन चैरिटेबल ट्रस्ट के माध्यम से सार्वजनिक उपयोग के लिए एम्बुलेंस खरीद पर 50% सब्सिडी। स्थानीय अग्रवाल सभाएं ट्रस्ट के साथ संयुक्त रूप से एम्बुलेंस का रखरखाव और संचालन करती हैं।'
+            description: 'श्री अग्रसेन चैरिटेबल ट्रस्ट के माध्यम से सार्वजनिक उपयोग के लिए एम्बुलेंस खरीद पर 50% सब्सिडी। स्थानीय अग्रवाल सभाएं ट्रस्ट के साथ संयुक्त रूप से एम्बुलेंस का रखरखाव और संचालन करती हैं।',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           kanyaVivah: {
             title: 'श्री अग्रसेन कन्या विवाह',
-            description: 'समुदाय के सदस्यों के लिए सामूहिक विवाह समारोह। होटल एंट्री पॉइंट में ₹2.5 लाख प्रति विवाह की किफायती दरों पर भव्य व्यवस्था, जिसमें सभी सुविधाएं और बेटियों के विवाह के लिए एक शानदार उत्सव शामिल है।'
+            description: 'समुदाय के सदस्यों के लिए सामूहिक विवाह समारोह। होटल एंट्री पॉइंट में ₹2.5 लाख प्रति विवाह की किफायती दरों पर भव्य व्यवस्था, जिसमें सभी सुविधाएं और बेटियों के विवाह के लिए एक शानदार उत्सव शामिल है।',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           freeWeddings: {
             title: 'निःशुल्क सामूहिक विवाह कार्यक्रम',
-            description: 'आर्थिक रूप से कमजोर वर्गों और अनाथ लड़कियों के लिए पूरी तरह से मुफ्त विवाह समारोह। 2025 में होटल एंट्री पॉइंट में 51 जोड़ों की शादी हुई, और सरायपाली क्षेत्र में 21 जोड़ों की शादी हुई, जिसमें सभी व्यवस्थाएं मुफ्त में प्रदान की गईं।'
+            description: 'आर्थिक रूप से कमजोर वर्गों और अनाथ लड़कियों के लिए पूरी तरह से मुफ्त विवाह समारोह। 2025 में होटल एंट्री पॉइंट में 51 जोड़ों की शादी हुई, और सरायपाली क्षेत्र में 21 जोड़ों की शादी हुई, जिसमें सभी व्यवस्थाएं मुफ्त में प्रदान की गईं।',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           sanjhaChulha: {
             title: 'श्री अग्रसेन सांझा चूल्हा',
-            description: '"सेवा दान नहीं" - जरूरतमंद परिवारों को निर्दिष्ट स्टोर से किराने का सामान और दैनिक आवश्यक वस्तुओं पर 50% सब्सिडी के साथ सहायता करना। वर्तमान में 10+ परिवारों को गरिमा और सम्मान के साथ सेवा प्रदान कर रहे हैं, गोपनीय रिकॉर्ड बनाए रख रहे हैं।'
+            description: '"सेवा दान नहीं" - जरूरतमंद परिवारों को निर्दिष्ट स्टोर से किराने का सामान और दैनिक आवश्यक वस्तुओं पर 50% सब्सिडी के साथ सहायता करना। वर्तमान में 10+ परिवारों को गरिमा और सम्मान के साथ सेवा प्रदान कर रहे हैं, गोपनीय रिकॉर्ड बनाए रख रहे हैं।',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           covidRelief: {
             title: 'कोविड राहत सहायता',
-            description: 'छत्तीसगढ़ में ₹10 लाख का फंड बनाया गया ताकि कोविड प्रभावित परिवारों को उनकी जरूरत के समय में वित्तीय सहायता प्रदान की जा सके। इस मानवीय पहल से कई परिवारों को लाभ हुआ है।'
+            description: 'छत्तीसगढ़ में ₹10 लाख का फंड बनाया गया ताकि कोविड प्रभावित परिवारों को उनकी जरूरत के समय में वित्तीय सहायता प्रदान की जा सके। इस मानवीय पहल से कई परिवारों को लाभ हुआ है।',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           }
         }
       },
@@ -346,39 +364,57 @@ export const translations = {
         list: {
           agraAlankaran: {
             title: 'Annual Agra Alankaran',
-            description: 'Annual awards ceremony honoring distinguished members in 18 categories including education, business, social service, arts, sports, and more. Recognizing excellence across the community.'
+            description: 'Annual awards ceremony honoring distinguished members in 18 categories including education, business, social service, arts, sports, and more. Recognizing excellence across the community.',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           agraPanchayat: {
             title: 'Agra Panchayat Committee',
-            description: 'Dispute resolution system handling marriage, divorce, property, and family matters. Thousands of cases resolved peacefully with guidance from retired High Court judges and senior community members.'
+            description: 'Dispute resolution system handling marriage, divorce, property, and family matters. Thousands of cases resolved peacefully with guidance from retired High Court judges and senior community members.',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           mangalParinay: {
             title: 'Mangal Parinay Yojana',
-            description: 'Matrimonial alliance program with 15+ WhatsApp groups. Over 780 successful matches facilitated. Annual online meet with 800+ participants including 75 from abroad.'
+            description: 'Matrimonial alliance program with 15+ WhatsApp groups. Over 780 successful matches facilitated. Annual online meet with 800+ participants including 75 from abroad.',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           educationLoan: {
             title: 'Interest-Free Education Loan',
-            description: 'Through Shri Agrasen Charitable Trust, providing interest-free loans up to ₹2 lakhs for higher education to deserving students of all castes and religions. Repayable in easy monthly installments after securing employment.'
+            description: 'Through Shri Agrasen Charitable Trust, providing interest-free loans up to ₹2 lakhs for higher education to deserving students of all castes and religions. Repayable in easy monthly installments after securing employment.',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           ambulance: {
             title: 'Ambulance Support Scheme',
-            description: '50% subsidy on ambulance purchase for public use through Shri Agrasen Charitable Trust. Local Agrawal sabhas maintain and operate the ambulances jointly with the trust.'
+            description: '50% subsidy on ambulance purchase for public use through Shri Agrasen Charitable Trust. Local Agrawal sabhas maintain and operate the ambulances jointly with the trust.',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           kanyaVivah: {
             title: 'Shri Agrasen Kanya Vivah',
-            description: 'Mass wedding ceremonies for community members. Grand arrangements at affordable rates of ₹2.5 lakh per wedding at Hotel Entry Point, including all facilities and a magnificent celebration for daughters\' marriages.'
+            description: 'Mass wedding ceremonies for community members. Grand arrangements at affordable rates of ₹2.5 lakh per wedding at Hotel Entry Point, including all facilities and a magnificent celebration for daughters\' marriages.',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           freeWeddings: {
             title: 'Free Mass Wedding Program',
-            description: 'Completely free wedding ceremonies for economically weaker sections and orphan girls. 51 couples married in 2025 at Hotel Entry Point, and 21 couples in Saraipali area with all arrangements provided free of cost.'
+            description: 'Completely free wedding ceremonies for economically weaker sections and orphan girls. 51 couples married in 2025 at Hotel Entry Point, and 21 couples in Saraipali area with all arrangements provided free of cost.',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           sanjhaChulha: {
             title: 'Shri Agrasen Sanjha Chulha',
-            description: '"Service not Charity" - Supporting needy families with 50% subsidy on groceries and daily essentials from designated stores. Currently serving 10+ families with dignity and respect, maintaining confidential records.'
+            description: '"Service not Charity" - Supporting needy families with 50% subsidy on groceries and daily essentials from designated stores. Currently serving 10+ families with dignity and respect, maintaining confidential records.',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           },
           covidRelief: {
             title: 'COVID Relief Support',
-            description: '₹10 lakh fund created in Chhattisgarh to support COVID-affected families with financial assistance during their time of need. Many families have benefited from this humanitarian initiative.'
+            description: '₹10 lakh fund created in Chhattisgarh to support COVID-affected families with financial assistance during their time of need. Many families have benefited from this humanitarian initiative.',
+            coordinator: 'Mr. Agrawal Sangathan- Coordinator',
+            phone: 'Mo. 99999-99999'
           }
         }
       },

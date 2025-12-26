@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import HeroSection from '../component/HeroSection';
+import { User } from 'lucide-react';
 
 const Home = () => {
   const { language } = useLanguage();
@@ -147,15 +148,28 @@ const Home = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
             {/* Annual Agra Alankaran */}
             <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-2 md:gap-3 mb-1.5 md:mb-3">
-                <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
+              <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
+                <div className="flex items-center gap-2 md:gap-3 flex-1">
+                  <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm md:text-xl font-bold text-gray-900">
+                    {t.home.initiatives.list.agraAlankaran.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm md:text-xl font-bold text-gray-900">
-                  {t.home.initiatives.list.agraAlankaran.title}
-                </h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
+                    <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
+                  </div>
+                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                    {t.home.initiatives.list.agraAlankaran.coordinator}
+                  </p>
+                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                    {t.home.initiatives.list.agraAlankaran.phone}
+                  </p>
+                </div>
               </div>
               <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
                 {t.home.initiatives.list.agraAlankaran.description}
@@ -164,15 +178,28 @@ const Home = () => {
 
             {/* Agra Panchayat */}
             <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-2 md:gap-3 mb-1.5 md:mb-3">
-                <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                  </svg>
+              <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
+                <div className="flex items-center gap-2 md:gap-3 flex-1">
+                  <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm md:text-xl font-bold text-gray-900">
+                    {t.home.initiatives.list.agraPanchayat.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm md:text-xl font-bold text-gray-900">
-                  {t.home.initiatives.list.agraPanchayat.title}
-                </h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
+                    <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
+                  </div>
+                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                    {t.home.initiatives.list.agraPanchayat.coordinator}
+                  </p>
+                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                    {t.home.initiatives.list.agraPanchayat.phone}
+                  </p>
+                </div>
               </div>
               <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
                 {t.home.initiatives.list.agraPanchayat.description}
@@ -181,15 +208,28 @@ const Home = () => {
 
             {/* Mangal Parinay */}
             <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-2 md:gap-3 mb-1.5 md:mb-3">
-                <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
+              <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
+                <div className="flex items-center gap-2 md:gap-3 flex-1">
+                  <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm md:text-xl font-bold text-gray-900">
+                    {t.home.initiatives.list.mangalParinay.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm md:text-xl font-bold text-gray-900">
-                  {t.home.initiatives.list.mangalParinay.title}
-                </h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
+                    <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
+                  </div>
+                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                    {t.home.initiatives.list.mangalParinay.coordinator}
+                  </p>
+                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                    {t.home.initiatives.list.mangalParinay.phone}
+                  </p>
+                </div>
               </div>
               <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
                 {t.home.initiatives.list.mangalParinay.description}
@@ -198,15 +238,28 @@ const Home = () => {
 
             {/* Interest-Free Education Loan */}
             <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-2 md:gap-3 mb-1.5 md:mb-3">
-                <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+              <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
+                <div className="flex items-center gap-2 md:gap-3 flex-1">
+                  <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm md:text-xl font-bold text-gray-900">
+                    {t.home.initiatives.list.educationLoan.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm md:text-xl font-bold text-gray-900">
-                  {t.home.initiatives.list.educationLoan.title}
-                </h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
+                    <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
+                  </div>
+                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                    {t.home.initiatives.list.educationLoan.coordinator}
+                  </p>
+                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                    {t.home.initiatives.list.educationLoan.phone}
+                  </p>
+                </div>
               </div>
               <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
                 {t.home.initiatives.list.educationLoan.description}
@@ -215,15 +268,28 @@ const Home = () => {
 
             {/* Ambulance Support */}
             <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-2 md:gap-3 mb-1.5 md:mb-3">
-                <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
+              <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
+                <div className="flex items-center gap-2 md:gap-3 flex-1">
+                  <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm md:text-xl font-bold text-gray-900">
+                    {t.home.initiatives.list.ambulance.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm md:text-xl font-bold text-gray-900">
-                  {t.home.initiatives.list.ambulance.title}
-                </h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
+                    <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
+                  </div>
+                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                    {t.home.initiatives.list.ambulance.coordinator}
+                  </p>
+                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                    {t.home.initiatives.list.ambulance.phone}
+                  </p>
+                </div>
               </div>
               <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
                 {t.home.initiatives.list.ambulance.description}
@@ -232,15 +298,28 @@ const Home = () => {
 
             {/* Agra Kanya Vivah */}
             <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-2 md:gap-3 mb-1.5 md:mb-3">
-                <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
+                <div className="flex items-center gap-2 md:gap-3 flex-1">
+                  <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm md:text-xl font-bold text-gray-900">
+                    {t.home.initiatives.list.kanyaVivah.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm md:text-xl font-bold text-gray-900">
-                  {t.home.initiatives.list.kanyaVivah.title}
-                </h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
+                    <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
+                  </div>
+                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                    {t.home.initiatives.list.kanyaVivah.coordinator}
+                  </p>
+                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                    {t.home.initiatives.list.kanyaVivah.phone}
+                  </p>
+                </div>
               </div>
               <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
                 {t.home.initiatives.list.kanyaVivah.description}
@@ -249,15 +328,28 @@ const Home = () => {
 
             {/* Free Mass Weddings */}
             <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-2 md:gap-3 mb-1.5 md:mb-3">
-                <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+              <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
+                <div className="flex items-center gap-2 md:gap-3 flex-1">
+                  <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm md:text-xl font-bold text-gray-900">
+                    {t.home.initiatives.list.freeWeddings.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm md:text-xl font-bold text-gray-900">
-                  {t.home.initiatives.list.freeWeddings.title}
-                </h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
+                    <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
+                  </div>
+                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                    {t.home.initiatives.list.freeWeddings.coordinator}
+                  </p>
+                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                    {t.home.initiatives.list.freeWeddings.phone}
+                  </p>
+                </div>
               </div>
               <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
                 {t.home.initiatives.list.freeWeddings.description}
@@ -266,15 +358,28 @@ const Home = () => {
 
             {/* Agra Sanjha Chulha */}
             <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-2 md:gap-3 mb-1.5 md:mb-3">
-                <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
+              <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
+                <div className="flex items-center gap-2 md:gap-3 flex-1">
+                  <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm md:text-xl font-bold text-gray-900">
+                    {t.home.initiatives.list.sanjhaChulha.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm md:text-xl font-bold text-gray-900">
-                  {t.home.initiatives.list.sanjhaChulha.title}
-                </h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
+                    <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
+                  </div>
+                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                    {t.home.initiatives.list.sanjhaChulha.coordinator}
+                  </p>
+                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                    {t.home.initiatives.list.sanjhaChulha.phone}
+                  </p>
+                </div>
               </div>
               <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
                 {t.home.initiatives.list.sanjhaChulha.description}
@@ -283,15 +388,28 @@ const Home = () => {
 
             {/* COVID Relief Fund */}
             <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-2 md:gap-3 mb-1.5 md:mb-3">
-                <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
+              <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
+                <div className="flex items-center gap-2 md:gap-3 flex-1">
+                  <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-sm md:text-xl font-bold text-gray-900">
+                    {t.home.initiatives.list.covidRelief.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm md:text-xl font-bold text-gray-900">
-                  {t.home.initiatives.list.covidRelief.title}
-                </h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
+                    <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
+                  </div>
+                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                    {t.home.initiatives.list.covidRelief.coordinator}
+                  </p>
+                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                    {t.home.initiatives.list.covidRelief.phone}
+                  </p>
+                </div>
               </div>
               <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
                 {t.home.initiatives.list.covidRelief.description}
