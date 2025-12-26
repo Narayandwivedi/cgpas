@@ -13,11 +13,11 @@ const Footer = () => {
           {/* About Section */}
           <div className="col-span-2 md:col-span-1">
             <h3 className="text-base md:text-xl font-bold mb-3 md:mb-4 text-orange-400">CGPAS</h3>
-            <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-2">
+            <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-1">
               Chhattisgarh Prantiya Agrawal Sammelan (Sangathan)
             </p>
-            <p className="text-gray-400 text-[10px] md:text-xs italic leading-relaxed mb-2">
-              State unit of Akhil Bhartiya Agrawal Sangathan
+            <p className="text-gray-400 text-[10px] md:text-xs leading-relaxed mb-2">
+              {'{State unit of Akhil Bhartiya Agrawal Sangathan}'}
             </p>
             <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
               Dedicated to the growth and development of the Agrawal community through various initiatives and programs.

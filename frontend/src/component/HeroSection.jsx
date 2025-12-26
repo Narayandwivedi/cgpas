@@ -37,10 +37,10 @@ const HeroSection = () => {
               />
               <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 md:px-6 md:py-3 rounded-full shadow-lg border-2 border-orange-500">
                 <p className="text-xs md:text-base font-bold text-gray-800 whitespace-nowrap">
-                  महाराजा अग्रसेन
+                  भगवान अग्रसेन
                 </p>
                 <p className="text-[10px] md:text-xs text-gray-600 text-center whitespace-nowrap">
-                  Maharaja Agrasen
+                  Bhagwan Agrasen
                 </p>
               </div>
             </div>

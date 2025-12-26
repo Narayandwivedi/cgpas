@@ -163,15 +163,15 @@ const Home = () => {
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
                     <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
                   </div>
-                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                  <p className="text-[7px] md:text-[9px] text-gray-700 text-center font-semibold whitespace-nowrap">
                     {t.home.initiatives.list.agraAlankaran.coordinator}
                   </p>
-                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                  <p className="text-[8px] md:text-[10px] text-gray-600 text-center whitespace-nowrap">
                     {t.home.initiatives.list.agraAlankaran.phone}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
+              <p className="text-gray-700 text-xs md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.agraAlankaran.description}
               </p>
             </div>
@@ -193,15 +193,15 @@ const Home = () => {
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
                     <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
                   </div>
-                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                  <p className="text-[7px] md:text-[9px] text-gray-700 text-center font-semibold whitespace-nowrap">
                     {t.home.initiatives.list.agraPanchayat.coordinator}
                   </p>
-                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                  <p className="text-[8px] md:text-[10px] text-gray-600 text-center whitespace-nowrap">
                     {t.home.initiatives.list.agraPanchayat.phone}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
+              <p className="text-gray-700 text-xs md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.agraPanchayat.description}
               </p>
             </div>
@@ -223,15 +223,15 @@ const Home = () => {
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
                     <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
                   </div>
-                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                  <p className="text-[7px] md:text-[9px] text-gray-700 text-center font-semibold whitespace-nowrap">
                     {t.home.initiatives.list.mangalParinay.coordinator}
                   </p>
-                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                  <p className="text-[8px] md:text-[10px] text-gray-600 text-center whitespace-nowrap">
                     {t.home.initiatives.list.mangalParinay.phone}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
+              <p className="text-gray-700 text-xs md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.mangalParinay.description}
               </p>
             </div>
@@ -253,15 +253,15 @@ const Home = () => {
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
                     <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
                   </div>
-                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                  <p className="text-[7px] md:text-[9px] text-gray-700 text-center font-semibold whitespace-nowrap">
                     {t.home.initiatives.list.educationLoan.coordinator}
                   </p>
-                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                  <p className="text-[8px] md:text-[10px] text-gray-600 text-center whitespace-nowrap">
                     {t.home.initiatives.list.educationLoan.phone}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
+              <p className="text-gray-700 text-xs md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.educationLoan.description}
               </p>
             </div>
@@ -283,15 +283,15 @@ const Home = () => {
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
                     <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
                   </div>
-                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                  <p className="text-[7px] md:text-[9px] text-gray-700 text-center font-semibold whitespace-nowrap">
                     {t.home.initiatives.list.ambulance.coordinator}
                   </p>
-                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                  <p className="text-[8px] md:text-[10px] text-gray-600 text-center whitespace-nowrap">
                     {t.home.initiatives.list.ambulance.phone}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
+              <p className="text-gray-700 text-xs md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.ambulance.description}
               </p>
             </div>
@@ -313,15 +313,15 @@ const Home = () => {
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
                     <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
                   </div>
-                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                  <p className="text-[7px] md:text-[9px] text-gray-700 text-center font-semibold whitespace-nowrap">
                     {t.home.initiatives.list.kanyaVivah.coordinator}
                   </p>
-                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                  <p className="text-[8px] md:text-[10px] text-gray-600 text-center whitespace-nowrap">
                     {t.home.initiatives.list.kanyaVivah.phone}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
+              <p className="text-gray-700 text-xs md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.kanyaVivah.description}
               </p>
             </div>
@@ -343,15 +343,15 @@ const Home = () => {
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
                     <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
                   </div>
-                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                  <p className="text-[7px] md:text-[9px] text-gray-700 text-center font-semibold whitespace-nowrap">
                     {t.home.initiatives.list.freeWeddings.coordinator}
                   </p>
-                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                  <p className="text-[8px] md:text-[10px] text-gray-600 text-center whitespace-nowrap">
                     {t.home.initiatives.list.freeWeddings.phone}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
+              <p className="text-gray-700 text-xs md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.freeWeddings.description}
               </p>
             </div>
@@ -373,15 +373,15 @@ const Home = () => {
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
                     <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
                   </div>
-                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                  <p className="text-[7px] md:text-[9px] text-gray-700 text-center font-semibold whitespace-nowrap">
                     {t.home.initiatives.list.sanjhaChulha.coordinator}
                   </p>
-                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                  <p className="text-[8px] md:text-[10px] text-gray-600 text-center whitespace-nowrap">
                     {t.home.initiatives.list.sanjhaChulha.phone}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
+              <p className="text-gray-700 text-xs md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.sanjhaChulha.description}
               </p>
             </div>
@@ -403,15 +403,15 @@ const Home = () => {
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border-2 border-orange-500 mb-1 flex items-center justify-center">
                     <User className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
                   </div>
-                  <p className="text-[6px] md:text-[8px] text-gray-700 text-center font-semibold whitespace-nowrap">
+                  <p className="text-[7px] md:text-[9px] text-gray-700 text-center font-semibold whitespace-nowrap">
                     {t.home.initiatives.list.covidRelief.coordinator}
                   </p>
-                  <p className="text-[6px] md:text-[8px] text-gray-600 text-center whitespace-nowrap">
+                  <p className="text-[8px] md:text-[10px] text-gray-600 text-center whitespace-nowrap">
                     {t.home.initiatives.list.covidRelief.phone}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
+              <p className="text-gray-700 text-xs md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.covidRelief.description}
               </p>
             </div>
