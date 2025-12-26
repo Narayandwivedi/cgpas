@@ -24,7 +24,7 @@ const Home = () => {
               <div className="w-12 md:w-24 h-1 bg-orange-500 mx-auto mb-2 md:mb-8"></div>
             </div>
             <div className="max-w-4xl mx-auto">
-              <p className="text-xs md:text-lg text-gray-700 leading-snug md:leading-relaxed">
+              <p className="text-xs md:text-lg text-gray-700 leading-snug md:leading-relaxed text-justify">
                 {t.home.aboutSection.paragraph1}
               </p>
             </div>
@@ -41,7 +41,7 @@ const Home = () => {
                 {t.home.abcdSection.title}
               </h2>
               <div className="w-12 md:w-24 h-1 bg-orange-500 mx-auto mb-2 md:mb-6"></div>
-              <p className="text-xs md:text-lg text-gray-700 leading-snug md:leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xs md:text-lg text-gray-700 leading-snug md:leading-relaxed max-w-3xl mx-auto text-justify">
                 {t.home.abcdSection.description}
               </p>
             </div>
@@ -68,7 +68,7 @@ const Home = () => {
                     {t.home.abcdSection.forBusinesses.title}
                   </h3>
                 </div>
-                <p className="text-gray-700 mb-2 md:mb-4 text-xs md:text-base leading-snug md:leading-normal">
+                <p className="text-gray-700 mb-2 md:mb-4 text-xs md:text-base leading-snug md:leading-normal text-justify">
                   {t.home.abcdSection.forBusinesses.description}
                 </p>
                 <ul className="text-gray-700 space-y-1 md:space-y-3 mb-2 md:mb-6 text-xs md:text-base">
@@ -110,7 +110,7 @@ const Home = () => {
                     {t.home.abcdSection.forMembers.title}
                   </h3>
                 </div>
-                <p className="text-gray-700 mb-2 md:mb-4 text-xs md:text-base leading-snug md:leading-normal">
+                <p className="text-gray-700 mb-2 md:mb-4 text-xs md:text-base leading-snug md:leading-normal text-justify">
                   {t.home.abcdSection.forMembers.description}
                 </p>
                 <ul className="text-gray-700 space-y-1 md:space-y-3 mb-2 md:mb-6 text-xs md:text-base">
@@ -171,7 +171,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
+              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.agraAlankaran.description}
               </p>
             </div>
@@ -201,7 +201,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
+              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.agraPanchayat.description}
               </p>
             </div>
@@ -231,7 +231,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
+              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.mangalParinay.description}
               </p>
             </div>
@@ -261,7 +261,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
+              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.educationLoan.description}
               </p>
             </div>
@@ -291,7 +291,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
+              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.ambulance.description}
               </p>
             </div>
@@ -321,7 +321,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
+              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.kanyaVivah.description}
               </p>
             </div>
@@ -351,7 +351,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
+              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.freeWeddings.description}
               </p>
             </div>
@@ -381,7 +381,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
+              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.sanjhaChulha.description}
               </p>
             </div>
@@ -411,7 +411,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed">
+              <p className="text-gray-700 text-[10px] md:text-sm leading-tight md:leading-relaxed text-justify">
                 {t.home.initiatives.list.covidRelief.description}
               </p>
             </div>
@@ -514,7 +514,7 @@ const Home = () => {
           <h2 className="text-xl md:text-4xl font-bold mb-2 md:mb-6">
             {t.home.cta.title}
           </h2>
-          <p className="text-xs md:text-xl mb-3 md:mb-8 max-w-2xl mx-auto leading-snug md:leading-normal">
+          <p className="text-xs md:text-xl mb-3 md:mb-8 max-w-2xl mx-auto leading-snug md:leading-normal text-justify">
             {t.home.cta.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-2 md:gap-4 justify-center">
