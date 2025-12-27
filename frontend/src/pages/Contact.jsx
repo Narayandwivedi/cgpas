@@ -162,9 +162,15 @@ const Contact = () => {
                       </h3>
                       <a
                         href="tel:07713562323"
-                        className="text-orange-600 hover:text-orange-700 transition-colors duration-200 text-[10px] md:text-base"
+                        className="text-orange-600 hover:text-orange-700 transition-colors duration-200 text-[10px] md:text-base block"
                       >
                         0771- 3562323
+                      </a>
+                      <a
+                        href="tel:+919993961778"
+                        className="text-orange-600 hover:text-orange-700 transition-colors duration-200 text-[10px] md:text-base block"
+                      >
+                        +91 9993961778
                       </a>
                     </div>
                   </div>

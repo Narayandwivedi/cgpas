@@ -213,8 +213,14 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-6 md:mt-8 pt-4 md:pt-8 text-center">
-          <p className="text-gray-400 text-xs md:text-sm">
+          <p className="text-gray-400 text-xs md:text-sm mb-2 md:mb-3">
             &copy; {new Date().getFullYear()} Chhattisgarh Prantiya Agrawal Sammelan (Sangathan). All rights reserved.
+          </p>
+          <p className="text-gray-400 text-xs md:text-sm mt-1">
+            Website concept and design by
+          </p>
+          <p className="text-xs md:text-sm">
+            <span className="text-yellow-400 font-semibold">Lallit Agrawal ( Chairman-ABCD)</span> <span className="text-gray-400">Mob.</span> <span className="text-yellow-400 font-semibold">7566619578</span>
           </p>
         </div>
       </div>
