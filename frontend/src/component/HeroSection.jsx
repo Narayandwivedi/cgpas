@@ -36,11 +36,11 @@ const HeroSection = () => {
                 className="relative w-full max-w-[200px] md:max-w-[340px] rounded-lg shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 md:px-6 md:py-3 rounded-full shadow-lg border-2 border-orange-500">
-                <p className="text-[10px] md:text-sm font-bold text-gray-800 whitespace-nowrap">
-                  भगवान अग्रसेन
+                <p className="text-[10px] md:text-sm font-bold text-gray-800 text-center whitespace-nowrap">
+                  भगवान अग्रसेन महाराज
                 </p>
                 <p className="text-[10px] md:text-xs text-gray-600 text-center whitespace-nowrap">
-                  Bhagwan Agrasen
+                  Bhagwan Agrasen Maharaj
                 </p>
               </div>
             </div>
