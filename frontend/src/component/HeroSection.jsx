@@ -31,7 +31,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
               <img
-                src="/maharaj2.jpeg"
+                src="/maharaj2.webp"
                 alt="Maharaja Agrasen"
                 className="relative w-full max-w-[200px] md:max-w-[340px] rounded-lg shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
               />

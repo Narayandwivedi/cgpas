@@ -205,6 +205,12 @@ const Navbar = () => {
               Branches
             </Link>
             <Link
+              to="/voice-of-abcd"
+              className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 whitespace-nowrap"
+            >
+              Voice of ABCD
+            </Link>
+            <Link
               to="/contact"
               className="text-gray-700 hover:text-orange-600 transition-colors duration-200 font-semibold text-[13px] lg:text-[14px] xl:text-[15px] px-2 lg:px-2.5 xl:px-3 py-2 rounded-md hover:bg-orange-50 whitespace-nowrap"
             >
@@ -446,6 +452,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Branches
+            </Link>
+            <Link
+              to="/voice-of-abcd"
+              className="block px-3 py-1.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md font-medium text-sm"
+              onClick={() => setIsOpen(false)}
+            >
+              Voice of ABCD
             </Link>
             <Link
               to="/contact"

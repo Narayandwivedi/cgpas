@@ -92,9 +92,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <span className="text-gray-300 text-xs md:text-sm">
-                  Voice Of ABCD
-                </span>
+                <Link
+                  to="/voice-of-abcd"
+                  onClick={scrollToTop}
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200 text-xs md:text-sm"
+                >
+                  Voice Of ABCD(Magazine)
+                </Link>
               </li>
               <li>
                 <a

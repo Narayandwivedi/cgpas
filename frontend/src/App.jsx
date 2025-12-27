@@ -15,6 +15,7 @@ import InternationalNews from './pages/news/InternationalNews';
 import Gallery from './pages/Gallery';
 import ExecutiveBody from './pages/ExecutiveBody';
 import Branch from './pages/Branch';
+import VoiceOfAbcd from './pages/VoiceOfAbcd';
 
 const App = () => {
   return (
@@ -55,6 +56,7 @@ const App = () => {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/executive-body" element={<ExecutiveBody />} />
               <Route path="/branches" element={<Branch />} />
+              <Route path="/voice-of-abcd" element={<VoiceOfAbcd />} />
             </Routes>
           </main>
           <Footer />
