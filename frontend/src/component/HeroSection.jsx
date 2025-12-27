@@ -7,7 +7,7 @@ const HeroSection = () => {
   const t = translations[language];
 
   return (
-    <section className="bg-gradient-to-r from-orange-50 to-orange-100 py-4 md:py-20">
+    <section className="bg-gradient-to-r from-orange-50 to-orange-100 py-4 pb-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-4 md:gap-12 items-center">
           {/* Text Content */}
@@ -33,10 +33,10 @@ const HeroSection = () => {
               <img
                 src="/maharaj2.jpeg"
                 alt="Maharaja Agrasen"
-                className="relative w-full max-w-[174px] md:max-w-[290px] rounded-lg shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
+                className="relative w-full max-w-[200px] md:max-w-[340px] rounded-lg shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 md:px-6 md:py-3 rounded-full shadow-lg border-2 border-orange-500">
-                <p className="text-xs md:text-base font-bold text-gray-800 whitespace-nowrap">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 md:px-6 md:py-3 rounded-full shadow-lg border-2 border-orange-500">
+                <p className="text-[10px] md:text-sm font-bold text-gray-800 whitespace-nowrap">
                   भगवान अग्रसेन
                 </p>
                 <p className="text-[10px] md:text-xs text-gray-600 text-center whitespace-nowrap">

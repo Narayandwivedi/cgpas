@@ -14,7 +14,7 @@ const Home = () => {
       <HeroSection />
 
       {/* About CGPAS Section */}
-      <section className="py-4 md:py-16 bg-white border-t-4 border-gray-200">
+      <section className="pt-8 pb-4 md:py-16 bg-white border-t-4 border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-4 border-gray-900 rounded-xl p-3 md:p-8 lg:p-12 bg-gradient-to-br from-orange-50 to-white shadow-xl">
             <div className="text-center mb-2 md:mb-8">
