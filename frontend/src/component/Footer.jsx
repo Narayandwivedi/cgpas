@@ -93,6 +93,33 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/gallery"
+                  onClick={scrollToTop}
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200 text-xs md:text-sm"
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/news"
+                  onClick={scrollToTop}
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200 text-xs md:text-sm"
+                >
+                  News
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog"
+                  onClick={scrollToTop}
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200 text-xs md:text-sm"
+                >
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/voice-of-abcd"
                   onClick={scrollToTop}
                   className="text-gray-300 hover:text-orange-400 transition-colors duration-200 text-xs md:text-sm"

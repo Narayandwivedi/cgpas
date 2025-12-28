@@ -186,84 +186,83 @@ const Branch = () => {
       <div className="max-w-7xl mx-auto px-4 py-4 md:py-8">
         <h1 className="text-2xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-gray-800">Our Branches</h1>
 
-        <div className="bg-white rounded-lg shadow-md p-4 md:p-6 mb-4 md:mb-8">
-          <h2 className="text-base md:text-xl font-semibold mb-3 md:mb-4 flex items-center gap-2">
-            <Search className="w-4 h-4 md:w-5 md:h-5" />
-            Search Branches
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-3 md:mb-4">
-            <div>
-              <label className="block text-xs md:text-sm font-medium mb-1">Country</label>
-              <select
-                name="country"
-                value={filters.country}
-                onChange={handleFilterChange}
-                className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-              >
-                <option value="">All Countries</option>
-                {countries.map((country) => (
-                  <option key={country} value={country}>{country}</option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-xs md:text-sm font-medium mb-1">State</label>
-              <select
-                name="state"
-                value={filters.state}
-                onChange={handleFilterChange}
-                disabled={!filters.country}
-                className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:bg-gray-100"
-              >
-                <option value="">All States</option>
-                {states.map((state) => (
-                  <option key={state} value={state}>{state}</option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-xs md:text-sm font-medium mb-1">District</label>
-              <select
-                name="district"
-                value={filters.district}
-                onChange={handleFilterChange}
-                disabled={!filters.state}
-                className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:bg-gray-100"
-              >
-                <option value="">All Districts</option>
-                {districts.map((district) => (
-                  <option key={district} value={district}>{district}</option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-xs md:text-sm font-medium mb-1">Search</label>
-              <input
-                type="text"
-                name="search"
-                value={filters.search}
-                onChange={handleFilterChange}
-                placeholder="Search by location..."
-                className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-              />
-            </div>
+                <div className="bg-white rounded-lg shadow-md p-4 md:p-6 mb-4 md:mb-8">
+                  <h2 className="text-base md:text-xl font-semibold mb-3 md:mb-4 flex items-center gap-2">
+                    <Search className="w-4 h-4 md:w-5 md:h-5" />
+                    Search Branches
+                  </h2>
+        
+                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mb-3 md:mb-4">
+                    <div className="col-span-2 lg:col-span-1">
+                      <label className="block text-xs md:text-sm font-medium mb-1">Country</label>
+                      <select
+                        name="country"
+                        value={filters.country}
+                        onChange={handleFilterChange}
+                        className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      >
+                        <option value="">All Countries</option>
+                        {countries.map((country) => (
+                          <option key={country} value={country}>{country}</option>
+                        ))}
+                      </select>
+                    </div>
+        
+                    <div className="col-span-1 lg:col-span-1">
+                      <label className="block text-xs md:text-sm font-medium mb-1">State</label>
+                      <select
+                        name="state"
+                        value={filters.state}
+                        onChange={handleFilterChange}
+                        disabled={!filters.country}
+                        className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:bg-gray-100"
+                      >
+                        <option value="">All States</option>
+                        {states.map((state) => (
+                          <option key={state} value={state}>{state}</option>
+                        ))}
+                      </select>
+                    </div>
+        
+                    <div className="col-span-1 lg:col-span-1">
+                      <label className="block text-xs md:text-sm font-medium mb-1">District</label>
+                      <select
+                        name="district"
+                        value={filters.district}
+                        onChange={handleFilterChange}
+                        disabled={!filters.state}
+                        className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:bg-gray-100"
+                      >
+                        <option value="">All Districts</option>
+                        {districts.map((district) => (
+                          <option key={district} value={district}>{district}</option>
+                        ))}
+                      </select>
+                    </div>
+        
+                                <div className="col-span-2 lg:col-span-3 flex items-end justify-between gap-2 md:gap-4">
+                                  <div className="w-[85%]">
+                                    <label className="block text-xs md:text-sm font-medium mb-1">Search</label>
+                                    <input
+                                      type="text"
+                                      name="search"
+                                      value={filters.search}
+                                      onChange={handleFilterChange}
+                                      placeholder="Search by location..."
+                                      className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                    />
+                                  </div>
+                                  <button
+                                    onClick={resetFilters}
+                                    className="w-[15%] text-amber-700 hover:text-amber-900 font-medium text-xs md:text-sm whitespace-nowrap"
+                                  >
+                                    Reset
+                                  </button>
+                                </div>                  </div>
+                </div>
+          <div className="mb-3 md:mb-4 text-gray-600 text-xs md:text-sm">
+            Showing {filteredBranches.length} of {branches.length} branches
           </div>
-
-          <button
-            onClick={resetFilters}
-            className="text-amber-700 hover:text-amber-900 font-medium text-xs md:text-sm"
-          >
-            Reset Filters
-          </button>
-        </div>
-
-        <div className="mb-3 md:mb-4 text-gray-600 text-xs md:text-sm">
-          Showing {filteredBranches.length} of {branches.length} branches
-        </div>
 
         {filteredBranches.length === 0 ? (
           <div className="text-center py-8 md:py-12 bg-white rounded-lg shadow">
