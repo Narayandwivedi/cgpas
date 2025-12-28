@@ -16,6 +16,10 @@ import Gallery from './pages/Gallery';
 import ExecutiveBody from './pages/ExecutiveBody';
 import Branch from './pages/Branch';
 import VoiceOfAbcd from './pages/VoiceOfAbcd';
+import Suggestion from './pages/Suggestion';
+import Complaint from './pages/Complaint';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
@@ -57,9 +61,12 @@ const App = () => {
               <Route path="/executive-body" element={<ExecutiveBody />} />
               <Route path="/branches" element={<Branch />} />
               <Route path="/voice-of-abcd" element={<VoiceOfAbcd />} />
+              <Route path="/suggestions" element={<Suggestion />} />
+              <Route path="/complaint" element={<Complaint />} />
             </Routes>
           </main>
           <Footer />
+          <ToastContainer />
         </div>
       </Router>
     </LanguageProvider>

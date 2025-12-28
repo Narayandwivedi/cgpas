@@ -40,6 +40,24 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       icon: '📰',
       path: '/news',
       description: 'Manage News Articles'
+    },
+    {
+      name: 'Contact',
+      icon: '📨',
+      path: '/contact',
+      description: 'View Messages'
+    },
+    {
+      name: 'Suggestions',
+      icon: '💡',
+      path: '/suggestions',
+      description: 'View Suggestions'
+    },
+    {
+      name: 'Complaints',
+      icon: '😠',
+      path: '/complaints',
+      description: 'View Complaints'
     }
   ]
 

@@ -14,6 +14,12 @@ const executiveBodyRoutes = require('./routes/executiveBodyRoutes');
 const adminExecutiveBodyRoutes = require('./routes/adminExecutiveBodyRoutes');
 const branchRoutes = require('./routes/branchRoutes');
 const adminBranchRoutes = require('./routes/adminBranchRoutes');
+const contactRoutes = require('./routes/contactRoutes');
+const adminContactRoutes = require('./routes/adminContactRoutes');
+const suggestionRoutes = require('./routes/suggestionRoutes');
+const adminSuggestionRoutes = require('./routes/adminSuggestionRoutes');
+const complaintRoutes = require('./routes/complaintRoutes');
+const adminComplaintRoutes = require('./routes/adminComplaintRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -41,6 +47,12 @@ app.use('/api/executive-body', executiveBodyRoutes);
 app.use('/api/admin/executive-body', adminExecutiveBodyRoutes);
 app.use('/api/branches', branchRoutes);
 app.use('/api/admin/branches', adminBranchRoutes);
+app.use('/api/contact', contactRoutes);
+app.use('/api/admin/contacts', adminContactRoutes);
+app.use('/api/suggestions', suggestionRoutes);
+app.use('/api/admin/suggestions', adminSuggestionRoutes);
+app.use('/api/complaints', complaintRoutes);
+app.use('/api/admin/complaints', adminComplaintRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {

@@ -357,7 +357,7 @@ const Home = () => {
             </div>
 
             {/* Agra Sanjha Chulha */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
+            <div className="bg-gradient-to-br- from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
               <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
                 <div className="flex items-center gap-2 md:gap-3 flex-1">
                   <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">
@@ -387,7 +387,7 @@ const Home = () => {
             </div>
 
             {/* COVID Relief Fund */}
-            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
+            <div className="bg-gradient-to-br- from-orange-50 to-white border-2 border-gray-200 rounded-lg p-2 md:p-6 hover:shadow-xl transition-all duration-300">
               <div className="flex items-start justify-between gap-2 md:gap-3 mb-1.5 md:mb-3">
                 <div className="flex items-center gap-2 md:gap-3 flex-1">
                   <div className="bg-orange-500 w-8 h-8 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0">

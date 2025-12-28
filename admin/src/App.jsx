@@ -7,6 +7,9 @@ import BlogManage from './pages/BlogManage'
 import NewsManage from './pages/NewsManage'
 import ExecutiveBody from './pages/ExecutiveBody'
 import BranchManage from './pages/BranchManage'
+import ContactManage from './pages/ContactManage'
+import SuggestionManage from './pages/SuggestionManage'
+import ComplaintManage from './pages/ComplaintManage'
 import './App.css'
 
 function App() {
@@ -48,6 +51,9 @@ function App() {
               <Route path="/news" element={<NewsManage />} />
               <Route path="/executive-body" element={<ExecutiveBody />} />
               <Route path="/branches" element={<BranchManage />} />
+              <Route path="/contact" element={<ContactManage />} />
+              <Route path="/suggestions" element={<SuggestionManage />} />
+              <Route path="/complaints" element={<ComplaintManage />} />
             </Routes>
           </main>
         </div>

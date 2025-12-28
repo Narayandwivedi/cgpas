@@ -244,9 +244,135 @@ const uploadExecutiveBodyPhoto = async (req, res) => {
   }
 };
 
+// Upload suggestion image
+const uploadSuggestionImage = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({
+        success: false,
+        message: 'No file uploaded'
+      });
+    }
+
+    // Ensure suggestions directory exists
+    const suggestionsDir = path.join(uploadsDir, 'suggestions');
+    if (!fs.existsSync(suggestionsDir)) {
+      fs.mkdirSync(suggestionsDir, { recursive: true });
+    }
+
+    // Generate unique filename
+    const timestamp = Date.now();
+    const randomString = Math.random().toString(36).substring(2, 8);
+    const filename = `suggestion-${timestamp}-${randomString}.webp`;
+    const filepath = path.join(suggestionsDir, filename);
+
+    // Process image with sharp
+    await sharp(req.file.buffer)
+      .resize({
+        width: 1024,  // Max width for suggestion images
+        fit: 'inside',
+        withoutEnlargement: true
+      })
+      .webp({
+        quality: 80,
+        effort: 6
+      })
+      .toFile(filepath);
+
+    // Get file size
+    const stats = fs.statSync(filepath);
+    const fileSizeInKB = (stats.size / 1024).toFixed(2);
+
+    // Generate URL
+    const imageUrl = `/uploads/suggestions/${filename}`;
+
+    res.status(200).json({
+      success: true,
+      message: 'Suggestion image uploaded successfully',
+      data: {
+        filename,
+        url: imageUrl,
+        size: `${fileSizeInKB} KB`,
+        format: 'webp'
+      }
+    });
+  } catch (error) {
+    console.error('Error uploading suggestion image:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Error uploading suggestion image',
+      error: error.message
+    });
+  }
+};
+
+// Upload complaint image
+const uploadComplaintImage = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({
+        success: false,
+        message: 'No file uploaded'
+      });
+    }
+
+    // Ensure complaints directory exists
+    const complaintsDir = path.join(uploadsDir, 'complaints');
+    if (!fs.existsSync(complaintsDir)) {
+      fs.mkdirSync(complaintsDir, { recursive: true });
+    }
+
+    // Generate unique filename
+    const timestamp = Date.now();
+    const randomString = Math.random().toString(36).substring(2, 8);
+    const filename = `complaint-${timestamp}-${randomString}.webp`;
+    const filepath = path.join(complaintsDir, filename);
+
+    // Process image with sharp
+    await sharp(req.file.buffer)
+      .resize({
+        width: 1024,  // Max width for complaint images
+        fit: 'inside',
+        withoutEnlargement: true
+      })
+      .webp({
+        quality: 80,
+        effort: 6
+      })
+      .toFile(filepath);
+
+    // Get file size
+    const stats = fs.statSync(filepath);
+    const fileSizeInKB = (stats.size / 1024).toFixed(2);
+
+    // Generate URL
+    const imageUrl = `/uploads/complaints/${filename}`;
+
+    res.status(200).json({
+      success: true,
+      message: 'Complaint image uploaded successfully',
+      data: {
+        filename,
+        url: imageUrl,
+        size: `${fileSizeInKB} KB`,
+        format: 'webp'
+      }
+    });
+  } catch (error) {
+    console.error('Error uploading complaint image:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Error uploading complaint image',
+      error: error.message
+    });
+  }
+};
+
 module.exports = {
   uploadBlogFeaturedImage,
   uploadGalleryImage,
   uploadExecutiveBodyPhoto,
+  uploadSuggestionImage,
+  uploadComplaintImage,
   deleteImage
 };

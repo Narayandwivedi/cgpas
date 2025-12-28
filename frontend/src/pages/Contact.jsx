@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
   const { language } = useLanguage();
   const t = translations[language];
 
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+  const API_URL = `${BACKEND_URL}/api`;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
+    mobile: '', // Changed from phone to mobile
     subject: '',
     message: '',
   });
+
+  const [loading, setLoading] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,14 +29,43 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:cgpascg@gmail.com?subject=${encodeURIComponent(
-      formData.subject
-    )}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
-    )}`;
-    window.location.href = mailtoLink;
+    setLoading(true);
+    setError(null);
+    setMessageSent(false);
+
+    try {
+      const response = await fetch(`${API_URL}/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessageSent(true);
+        setFormData({
+          name: '',
+          email: '',
+          mobile: '',
+          subject: '',
+          message: '',
+        });
+        toast.success('Your message has been sent successfully!');
+      } else {
+        setError(data.message || 'Failed to send message.');
+        toast.error(data.message || 'Failed to send message.');
+      }
+    } catch (err) {
+      setError('An error occurred while sending your message.');
+      toast.error('An error occurred while sending your message.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -261,7 +298,6 @@ const Contact = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      required
                       className="w-full px-2 py-1.5 md:px-4 md:py-3 text-xs md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
                       placeholder={t.contact.form.placeholders.email}
                     />
@@ -269,16 +305,16 @@ const Contact = () => {
 
                   <div>
                     <label
-                      htmlFor="phone"
+                      htmlFor="mobile"
                       className="block text-xs md:text-sm font-medium text-gray-700 mb-1 md:mb-2"
                     >
                       {t.contact.form.phoneNumber}
                     </label>
                     <input
                       type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
+                      id="mobile"
+                      name="mobile"
+                      value={formData.mobile}
                       onChange={handleChange}
                       className="w-full px-2 py-1.5 md:px-4 md:py-3 text-xs md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
                       placeholder={t.contact.form.placeholders.phone}
@@ -298,7 +334,6 @@ const Contact = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      required
                       className="w-full px-2 py-1.5 md:px-4 md:py-3 text-xs md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
                       placeholder={t.contact.form.placeholders.subject}
                     />
