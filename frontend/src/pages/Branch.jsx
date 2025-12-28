@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, MapPin, Phone, Mail } from 'lucide-react';
+import { Search, MapPin, Phone, Mail, User, Briefcase } from 'lucide-react';
 
 const Branch = () => {
   const [branches, setBranches] = useState([]);
@@ -127,6 +127,7 @@ const Branch = () => {
         branch.country.toLowerCase().includes(searchLower) ||
         (branch.state && branch.state.toLowerCase().includes(searchLower)) ||
         (branch.district && branch.district.toLowerCase().includes(searchLower)) ||
+        (branch.city && branch.city.toLowerCase().includes(searchLower)) ||
         branch.fullAddress.toLowerCase().includes(searchLower) ||
         branch.mobileNumber.includes(searchLower) ||
         (branch.email && branch.email.toLowerCase().includes(searchLower))
@@ -164,6 +165,12 @@ const Branch = () => {
       district: '',
       search: ''
     });
+  };
+
+  const formatLocation = (branch) => {
+    return [branch.city, branch.district, branch.state, branch.country]
+      .filter(Boolean)
+      .join(', ');
   };
 
   if (loading) {
@@ -240,7 +247,7 @@ const Branch = () => {
                 name="search"
                 value={filters.search}
                 onChange={handleFilterChange}
-                placeholder="Search by country, state, district"
+                placeholder="Search by location..."
                 className="w-full px-2 py-1.5 md:px-3 md:py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
             </div>
@@ -267,46 +274,84 @@ const Branch = () => {
             {filteredBranches.map((branch) => (
               <div
                 key={branch._id}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4 md:p-6"
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4 md:p-6 flex flex-col"
               >
-                <div className="flex items-start gap-2 mb-2 md:mb-3">
-                  <MapPin className="w-4 h-4 md:w-5 md:h-5 text-amber-700 mt-0.5 md:mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-3 mb-3">
+                  <MapPin className="w-5 h-5 text-amber-700 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-sm md:text-lg text-gray-800">
-                      {branch.district ? `${branch.district}, ` : ''}
-                      {branch.state ? `${branch.state}, ` : ''}
-                      {branch.country}
+                    <h3 className="font-bold text-base md:text-lg text-gray-800">
+                      {formatLocation(branch)}
                     </h3>
+                    <p className="text-gray-600 text-xs md:text-sm">{branch.fullAddress}</p>
                   </div>
                 </div>
 
-                <div className="space-y-1 md:space-y-2 mb-3 md:mb-4">
-                  <p className="text-gray-600 text-xs md:text-sm">{branch.fullAddress}</p>
-                </div>
-
-                <div className="border-t pt-3 md:pt-4 space-y-1.5 md:space-y-2">
+                <div className="border-t pt-3 mt-auto space-y-2">
                   <div className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-700" />
-                    <a
-                      href={`tel:${branch.mobileNumber}`}
-                      className="text-gray-700 hover:text-amber-700 text-xs md:text-sm"
-                    >
-                      {branch.mobileNumber}
-                    </a>
+                    <Phone className="w-4 h-4 text-amber-700" />
+                    <a href={`tel:${branch.mobileNumber}`} className="text-gray-700 hover:text-amber-700 text-sm">{branch.mobileNumber}</a>
                   </div>
 
                   {branch.email && (
                     <div className="flex items-center gap-2">
-                      <Mail className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-700" />
-                      <a
-                        href={`mailto:${branch.email}`}
-                        className="text-gray-700 hover:text-amber-700 break-all text-xs md:text-sm"
-                      >
-                        {branch.email}
-                      </a>
+                      <Mail className="w-4 h-4 text-amber-700" />
+                      <a href={`mailto:${branch.email}`} className="text-gray-700 hover:text-amber-700 break-all text-sm">{branch.email}</a>
                     </div>
                   )}
                 </div>
+
+                {(branch.head1Name || branch.head2Name) && (
+                  <div className="border-t pt-3 mt-3">
+                    <div className="flex flex-col md:flex-row gap-4">
+                      {branch.head1Name && (
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-sm text-gray-700 mb-1">Head 1</h4>
+                          <div className="space-y-1 text-sm">
+                            <div className="flex items-center gap-2">
+                              <User className="w-4 h-4 text-gray-500" />
+                              <span>{branch.head1Name}</span>
+                            </div>
+                            {branch.head1Designation && (
+                              <div className="flex items-center gap-2">
+                                <Briefcase className="w-4 h-4 text-gray-500" />
+                                <span>{branch.head1Designation}</span>
+                              </div>
+                            )}
+                            {branch.head1Mobile && (
+                              <div className="flex items-center gap-2">
+                                <Phone className="w-4 h-4 text-gray-500" />
+                                <a href={`tel:${branch.head1Mobile}`} className="hover:text-amber-700">{branch.head1Mobile}</a>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                      {branch.head2Name && (
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-sm text-gray-700 mb-1">Head 2</h4>
+                          <div className="space-y-1 text-sm">
+                            <div className="flex items-center gap-2">
+                              <User className="w-4 h-4 text-gray-500" />
+                              <span>{branch.head2Name}</span>
+                            </div>
+                            {branch.head2Designation && (
+                              <div className="flex items-center gap-2">
+                                <Briefcase className="w-4 h-4 text-gray-500" />
+                                <span>{branch.head2Designation}</span>
+                              </div>
+                            )}
+                            {branch.head2Mobile && (
+                              <div className="flex items-center gap-2">
+                                <Phone className="w-4 h-4 text-gray-500" />
+                                <a href={`tel:${branch.head2Mobile}`} className="hover:text-amber-700">{branch.head2Mobile}</a>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>

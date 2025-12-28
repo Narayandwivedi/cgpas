@@ -9,10 +9,17 @@ const BranchManage = () => {
     country: '',
     state: '',
     district: '',
+    city: '',
     mobileNumber: '',
     email: '',
     fullAddress: '',
-    status: 'active'
+    status: 'active',
+    head1Name: '',
+    head1Designation: '',
+    head1Mobile: '',
+    head2Name: '',
+    head2Designation: '',
+    head2Mobile: ''
   });
   const [editingId, setEditingId] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -54,10 +61,17 @@ const BranchManage = () => {
       country: '',
       state: '',
       district: '',
+      city: '',
       mobileNumber: '',
       email: '',
       fullAddress: '',
-      status: 'active'
+      status: 'active',
+      head1Name: '',
+      head1Designation: '',
+      head1Mobile: '',
+      head2Name: '',
+      head2Designation: '',
+      head2Mobile: ''
     });
     setEditingId(null);
     setShowModal(true);
@@ -73,10 +87,17 @@ const BranchManage = () => {
           country: data.data.country || '',
           state: data.data.state || '',
           district: data.data.district || '',
+          city: data.data.city || '',
           mobileNumber: data.data.mobileNumber || '',
           email: data.data.email || '',
           fullAddress: data.data.fullAddress || '',
-          status: data.data.status || 'active'
+          status: data.data.status || 'active',
+          head1Name: data.data.head1Name || '',
+          head1Designation: data.data.head1Designation || '',
+          head1Mobile: data.data.head1Mobile || '',
+          head2Name: data.data.head2Name || '',
+          head2Designation: data.data.head2Designation || '',
+          head2Mobile: data.data.head2Mobile || ''
         });
         setEditingId(id);
         setShowModal(true);
@@ -257,7 +278,7 @@ const BranchManage = () => {
             </h2>
 
             <form onSubmit={handleSubmit}>
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-1">
                     Country <span className="text-red-500">*</span>
@@ -297,6 +318,19 @@ const BranchManage = () => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
                   />
                 </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-1">
+                    City <span className="text-gray-400">(Optional)</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="city"
+                    value={formData.city}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  />
+                </div>
 
                 <div>
                   <label className="block text-sm font-medium mb-1">
@@ -325,7 +359,7 @@ const BranchManage = () => {
                   />
                 </div>
 
-                <div>
+                <div className="md:col-span-2">
                   <label className="block text-sm font-medium mb-1">
                     Full Address <span className="text-red-500">*</span>
                   </label>
@@ -339,7 +373,7 @@ const BranchManage = () => {
                   />
                 </div>
 
-                <div>
+                <div className="md:col-span-2">
                   <label className="block text-sm font-medium mb-1">Status</label>
                   <select
                     name="status"
@@ -351,6 +385,41 @@ const BranchManage = () => {
                     <option value="inactive">Inactive</option>
                   </select>
                 </div>
+
+                <div className="md:col-span-2 mt-4">
+                  <h3 className="text-lg font-semibold border-b pb-2 mb-4">Head 1 Details (Optional)</h3>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-1">Head 1 Name</label>
+                  <input type="text" name="head1Name" value={formData.head1Name} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-1">Head 1 Designation</label>
+                  <input type="text" name="head1Designation" value={formData.head1Designation} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-1">Head 1 Mobile</label>
+                  <input type="tel" name="head1Mobile" value={formData.head1Mobile} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" />
+                </div>
+
+                <div className="md:col-span-2 mt-4">
+                  <h3 className="text-lg font-semibold border-b pb-2 mb-4">Head 2 Details (Optional)</h3>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-1">Head 2 Name</label>
+                  <input type="text" name="head2Name" value={formData.head2Name} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-1">Head 2 Designation</label>
+                  <input type="text" name="head2Designation" value={formData.head2Designation} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-1">Head 2 Mobile</label>
+                  <input type="tel" name="head2Mobile" value={formData.head2Mobile} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" />
+                </div>
+
               </div>
 
               <div className="flex justify-end gap-2 md:gap-3 mt-4 md:mt-6">

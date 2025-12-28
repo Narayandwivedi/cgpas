@@ -47,7 +47,7 @@ const getBranchById = async (req, res) => {
 // Create new branch
 const createBranch = async (req, res) => {
   try {
-    const { country, state, district, mobileNumber, email, fullAddress, status } = req.body;
+    const { country, state, district, city, mobileNumber, email, fullAddress, status, head1Name, head1Designation, head1Mobile, head2Name, head2Designation, head2Mobile } = req.body;
 
     // Validation
     if (!country || !mobileNumber || !fullAddress) {
@@ -61,10 +61,17 @@ const createBranch = async (req, res) => {
       country,
       state: state || null,
       district: district || null,
+      city: city || null,
       mobileNumber,
       email: email || null,
       fullAddress,
-      status: status || 'active'
+      status: status || 'active',
+      head1Name: head1Name || null,
+      head1Designation: head1Designation || null,
+      head1Mobile: head1Mobile || null,
+      head2Name: head2Name || null,
+      head2Designation: head2Designation || null,
+      head2Mobile: head2Mobile || null
     });
 
     await branch.save();
@@ -87,7 +94,7 @@ const createBranch = async (req, res) => {
 // Update branch
 const updateBranch = async (req, res) => {
   try {
-    const { country, state, district, mobileNumber, email, fullAddress, status } = req.body;
+    const { country, state, district, city, mobileNumber, email, fullAddress, status, head1Name, head1Designation, head1Mobile, head2Name, head2Designation, head2Mobile } = req.body;
 
     const branch = await Branch.findById(req.params.id);
 
@@ -102,10 +109,17 @@ const updateBranch = async (req, res) => {
     if (country) branch.country = country;
     if (state !== undefined) branch.state = state || null;
     if (district !== undefined) branch.district = district || null;
+    if (city !== undefined) branch.city = city || null;
     if (mobileNumber) branch.mobileNumber = mobileNumber;
     if (email !== undefined) branch.email = email || null;
     if (fullAddress) branch.fullAddress = fullAddress;
     if (status) branch.status = status;
+    if (head1Name !== undefined) branch.head1Name = head1Name || null;
+    if (head1Designation !== undefined) branch.head1Designation = head1Designation || null;
+    if (head1Mobile !== undefined) branch.head1Mobile = head1Mobile || null;
+    if (head2Name !== undefined) branch.head2Name = head2Name || null;
+    if (head2Designation !== undefined) branch.head2Designation = head2Designation || null;
+    if (head2Mobile !== undefined) branch.head2Mobile = head2Mobile || null;
 
     await branch.save();
 
