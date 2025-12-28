@@ -252,7 +252,7 @@ const Navbar = () => {
           {/* Mobile Contact Icons and Menu Button */}
           <div className="md:hidden flex items-center gap-3">
             {/* Contact Icons - Stacked Vertically */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 mr-2">
               {/* WhatsApp Button */}
               <a
                 href="https://wa.me/919993961778"
@@ -278,27 +278,32 @@ const Navbar = () => {
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-orange-600 focus:outline-none"
-            >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            {/* Mobile Menu Button and Language Toggle */}
+            <div className="flex flex-col items-center">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-700 hover:text-orange-600 focus:outline-none"
               >
-                {isOpen ? (
-                  <path d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  {isOpen ? (
+                    <path d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
+              <div className="mt-1">
+                <LanguageToggle />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -467,9 +472,6 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            <div className="px-3 py-1.5">
-              <LanguageToggle />
-            </div>
           </div>
         </div>
       )}

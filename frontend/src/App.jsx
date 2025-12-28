@@ -63,6 +63,7 @@ const App = () => {
               <Route path="/voice-of-abcd" element={<VoiceOfAbcd />} />
               <Route path="/suggestions" element={<Suggestion />} />
               <Route path="/complaint" element={<Complaint />} />
+              <Route path="/admin/login" element={<div>Admin Login</div>} />
             </Routes>
           </main>
           <Footer />
