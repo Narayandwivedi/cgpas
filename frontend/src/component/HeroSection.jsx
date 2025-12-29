@@ -37,10 +37,10 @@ const HeroSection = () => {
               />
               <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 md:px-6 md:py-3 rounded-full shadow-lg border-2 border-orange-500">
                 <p className="text-[10px] md:text-sm font-bold text-gray-800 text-center whitespace-nowrap">
-                  भगवान अग्रसेन महाराज और माता माधवी
+                  भगवान श्री अग्रसेन और माता माधवी
                 </p>
                 <p className="text-[10px] md:text-xs text-gray-600 text-center whitespace-nowrap">
-                  Bhagwan Shri Agrsen Maharaj and Mata Madhavi
+                  Bhagwan Shri Agrsen and Mata Madhavi
                 </p>
               </div>
             </div>
