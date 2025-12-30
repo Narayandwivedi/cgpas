@@ -20,6 +20,7 @@ const suggestionRoutes = require('./routes/suggestionRoutes');
 const adminSuggestionRoutes = require('./routes/adminSuggestionRoutes');
 const complaintRoutes = require('./routes/complaintRoutes');
 const adminComplaintRoutes = require('./routes/adminComplaintRoutes');
+const exportRoutes = require('./routes/exportRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -53,6 +54,7 @@ app.use('/api/suggestions', suggestionRoutes);
 app.use('/api/admin/suggestions', adminSuggestionRoutes);
 app.use('/api/complaints', complaintRoutes);
 app.use('/api/admin/complaints', adminComplaintRoutes);
+app.use('/api', exportRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {

@@ -58,6 +58,12 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       icon: '😠',
       path: '/complaints',
       description: 'View Complaints'
+    },
+    {
+      name: 'Export',
+      icon: '📤',
+      path: '/export',
+      description: 'Export All Data'
     }
   ]
 

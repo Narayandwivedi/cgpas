@@ -10,6 +10,7 @@ import BranchManage from './pages/BranchManage'
 import ContactManage from './pages/ContactManage'
 import SuggestionManage from './pages/SuggestionManage'
 import ComplaintManage from './pages/ComplaintManage'
+import Export from './pages/Export'
 import './App.css'
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
               <Route path="/contact" element={<ContactManage />} />
               <Route path="/suggestions" element={<SuggestionManage />} />
               <Route path="/complaints" element={<ComplaintManage />} />
+              <Route path="/export" element={<Export />} />
             </Routes>
           </main>
         </div>
