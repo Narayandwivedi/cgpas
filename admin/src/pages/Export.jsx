@@ -5,7 +5,7 @@ import JSZip from 'jszip';
 const Export = () => {
   const handleExport = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/export');
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/export`);
       const allData = response.data;
       
       const zip = new JSZip();
